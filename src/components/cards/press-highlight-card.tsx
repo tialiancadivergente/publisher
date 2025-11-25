@@ -1,0 +1,89 @@
+"use client";
+
+import Image from "next/image";
+
+import { cn } from "@/lib/utils";
+import type { PressHighlight } from "@/data/press-highlights";
+
+interface PressHighlightCardProps extends PressHighlight {
+  readonly className?: string;
+}
+
+export function PressHighlightCard({
+  title,
+  excerpt,
+  imageSrc,
+  imageAlt,
+  sourceLogo,
+  sourceLogoAlt,
+  author,
+  publishedAt,
+  accentClass,
+  className,
+}: PressHighlightCardProps) {
+  const formattedDate = new Intl.DateTimeFormat("pt-BR", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+  }).format(new Date(publishedAt));
+
+  return (
+    <article
+      className={cn(
+        "flex h-full flex-col overflow-hidden bg-white shadow-lg",
+        accentClass,
+        className
+      )}
+      aria-labelledby={`${title}-heading`}
+    >
+      <div className="relative aspect-[352/180] w-full">
+        <Image
+          src={imageSrc}
+          alt={imageAlt}
+          fill
+          className="object-cover"
+          sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 352px"
+          loading="lazy"
+          decoding="async"
+          fetchPriority="low"
+        />
+      </div>
+      <div className="flex flex-1 flex-col gap-4 px-6 py-5 text-left text-verde-eucalipto">
+        <h3
+          id={`${title}-heading`}
+          className="text-[26px] font-semibold text-verde-eucalipto truncate whitespace-nowrap"
+          title={title}
+        >
+          {title}
+        </h3>
+        <p
+          className="text-[18px] leading-8 text-verde-eucalipto font-light overflow-hidden text-ellipsis line-clamp-4"
+          title={excerpt}
+        >
+          {excerpt}
+        </p>
+        <div className="mt-auto flex flex-col gap-3 text-xs text-verde-eucalipto/70 uppercase tracking-[0.2em]">
+          <div className="flex items-center justify-between gap-4">
+            <span className="flex items-center">
+              <Image
+                src={sourceLogo}
+                alt={sourceLogoAlt}
+                width={0}
+                height={24}
+                className="object-contain object-left h-6 w-auto"
+                sizes="(max-width: 640px) 80px, 120px"
+                loading="lazy"
+                decoding="async"
+                fetchPriority="low"
+                style={{ height: 24, width: "auto" }}
+              />
+            </span>
+            <div className="text-[0.7rem] font-medium normal-case tracking-normal">
+              {author} - <time dateTime={publishedAt}>{formattedDate}</time>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  );
+}

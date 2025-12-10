@@ -1,10 +1,68 @@
+"use client";
+
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+
+function AnimatedNumber({ value, duration = 2000 }: { value: number; duration?: number }) {
+  const [count, setCount] = useState(0);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const ref = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    if (hasAnimated) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setHasAnimated(true);
+            const startTime = Date.now();
+            const startValue = 0;
+
+            const animate = () => {
+              const elapsed = Date.now() - startTime;
+              const progress = Math.min(elapsed / duration, 1);
+              
+              // Easing function para suavizar a animação
+              const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+              const currentValue = Math.floor(startValue + (value - startValue) * easeOutQuart);
+              
+              setCount(currentValue);
+
+              if (progress < 1) {
+                requestAnimationFrame(animate);
+              } else {
+                setCount(value);
+              }
+            };
+
+            requestAnimationFrame(animate);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const currentRef = ref.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, [value, duration, hasAnimated]);
+
+  return <span ref={ref}>{count}</span>;
+}
 
 export function StartYourJourneyContentSection() {
   return (
     <>
       <h2 className="text-[56px] text-dourado uppercase">Comece sua jornada</h2>
-      <p className="text-verde-eucalipto text-[18px]/[32px] font-light text-center">
+      <p className="text-verde-eucalipto text-[18px]/[32px] font-light text-center font-mulish">
         Na <span className="font-bold">Aliança Divergente</span>, você encontra
         grupos de apoio, encontros semanais, protocolos práticos, mentores
         experientes e uma plataforma completa dedicada ao seu avanço. Aqui, você
@@ -28,9 +86,9 @@ export function StartYourJourneyContentSection() {
           width={164}
           height={56}
         />
-        <div>
+        <div className="font-mulish">
           <p className="text-verde-folha text-[18px]/[32px] font-bold">
-            +140mil aliados{" "}
+            +<AnimatedNumber value={140} duration={1500} />mil aliados{" "}
           </p>
           <p className="text-verde-eucalipto text-[12px]/[16px] font-light">
             que decidiram romper padrões e <br /> construir uma vida memorável.

@@ -24,7 +24,7 @@ export function EventsSection() {
         <div className="flex flex-col gap-16 items-center justify-center">
           {titleDescription(
             "Eventos Online",
-            <p>
+            <p className="font-mulish">
               Os eventos online da Aliança Divergente são encontros abertos, ao
               vivo, conduzidos pelos Mentores e convidados especiais.
               <span className="font-bold">
@@ -72,7 +72,7 @@ export function EventsSection() {
           )}
           {titleDescription(
             "Eventos Presenciais",
-            <p>
+            <p className="font-mulish">
               <span className="font-bold">
                 Os eventos presenciais da Aliança Divergente são exclusivos para
                 Aliados e marcam etapas importantes da jornada.

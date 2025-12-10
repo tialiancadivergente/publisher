@@ -31,7 +31,7 @@ export function PressSaysSection() {
         >
           O Que a Imprensa Diz
         </h2>
-        <p className="text-verde-eucalipto text-[18px]/[32px] font-light text-center">
+        <p className="text-verde-eucalipto text-[18px]/[32px] font-light text-center font-mulish">
           <strong className="font-bold">
             A proposta da Aliança Divergente tem despertado a atenção de
             veículos nacionais,

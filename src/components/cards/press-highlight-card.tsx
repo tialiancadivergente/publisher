@@ -57,7 +57,7 @@ export function PressHighlightCard({
           {title}
         </h3>
         <p
-          className="text-[18px] leading-8 text-verde-eucalipto font-light overflow-hidden text-ellipsis line-clamp-4"
+          className="text-[18px] leading-8 text-verde-eucalipto font-light overflow-hidden text-ellipsis line-clamp-4 font-mulish"
           title={excerpt}
         >
           {excerpt}
@@ -78,7 +78,7 @@ export function PressHighlightCard({
                 style={{ height: 24, width: "auto" }}
               />
             </span>
-            <div className="text-[0.7rem] font-medium normal-case tracking-normal">
+            <div className="text-[0.7rem] font-medium normal-case tracking-normal font-mulish text-right">
               {author} - <time dateTime={publishedAt}>{formattedDate}</time>
             </div>
           </div>

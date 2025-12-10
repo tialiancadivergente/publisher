@@ -61,6 +61,14 @@ const config = {
   			cormorant: [
   				'var(--font-cormorant)',
   				'serif'
+  			],
+  			mulish: [
+  				'var(--font-mulish)',
+  				'sans-serif'
+  			],
+  			spectral: [
+  				'var(--font-spectral)',
+  				'serif'
   			]
   		},
   		borderRadius: {

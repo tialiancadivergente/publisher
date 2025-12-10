@@ -43,12 +43,12 @@ export function TestimonialCard({
           {title}
         </h3>
 
-        <p className="text-base text-verde-eucalipto font-light leading-relaxed flex-1">
+        <p className="text-base text-verde-eucalipto font-light leading-relaxed flex-1 font-mulish">
           {description}
         </p>
 
         {/* Footer */}
-        <div className="flex flex-col gap-1 pt-4 border-t border-verde-folha/10">
+        <div className="flex flex-col gap-1 pt-4 border-t border-verde-folha/10 font-mulish">
           <p className="text-sm font-semibold text-verde-folha">{name}</p>
           <p className="text-xs text-verde-eucalipto">
             Aliado desde {joinDate} • {location}

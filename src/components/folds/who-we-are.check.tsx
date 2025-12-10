@@ -61,7 +61,7 @@ export function WhoWeAreCheckSection() {
   return (
     <div className="absolute left-1/2 xl:top-[260px] md:top-[320px] top-[260px] -translate-x-1/2 w-full container z-10">
       <div className="bg-[#F4ECE4] p-8 md:p-14 shadow-xl flex flex-col gap-2 items-center">
-        <p className="text-base font-bold text-verde-eucalipto text-center">
+        <p className="text-base font-bold text-verde-eucalipto text-center font-mulish">
           Verificador de contatos oficiais – evite golpes.
         </p>
         <h3 className="text-xl md:text-2xl text-dourado font-semibold text-center">
@@ -76,7 +76,7 @@ export function WhoWeAreCheckSection() {
           <label
             htmlFor="phone-verification"
             className={cn(
-              "text-base font-bold text-verde-eucalipto",
+              "text-base font-bold text-verde-eucalipto font-mulish",
               "sr-only md:not-sr-only md:block"
             )}
           >
@@ -93,7 +93,7 @@ export function WhoWeAreCheckSection() {
               onKeyDown={handleKeyDown}
               maxLength={15}
               className={cn(
-                "p-2 bg-transparent border-b border-dourado",
+                "p-2 bg-transparent border-b border-dourado font-mulish",
                 "placeholder:text-dourado-velho text-dourado-velho",
                 "focus:outline-none focus:border-verde-folha",
                 "transition-colors",

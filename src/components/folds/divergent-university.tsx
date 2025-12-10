@@ -9,7 +9,7 @@ export function DivergentUniversitySection() {
       aria-labelledby="universidade-divergente-heading"
       role="region"
     >
-      <div className="container flex flex-col items-center justify-center gap-10 mb-20">
+      <div className="container flex flex-col items-center justify-center gap-10 mb-20 font-mulish">
         <h2
           id="universidade-divergente-heading"
           className="sr-only"

@@ -92,12 +92,12 @@ export const mentorData: readonly MentorCardProps[] = [
     imageAlt: "Dr. Alberto Guerra - especialista em empreendedorismo",
   },
   {
-    id: "gabriel-santos",
-    name: "Gabriel",
+    id: "luane-cardoso",
+    name: "Luane Cardoso",
     role: "Especialista em liderança",
     focus: "PRIMEIRA LIDERANÇA: INSPIRE E GERE RESULTADOS OUSADOS",
-    imageSrc: "/images/mentors/gabriel.webp",
-    imageAlt: "Gabriel Santos - especialista em liderança",
+    imageSrc: "/images/mentors/luane-cardoso.png",
+    imageAlt: "Luane Cardoso - especialista em liderança",
   },
 ] as const;
 

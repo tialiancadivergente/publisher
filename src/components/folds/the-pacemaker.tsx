@@ -14,7 +14,7 @@ export function ThePacemakerSection() {
           O Marca Passos
         </h2>
         <p
-          className="text-areia-claro text-[18px]/[32px] font-light"
+          className="text-areia-claro text-[18px]/[32px] font-light font-mulish"
           aria-describedby="marca-passos-heading"
         >
           <span className="font-bold">
@@ -48,7 +48,6 @@ export function ThePacemakerSection() {
           loading="lazy"
           decoding="async"
           fetchPriority="low"
-          className="h-auto w-auto"
           sizes="(max-width: 768px) 260px, 352px"
           aria-hidden="true"
         />
@@ -70,14 +69,14 @@ export function ThePacemakerSection() {
               className="max-w-[186px] min-w-[120px] w-auto h-auto object-cover"
             />
             <div className="flex flex-col gap-2 text-dourado max-w-[163px] w-full">
-              <p className="text-[10px]/[16px]">Elton Euler</p>
+              <p className="text-[10px]/[16px] font-mulish">Elton Euler</p>
               <p
                 id="audio-preview-heading"
                 className="text-[26px]/[38px] font-bold"
               >
                 Porque <br /> você não foi mais longe?
               </p>
-              <p className="text-white text-[10px]/[16px] font-light">
+              <p className="text-white text-[10px]/[16px] font-light font-mulish">
                 Ouça e experimente esta prévia do áudio diário.
               </p>
             </div>
@@ -114,7 +113,7 @@ export function ThePacemakerSection() {
           <h3 className="text-4xl md:text-6xl/[80px] text-dourado uppercase">
             Dê play na <br /> sua Permissão
           </h3>
-          <p className="text-areia-claro text-[18px]/[32px] font-light">
+          <p className="text-areia-claro text-[18px]/[32px] font-light font-mulish">
             Dentro do Marca Passos, o Aliado tem acesso ao Áudio Diário.{" "}
             <span className="font-bold">
               Ele provoca percepção, corrige rota, sustenta postura e mantém o

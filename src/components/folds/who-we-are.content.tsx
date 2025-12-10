@@ -14,7 +14,7 @@ export function WhoWeAreContentSection() {
             <span className="block">Somos</span>
           </h2>
         </div>
-        <div className="flex-1 flex flex-col gap-6 text-white text-base md:text-[18px] leading-7 md:leading-[32px] font-light">
+        <div className="flex-1 flex flex-col gap-6 text-white text-base md:text-[18px] leading-7 md:leading-[32px] font-light font-mulish">
           <p>
             A{" "}
             <strong className="font-bold">

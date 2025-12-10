@@ -51,7 +51,7 @@ export function MentorProfileCard({
           </h3>
         </header>
         <p
-          className="text-base leading-7 text-areia-claro/90 overflow-hidden text-ellipsis line-clamp-5 max-h-[8.5rem]"
+          className="text-base leading-7 text-areia-claro/90 overflow-hidden text-ellipsis line-clamp-5 max-h-[8.5rem] font-mulish"
           title={description}
         >
           {description}

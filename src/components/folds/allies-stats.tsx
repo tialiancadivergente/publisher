@@ -83,7 +83,7 @@ export function AlliesStatsSection() {
           <p className="text-ouro-velho text-xl md:text-2xl font-light text-center">
             com mais Permissão
           </p>
-          <p className="text-verde-eucalipto text-base md:text-[18px]/[32px] font-light text-center">
+          <p className="text-verde-eucalipto text-base md:text-[18px]/[32px] font-light text-center font-mulish">
             Milhares de Aliados já romperam padrões, aumentaram sua Permissão
             e sustentam novas posturas todos os dias.{" "}
             <strong className="font-bold">

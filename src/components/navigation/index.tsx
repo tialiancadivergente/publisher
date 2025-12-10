@@ -166,7 +166,7 @@ function NavigationItemRenderer({ item }: { item: NavigationItem }) {
             item.linkClassName === "navigationMenuTriggerStyle()"
               ? navigationMenuTriggerStyle()
               : item.linkClassName,
-            "bg-transparent font-lora text-sm xl:text-base text-verde-folha hover:text-areia hover:bg-verde-folha active:text-areia active:bg-verde-folha"
+            "bg-transparent font-spectral text-sm xl:text-base text-verde-folha hover:text-areia hover:bg-verde-folha active:text-areia active:bg-verde-folha"
           )}
         >
           <Link href={item.href}>{item.label}</Link>
@@ -209,7 +209,7 @@ function MobileMenu() {
           )}
         >
           <DrawerHeader className="border-b border-verde-folha/20">
-            <DrawerTitle className="text-lg font-lora font-semibold text-verde-folha text-left">
+            <DrawerTitle className="text-lg font-spectral font-semibold text-verde-folha text-left">
               Menu
             </DrawerTitle>
           </DrawerHeader>
@@ -225,7 +225,7 @@ function MobileMenu() {
                       <Link
                         href={item.href}
                         className={cn(
-                          "block px-4 py-3 rounded-md font-lora text-base text-verde-folha",
+                          "block px-4 py-3 rounded-md font-spectral text-base text-verde-folha",
                           "hover:bg-verde-folha hover:text-areia transition-colors",
                           "active:bg-verde-folha active:text-areia"
                         )}
@@ -235,7 +235,7 @@ function MobileMenu() {
                     </DrawerClose>
                   ) : (
                     <div className="space-y-2">
-                      <div className="px-4 py-2 font-lora font-semibold text-verde-folha text-sm uppercase tracking-wide">
+                      <div className="px-4 py-2 font-spectral font-semibold text-verde-folha text-sm uppercase tracking-wide">
                         {item.label}
                       </div>
                       {item.content.items.map((subItem, index) => (
@@ -246,7 +246,7 @@ function MobileMenu() {
                           <Link
                             href={subItem.href}
                             className={cn(
-                              "block px-6 py-2 rounded-md font-lora text-sm text-verde-folha/80",
+                              "block px-6 py-2 rounded-md font-spectral text-sm text-verde-folha/80",
                               "hover:bg-verde-folha hover:text-areia transition-colors",
                               "active:bg-verde-folha active:text-areia"
                             )}

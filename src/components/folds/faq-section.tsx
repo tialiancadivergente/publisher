@@ -44,7 +44,7 @@ export function FAQSection() {
           Perguntas frequentes
         </h2>
         <div
-          className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-12"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-12 font-mulish"
           role="region"
           aria-label="Lista de perguntas frequentes"
         >

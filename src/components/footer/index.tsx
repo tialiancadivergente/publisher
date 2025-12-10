@@ -36,19 +36,19 @@ export function Footer() {
 
   return (
     <footer
-      className="w-full bg-verde-eucalipto text-creme px-4 sm:px-11 py-8"
+      className="w-full bg-verde-eucalipto text-creme px-4 sm:px-11 py-8 font-spectral"
       role="contentinfo"
       aria-label="Rodapé do site"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-[auto_auto_auto_auto_1fr] gap-8 lg:gap-12">
         {/* Logo e Badge */}
-        <div className="flex flex-col	items-center md:items-start gap-4">
+        <div className="flex flex-col items-center md:items-start gap-4">
           <div className="flex items-center gap-2">
             <Image
               src={
                 isMobile
                   ? "/images/logo-alianca-divergente-mobile.png"
-                  : "/images/logo-alianca-divergente.webp"
+                  : "/images/logo-alianca-divergente.svg"
               }
               alt="Logotipo da Aliança Divergente"
               width={isMobile ? 94 : 306}
@@ -76,12 +76,15 @@ export function Footer() {
         </div>
 
         {/* Links de Conteúdo */}
-        <nav className="flex flex-col gap-3 items-center md:items-start" aria-label="Links de conteúdo">
+        <nav
+          className="flex flex-col gap-3 items-center md:items-start"
+          aria-label="Links de conteúdo"
+        >
           {footerContentLinks.map((link) => (
             <Link
               key={link.id}
               href={link.href}
-              className="text-creme hover:text-dourado transition-colors font-lora"
+              className="text-creme hover:text-dourado transition-colors"
               aria-label={link.label}
             >
               {link.label}
@@ -90,12 +93,15 @@ export function Footer() {
         </nav>
 
         {/* Links Sobre */}
-        <nav className="flex flex-col gap-3 items-center md:items-start" aria-label="Links sobre o site">
+        <nav
+          className="flex flex-col gap-3 items-center md:items-start"
+          aria-label="Links sobre o site"
+        >
           {footerAboutLinks.map((link) => (
             <Link
               key={link.id}
               href={link.href}
-              className="text-creme hover:text-dourado transition-colors font-lora"
+              className="text-creme hover:text-dourado transition-colors"
               aria-label={link.label}
             >
               {link.label}
@@ -105,9 +111,7 @@ export function Footer() {
 
         {/* Redes Sociais */}
         <div className="flex flex-col gap-4 items-center md:items-start">
-          <h3 className="text-creme font-lora font-semibold text-lg">
-            Nossas Redes
-          </h3>
+          <h3 className="text-creme font-semibold text-lg">Nossas Redes</h3>
           <div className="flex gap-4" role="list" aria-label="Redes sociais">
             {socialMediaLinks.map((social) => (
               <Link
@@ -129,11 +133,11 @@ export function Footer() {
           <h4 className="text-dourado font-semibold text-[10px]/[16px] uppercase">
             TERMOS E CONDIÇÕES E POLÍTICAS DE PRIVACIDADE.
           </h4>
-          <address className="text-white font-lora text-[10px]/[16px] not-italic">
+          <address className="text-white text-[10px]/[16px] not-italic">
             {footerAddress.street} - {footerAddress.neighborhood},{" "}
             {footerAddress.city} - {footerAddress.zipCode}
           </address>
-          <p className="text-white font-lora text-[10px]/[16px] leading-relaxed">
+          <p className="text-white text-[10px]/[16px] leading-relaxed">
             {footerDisclaimer}
           </p>
           <p className="text-white text-[10px]/[16px] text-right font-bold">

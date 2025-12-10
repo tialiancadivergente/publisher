@@ -49,7 +49,7 @@ export const NewsCard = React.memo(function NewsCard({
       >
         {title}
       </h2>
-      <div className="text-verde-eucalipto text-base md:text-lg leading-7 md:leading-8 font-light">
+      <div className="text-verde-eucalipto text-base md:text-lg leading-7 md:leading-8 font-light font-mulish">
         {description}
       </div>
     </div>

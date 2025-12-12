@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 type Direction = "up" | "down" | "left" | "right";
 
 interface RevealProps extends React.HTMLAttributes<HTMLElement> {
-  readonly as?: keyof JSX.IntrinsicElements;
+  readonly as?: React.ElementType;
   readonly delay?: number;
   readonly direction?: Direction;
   readonly once?: boolean;
@@ -28,7 +28,10 @@ export function Reveal({
 }: RevealProps) {
   const [isVisible, setIsVisible] = React.useState(false);
   const [prefersReducedMotion, setPrefersReducedMotion] = React.useState(false);
-  const elementRef = React.useRef<HTMLElement>(null);
+  const elementRef = React.useRef<Element | null>(null);
+  const setRef = React.useCallback((node: Element | null) => {
+    elementRef.current = node;
+  }, []);
 
   React.useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -81,7 +84,7 @@ export function Reveal({
 
   return (
     <Component
-      ref={elementRef}
+      ref={setRef as unknown as React.Ref<Element>}
       className={cn(
         "opacity-0 transition-all duration-700 ease-out will-change-transform",
         initialOffset[direction],

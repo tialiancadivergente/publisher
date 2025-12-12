@@ -29,7 +29,7 @@ export const newsCardsData: readonly NewsCardProps[] = [
         comprometidos em romper padrões.
       </>
     ),
-    imageSrc: "/images/grupo-de-apoio-alianca-divergente.webp",
+    imageSrc: "/images/grupo-de-apoio-alianca-divergente.jpg",
     imageAlt: "Grupos de apoio da Aliança Divergente - duas mulheres interagindo",
     imageWidth: 529,
     imageHeight: 360,
@@ -50,7 +50,7 @@ export const newsCardsData: readonly NewsCardProps[] = [
         posturas que aumentam sua Permissão de forma concreta e progressiva.
       </>
     ),
-    imageSrc: "/images/protocolos-alianca-divergente.webp",
+    imageSrc: "/images/protocolos-alianca-divergente.jpg",
     imageAlt: "Protocolos de proteção emocional - documentos em uma mesa",
     imageWidth: 529,
     imageHeight: 360,
@@ -72,7 +72,7 @@ export const newsCardsData: readonly NewsCardProps[] = [
         falando, desmistificando a jornada e valorizando o progresso.
       </>
     ),
-    imageSrc: "/images/encontros-de-impluso-alianca-divergente.webp",
+    imageSrc: "/images/encontros-de-impluso-alianca-divergente.jpg",
     imageAlt: "Encontros de Impulso da Aliança Divergente",
     imageWidth: 529,
     imageHeight: 360,
@@ -94,7 +94,7 @@ export const newsCardsData: readonly NewsCardProps[] = [
         </span>
       </>
     ),
-    imageSrc: "/images/encontros-de-reforcos-alianca-divergente.webp",
+    imageSrc: "/images/encontros-de-reforcos-alianca-divergente.jpg",
     imageAlt: "Encontros de Reforço da Aliança Divergente",
     imageWidth: 529,
     imageHeight: 360,

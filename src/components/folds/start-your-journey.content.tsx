@@ -3,7 +3,15 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
-function AnimatedNumber({ value, duration = 2000 }: { value: number; duration?: number }) {
+import { Reveal } from "@/components/ui/reveal";
+
+function AnimatedNumber({
+  value,
+  duration = 2000,
+}: {
+  value: number;
+  duration?: number;
+}) {
   const [count, setCount] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
   const ref = useRef<HTMLSpanElement>(null);
@@ -22,11 +30,13 @@ function AnimatedNumber({ value, duration = 2000 }: { value: number; duration?: 
             const animate = () => {
               const elapsed = Date.now() - startTime;
               const progress = Math.min(elapsed / duration, 1);
-              
-              // Easing function para suavizar a animação
+
+              // Easing function para suavizar a animaÇõÇœo
               const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-              const currentValue = Math.floor(startValue + (value - startValue) * easeOutQuart);
-              
+              const currentValue = Math.floor(
+                startValue + (value - startValue) * easeOutQuart
+              );
+
               setCount(currentValue);
 
               if (progress < 1) {
@@ -61,8 +71,14 @@ function AnimatedNumber({ value, duration = 2000 }: { value: number; duration?: 
 export function StartYourJourneyContentSection() {
   return (
     <>
-      <h2 className="text-[56px] text-dourado uppercase">Comece sua jornada</h2>
-      <p className="text-verde-eucalipto text-[18px]/[32px] font-light text-center font-mulish">
+      <Reveal as="h2" className="text-[56px] text-dourado uppercase">
+        Comece sua jornada
+      </Reveal>
+      <Reveal
+        as="p"
+        className="text-verde-eucalipto text-[18px]/[32px] font-light text-center font-mulish"
+        delay={120}
+      >
         Na <span className="font-bold">Aliança Divergente</span>, você encontra
         grupos de apoio, encontros semanais, protocolos práticos, mentores
         experientes e uma plataforma completa dedicada ao seu avanço. Aqui, você
@@ -70,31 +86,35 @@ export function StartYourJourneyContentSection() {
         coach. É{" "}
         <span className="font-bold">
           estrutura pedagógica, embasamento psicológico e uma comunidade forte
-          de Aliados
+          de Aliados comprometidos
         </span>{" "}
-        comprometidos em romper padrões, aumentar sua Permissão e construir
-        vidas memoráveis.
-      </p>
-      <button className="bg-dourado hover:bg-dourado/60 transition-colors duration-300 text-white px-8 py-3 uppercase font-bold sm:text-base text-xs mt-6">
-        Seja Aliado
-      </button>
+        em romper padrões, aumentar sua Permissão e construir vidas memoráveis.
+      </Reveal>
+      <Reveal delay={220}>
+        <button className="bg-dourado hover:bg-dourado/60 transition-colors duration-300 text-white px-8 py-3 uppercase font-bold sm:text-base text-xs mt-6 shadow-lg shadow-dourado/20">
+          Seja Aliado
+        </button>
+      </Reveal>
 
-      <div className="flex items-center gap-4 mt-6">
-        <Image
-          src="/images/avatares.webp"
-          alt="Avatares de Aliados"
-          width={164}
-          height={56}
-        />
-        <div className="font-mulish">
-          <p className="text-verde-folha text-[18px]/[32px] font-bold">
-            +<AnimatedNumber value={140} duration={1500} />mil aliados{" "}
-          </p>
-          <p className="text-verde-eucalipto text-[12px]/[16px] font-light">
-            que decidiram romper padrões e <br /> construir uma vida memorável.
-          </p>
+      <Reveal delay={300}>
+        <div className="flex items-center gap-4 mt-6">
+          <Image
+            src="/images/avatares.png"
+            alt="Avatares de Aliados"
+            width={164}
+            height={56}
+          />
+          <div className="font-mulish">
+            <p className="text-verde-folha text-[18px]/[32px] font-bold">
+              +<AnimatedNumber value={140} duration={1500} />
+              mil aliados{" "}
+            </p>
+            <p className="text-verde-eucalipto text-[12px]/[16px] font-light">
+              que decidiram romper padrões e <br /> construir uma vida memorável.
+            </p>
+          </div>
         </div>
-      </div>
+      </Reveal>
     </>
   );
 }

@@ -16,7 +16,7 @@ export const mentorProfiles: readonly MentorProfile[] = [
     specialty: "Mentora da Aliança Divergente",
     description:
       "Mentora da Aliança Divergente, Cida alia excelência técnica ao cuidado relacional em cada encontro. Lidera diretamente os Encontros de Impulso, a Academia dos Anfitriões e Anfitriões na Estrada, promovendo avanços consistentes para os Aliados.",
-    imageSrc: "/images/cida-torres.webp",
+    imageSrc: "/images/cida-torres.jpg",
     imageAlt: "Retrato da mentora Cida Torres",
     ctaLabel: "Conheça Cida Torres",
     ctaHref: "/mentores/cida-torres",
@@ -27,7 +27,7 @@ export const mentorProfiles: readonly MentorProfile[] = [
     specialty: "Fundador e mentor da Aliança",
     description:
       "Fundador da Aliança Divergente e mentor de mais de 130 mil Aliados em 60 países. Criador do método O Corpo Explica, direciona líderes a sustentarem novas posturas com clareza e consistência.",
-    imageSrc: "/images/elton-neuler.webp",
+    imageSrc: "/images/elton-neuler.jpg",
     imageAlt: "Retrato do mentor Elton Euler",
     ctaLabel: "Conheça Elton Euler",
     ctaHref: "/mentores/elton-euler",
@@ -38,7 +38,7 @@ export const mentorProfiles: readonly MentorProfile[] = [
     specialty: "Terapeuta e especialista em desenvolvimento humano",
     description:
       "Mentor focado em desenvolvimento humano. Ramon acompanha Aliados em jornadas que unem profundidade emocional e estratégia prática, com resultados transformadores ao redor do mundo.",
-    imageSrc: "/images/ramon-galimberti.webp",
+    imageSrc: "/images/ramon-galimberti.jpg",
     imageAlt: "Retrato do mentor Ramon Galimberti",
     ctaLabel: "Conheça Ramon Galimberti",
     ctaHref: "/mentores/ramon-galimberti",

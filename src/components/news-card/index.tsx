@@ -62,7 +62,7 @@ export const NewsCard = React.memo(function NewsCard({
         alt={imageAlt}
         width={imageWidth}
         height={imageHeight}
-        className="w-full h-auto object-cover"
+        className="w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03] transform-gpu"
         loading="lazy"
         fetchPriority="low"
         sizes={imageSizes}
@@ -74,7 +74,11 @@ export const NewsCard = React.memo(function NewsCard({
   return (
     <article
       id={id}
-      className={cn(backgroundColor, className)}
+      className={cn(
+        "group overflow-hidden transition-transform duration-500 hover:-translate-y-2 hover:shadow-lg",
+        backgroundColor,
+        className
+      )}
       aria-labelledby={headingId}
     >
       <div className="container mt-16">

@@ -23,7 +23,7 @@ export const testimonialsData: readonly TestimonialCardProps[] = [
         de 2025.
       </>
     ),
-    imageSrc: "/images/testimonials/ana-flavia-ferreira.webp",
+    imageSrc: "/images/testimonials/ana-flavia-ferreira.jpg",
     imageAlt: "Sandra de Almeida - Aliada da Aliança Divergente",
     location: "Curitiba/PR",
     joinDate: "jan/2025",
@@ -39,7 +39,7 @@ export const testimonialsData: readonly TestimonialCardProps[] = [
         injustiçada...
       </>
     ),
-    imageSrc: "/images/testimonials/sandra-de-almeida.webp",
+    imageSrc: "/images/testimonials/sandra-de-almeida.jpg",
     imageAlt: "Sandra de Almeida - Aliada da Aliança Divergente",
     location: "Belo Horizonte/MG",
     joinDate: "fev/2023",
@@ -55,7 +55,7 @@ export const testimonialsData: readonly TestimonialCardProps[] = [
         dependência.
       </>
     ),
-    imageSrc: "/images/testimonials/alessandra-zimmermann.webp",
+    imageSrc: "/images/testimonials/alessandra-zimmermann.jpg",
     imageAlt: "Alessandra Zimmermann - Aliada da Aliança Divergente",
     location: "Taubaté/SP",
     joinDate: "out/2024",
@@ -71,7 +71,7 @@ export const testimonialsData: readonly TestimonialCardProps[] = [
         filhos e desconectado da minha esposa.
       </>
     ),
-    imageSrc: "/images/testimonials/augusto-cesar.webp",
+    imageSrc: "/images/testimonials/augusto-cesar.jpg",
     imageAlt: "Augusto Cesar - Aliado da Aliança Divergente",
     location: "São Paulo/SP",
     joinDate: "nov/2023",

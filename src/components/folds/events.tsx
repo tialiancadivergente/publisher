@@ -1,23 +1,30 @@
 "use client";
+
 import Image from "next/image";
 
+import { Reveal } from "@/components/ui/reveal";
+
 export function EventsSection() {
-	const titleDescription = (
+  const titleDescription = (
     title: string,
     description: React.ReactNode,
-    imageSection?: React.ReactNode
+    imageSection?: React.ReactNode,
+    delay: number = 0
   ) => {
     return (
-      <div className="flex flex-col gap-6 items-center justify-center">
+      <Reveal
+        className="flex flex-col gap-6 items-center justify-center text-center"
+        delay={delay}
+      >
         <h2 className="text-[56px] text-ouro-velho text-center">{title}</h2>
         <div className="text-verde-eucalipto text-[18px]/[32px] font-light text-center">
           {description}
         </div>
         {imageSection && imageSection}
-      </div>
+      </Reveal>
     );
   };
-	
+
   return (
     <section className="w-full bg-areia py-24">
       <div className="container">
@@ -36,39 +43,40 @@ export function EventsSection() {
             </p>,
             <div className="flex flex-col md:flex-row items-center justify-center w-full">
               <Image
-                src="/images/blindado.webp"
+                src="/images/blindado.jpg"
                 alt="Blindado"
                 width={384}
                 height={460}
-                className="w-full max-w-[300px] lg:max-w-[300px] xl:max-w-[384px] h-auto object-contain"
+                className="w-full max-w-[300px] lg:max-w-[300px] xl:max-w-[384px] h-auto object-contain transition-transform duration-700 ease-out hover:-translate-y-2 transform-gpu"
                 sizes="(max-width: 640px) 150px, (max-width: 768px) 200px, (max-width: 1024px) 250px, (max-width: 1280px) 300px, 384px"
                 loading="lazy"
                 fetchPriority="low"
                 decoding="async"
               />
               <Image
-                src="/images/o-resgate-dos-otimistas.webp"
+                src="/images/o-resgate-dos-otimistas.jpg"
                 alt="O Resgate dos Otimistas"
                 width={384}
                 height={460}
-                className="w-full max-w-[300px] lg:max-w-[300px] xl:max-w-[384px] h-auto object-contain"
+                className="w-full max-w-[300px] lg:max-w-[300px] xl:max-w-[384px] h-auto object-contain transition-transform duration-700 ease-out hover:-translate-y-2 transform-gpu"
                 sizes="(max-width: 640px) 150px, (max-width: 768px) 200px, (max-width: 1024px) 250px, (max-width: 1280px) 300px, 384px"
                 loading="lazy"
                 fetchPriority="low"
                 decoding="async"
               />
               <Image
-                src="/images/o-fim-das-relacoes-ruins.webp"
-                alt="O Fim das Relações Ruins"
+                src="/images/o-fim-das-relacoes-ruins.jpg"
+                alt="O Fim das RelaÇõÇæes Ruins"
                 width={384}
                 height={460}
-                className="w-full max-w-[300px] lg:max-w-[300px] xl:max-w-[384px] h-auto object-contain"
+                className="w-full max-w-[300px] lg:max-w-[300px] xl:max-w-[384px] h-auto object-contain transition-transform duration-700 ease-out hover:-translate-y-2 transform-gpu"
                 sizes="(max-width: 640px) 150px, (max-width: 768px) 200px, (max-width: 1024px) 250px, (max-width: 1280px) 300px, 384px"
                 loading="lazy"
                 fetchPriority="low"
                 decoding="async"
               />
-            </div>
+            </div>,
+            80
           )}
           {titleDescription(
             "Eventos Presenciais",
@@ -87,25 +95,25 @@ export function EventsSection() {
               </span>
             </p>,
             <>
-              <div className="flex-col md:flex-row items-center justify-center w-full hidden md:flex">
+              <div className="flex-col md:flex-row items-center justify-center w-full hidden md:flex gap-6">
                 <Image
-                  src="/images/eventos-presenciais.webp"
+                  src="/images/eventos-presenciais.jpg"
                   alt="Eventos Presenciais"
                   width={1152}
                   height={606}
-                  className="w-full max-w-[900px] xl:max-w-[1152px] h-auto object-contain"
+                  className="w-full max-w-[900px] xl:max-w-[1152px] h-auto object-contain transition-transform duration-700 ease-out hover:-translate-y-2 transform-gpu"
                   loading="lazy"
                   fetchPriority="low"
                   decoding="async"
                 />
               </div>
-              <div className="flex md:hidden flex-col md:flex-row items-center justify-center w-full">
+              <div className="flex md:hidden flex-col md:flex-row items-center justify-center w-full gap-6">
                 <Image
                   src="/images/o-chamado-divergente.webp"
                   alt="O Chamado Divergente"
                   width={594}
                   height={303}
-                  className="w-full max-w-[300px] xl:max-w-[1152px] h-auto object-contain"
+                  className="w-full max-w-[300px] xl:max-w-[1152px] h-auto object-contain transition-transform duration-700 ease-out hover:-translate-y-2 transform-gpu"
                   loading="lazy"
                   fetchPriority="low"
                   decoding="async"
@@ -115,7 +123,7 @@ export function EventsSection() {
                   alt="Plano Perfeito"
                   width={558}
                   height={303}
-                  className="w-full max-w-[300px] xl:max-w-[1152px] h-auto object-contain"
+                  className="w-full max-w-[300px] xl:max-w-[1152px] h-auto object-contain transition-transform duration-700 ease-out hover:-translate-y-2 transform-gpu"
                   loading="lazy"
                   fetchPriority="low"
                   decoding="async"
@@ -125,7 +133,7 @@ export function EventsSection() {
                   alt="O Ponto Cego"
                   width={371}
                   height={303}
-                  className="w-full max-w-[300px] xl:max-w-[1152px] h-auto object-contain"
+                  className="w-full max-w-[300px] xl:max-w-[1152px] h-auto object-contain transition-transform duration-700 ease-out hover:-translate-y-2 transform-gpu"
                   loading="lazy"
                   fetchPriority="low"
                   decoding="async"
@@ -135,7 +143,7 @@ export function EventsSection() {
                   alt="Efeito Paralelo"
                   width={493}
                   height={303}
-                  className="w-full max-w-[300px] xl:max-w-[1152px] h-auto object-contain"
+                  className="w-full max-w-[300px] xl:max-w-[1152px] h-auto object-contain transition-transform duration-700 ease-out hover:-translate-y-2 transform-gpu"
                   loading="lazy"
                   fetchPriority="low"
                   decoding="async"
@@ -145,13 +153,14 @@ export function EventsSection() {
                   alt="Celebre Comigo"
                   width={288}
                   height={303}
-                  className="w-full max-w-[300px] xl:max-w-[1152px] h-auto object-contain"
+                  className="w-full max-w-[300px] xl:max-w-[1152px] h-auto object-contain transition-transform duration-700 ease-out hover:-translate-y-2 transform-gpu"
                   loading="lazy"
                   fetchPriority="low"
                   decoding="async"
                 />
               </div>
-            </>
+            </>,
+            160
           )}
         </div>
       </div>

@@ -22,7 +22,7 @@ export function MentorProfileCard({
   return (
     <article
       className={cn(
-        "flex flex-col text-areia-claro shadow-lg",
+        "flex flex-col text-areia-claro",
         "transition-transform duration-300 hover:-translate-y-1",
         className
       )}

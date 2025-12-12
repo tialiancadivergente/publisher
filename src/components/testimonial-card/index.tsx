@@ -14,7 +14,7 @@ export function TestimonialCard({
   return (
     <article
       className={cn(
-        "flex flex-col h-full",
+        "flex flex-col h-full w-full max-w-[368px] mx-auto",
         "bg-areia-claro border-r border-verde-folha/20",
         "last:border-r-0"
       )}
@@ -27,9 +27,8 @@ export function TestimonialCard({
           alt={imageAlt}
           fill
           className="object-cover"
-          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
           loading="lazy"
-          fetchPriority="low"
+          fetchPriority="high"
           decoding="async"
         />
       </div>

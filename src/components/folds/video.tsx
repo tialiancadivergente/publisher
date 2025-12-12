@@ -1,5 +1,8 @@
 "use client";
+
 import { PlayIcon } from "lucide-react";
+
+import { Reveal } from "@/components/ui/reveal";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 export function VideoSection() {
@@ -7,11 +10,16 @@ export function VideoSection() {
   return (
     <section className="w-full sm:h-[811px] h-[469px] bg-cover bg-center bg-[url('/images/bg-video.webp')]">
       <div className="container text-center sm:text-[40px]/[60px] text-base/8 font-semibold text-dourado sm:mt-24 mt-10 flex flex-col sm:gap-28 gap-20">
-        <p>TODA DEMORA NOS RESULTADOS ESCONDE UMA ESPERA NAS RELAÇÕES</p>
-        <div className="bg-verde-folha/30 hover:bg-verde-folha/60 transition-colors duration-300 cursor-pointer rounded-full sm:p-8 p-4 w-auto mx-auto">
-          <PlayIcon className="text-white font-extralight" size={isMobile ? 40 : 70} />
-        </div>
+        <Reveal>
+          <p>TODA DEMORA NOS RESULTADOS ESCONDE UMA ESPERA NAS RELAÇÕES</p>
+        </Reveal>
+        <Reveal delay={140}>
+          <div className="flex items-center justify-center bg-verde-folha/30 hover:bg-verde-folha/60 transition-colors duration-300 cursor-pointer rounded-full sm:p-8 p-4 w-[112px] h-[112px] mx-auto shadow-xl shadow-verde-escuro/30 hover:scale-105 transform-gpu">
+            <PlayIcon className="text-white font-extralight" size={40} />
+          </div>
+        </Reveal>
       </div>
     </section>
   );
 }
+

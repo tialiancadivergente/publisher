@@ -44,6 +44,7 @@ export function EventsSection() {
             <div className="flex flex-col md:flex-row items-center justify-center w-full">
               <Image
                 src="/images/blindado.jpg"
+                quality={100}
                 alt="Blindado"
                 width={384}
                 height={460}
@@ -55,6 +56,7 @@ export function EventsSection() {
               />
               <Image
                 src="/images/o-resgate-dos-otimistas.jpg"
+                quality={100}
                 alt="O Resgate dos Otimistas"
                 width={384}
                 height={460}
@@ -66,6 +68,7 @@ export function EventsSection() {
               />
               <Image
                 src="/images/o-fim-das-relacoes-ruins.jpg"
+                quality={100}
                 alt="O Fim das RelaÇõÇæes Ruins"
                 width={384}
                 height={460}
@@ -98,6 +101,7 @@ export function EventsSection() {
               <div className="flex-col md:flex-row items-center justify-center w-full hidden md:flex gap-6">
                 <Image
                   src="/images/eventos-presenciais.jpg"
+                  quality={100}
                   alt="Eventos Presenciais"
                   width={1152}
                   height={606}
@@ -110,6 +114,7 @@ export function EventsSection() {
               <div className="flex md:hidden flex-col md:flex-row items-center justify-center w-full gap-6">
                 <Image
                   src="/images/o-chamado-divergente.webp"
+                  quality={100}
                   alt="O Chamado Divergente"
                   width={594}
                   height={303}
@@ -120,6 +125,7 @@ export function EventsSection() {
                 />
                 <Image
                   src="/images/plano-perfeito.webp"
+                  quality={100}
                   alt="Plano Perfeito"
                   width={558}
                   height={303}
@@ -130,6 +136,7 @@ export function EventsSection() {
                 />
                 <Image
                   src="/images/o-ponto-cego.webp"
+                  quality={100}
                   alt="O Ponto Cego"
                   width={371}
                   height={303}
@@ -140,6 +147,7 @@ export function EventsSection() {
                 />
                 <Image
                   src="/images/efeito-paralelo.webp"
+                  quality={100}
                   alt="Efeito Paralelo"
                   width={493}
                   height={303}
@@ -150,6 +158,7 @@ export function EventsSection() {
                 />
                 <Image
                   src="/images/celebre-comigo.webp"
+                  quality={100}
                   alt="Celebre Comigo"
                   width={288}
                   height={303}

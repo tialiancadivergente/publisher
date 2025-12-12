@@ -21,6 +21,7 @@ export function MentorCard({
           src={imageSrc}
           alt={imageAlt}
           fill
+          quality={100}
           className="object-cover"
           sizes="(max-width: 768px) 70vw, (max-width: 1024px) 30vw, 20vw"
           loading="lazy"

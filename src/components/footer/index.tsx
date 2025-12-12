@@ -59,6 +59,7 @@ export function Footer() {
               }px, ${isMobile ? 94 : 306}px`}
               style={{ height: "auto", width: isMobile ? 94 : 306 }}
               role="img"
+              quality={100}
             />
           </div>
           <div className="flex items-center">
@@ -71,6 +72,8 @@ export function Footer() {
               priority={false}
               loading="lazy"
               decoding="async"
+              fetchPriority="low"
+              quality={100}
             />
           </div>
         </div>

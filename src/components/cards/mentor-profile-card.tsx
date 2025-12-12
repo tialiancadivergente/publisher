@@ -34,6 +34,7 @@ export function MentorProfileCard({
           alt={imageAlt}
           fill
           className="object-cover"
+          quality={100}          
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 45vw, 304px"
           priority={false}
           loading="lazy"

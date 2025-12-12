@@ -25,6 +25,7 @@ export function DivergentUniversitySection() {
             aria-hidden="true"
             fetchPriority="low"
             decoding="async"
+            quality={100}
           />
         </Reveal>
         <Reveal delay={140}>

@@ -14,6 +14,7 @@ export function Header() {
         alt="Logotipo da Aliança Divergente"
         width={isMobile ? 94 : 306}
         height={isMobile ? 27 : 40}
+        quality={100}
         priority
         sizes={`(max-width: ${isMobile ? 94 : 306}px) ${isMobile ? 94 : 306}px, ${isMobile ? 94 : 306}px`}
         style={{ height: "auto", width: isMobile ? 94 : 306 }}

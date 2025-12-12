@@ -27,6 +27,8 @@ export function TestimonialCard({
           alt={imageAlt}
           fill
           className="object-cover"
+          sizes="(max-width: 768px) 100vw, 368px"
+          quality={100}
           loading="lazy"
           fetchPriority="high"
           decoding="async"

@@ -44,6 +44,7 @@ export function PressHighlightCard({
           className="object-cover"
           sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 352px"
           loading="lazy"
+          quality={100}
           decoding="async"
           fetchPriority="low"
         />
@@ -70,6 +71,7 @@ export function PressHighlightCard({
                 alt={sourceLogoAlt}
                 width={0}
                 height={24}
+                quality={100}
                 className="object-contain object-left h-6 w-auto"
                 sizes="(max-width: 640px) 80px, 120px"
                 loading="lazy"

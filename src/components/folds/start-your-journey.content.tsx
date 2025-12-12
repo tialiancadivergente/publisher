@@ -102,6 +102,7 @@ export function StartYourJourneyContentSection() {
             src="/images/avatares.png"
             alt="Avatares de Aliados"
             width={164}
+            quality={100}
             height={56}
           />
           <div className="font-mulish">

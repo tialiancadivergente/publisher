@@ -54,6 +54,7 @@ export function ThePacemakerSection() {
             alt=""
             width={352}
             height={713}
+            quality={100}
             loading="lazy"
             decoding="async"
             fetchPriority="low"
@@ -76,6 +77,7 @@ export function ThePacemakerSection() {
                 width={186}
                 height={260}
                 loading="lazy"
+                quality={100}
                 decoding="async"
                 fetchPriority="low"
                 className="max-w-[186px] min-w-[120px] w-auto h-auto object-cover"
@@ -104,6 +106,7 @@ export function ThePacemakerSection() {
                 alt=""
                 width={302}
                 height={50}
+                quality={100}
                 loading="lazy"
                 decoding="async"
                 fetchPriority="low"
@@ -115,6 +118,7 @@ export function ThePacemakerSection() {
                 alt="BotÇœo para iniciar o Ç­udio"
                 width={52}
                 height={52}
+                quality={100}
                 loading="lazy"
                 decoding="async"
                 fetchPriority="low"

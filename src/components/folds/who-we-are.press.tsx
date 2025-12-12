@@ -34,6 +34,7 @@ export function WhoWeArePressSection() {
                 className={cn(logo.className, "object-contain")}
                 loading="lazy"
                 fetchPriority="low"
+                quality={100}
                 sizes={`(max-width: 768px) ${logo.mobileWidth}px, ${logo.width}px`}
                 decoding="async"
               />

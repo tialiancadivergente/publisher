@@ -78,6 +78,7 @@ export function AlliesStatsSection() {
                 : "lg:max-w-[407px] max-w-[407px]"
             )}
             sizes={imageSizes}
+            quality={100}
             loading="lazy"
             decoding="async"
             fetchPriority="low"
@@ -130,6 +131,7 @@ export function AlliesStatsSection() {
                 : "lg:max-w-[407px] max-w-[407px]"
             )}
             sizes={imageSizes}
+            quality={100}
             loading="lazy"
             decoding="async"
             fetchPriority="low"

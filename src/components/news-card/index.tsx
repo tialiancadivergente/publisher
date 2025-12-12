@@ -65,6 +65,7 @@ export const NewsCard = React.memo(function NewsCard({
         className="w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03] transform-gpu"
         loading="lazy"
         fetchPriority="low"
+        quality={100}
         sizes={imageSizes}
         decoding="async"
       />

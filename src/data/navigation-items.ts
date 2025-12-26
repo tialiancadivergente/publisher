@@ -46,6 +46,7 @@ export interface LinkNavigationItem extends BaseNavigationItem {
   readonly type: "link";
   readonly href: string;
   readonly linkClassName?: string;
+  readonly target?: string;
 }
 
 export type NavigationItem = DropdownNavigationItem | LinkNavigationItem;
@@ -57,8 +58,9 @@ export const navigationItems: readonly NavigationItem[] = [
     id: "seja-aliado",
     type: "link",
     label: "Seja Aliado",
-    href: "/",
+    href: "https://aliancadivergentead.pro.typeform.com/to/JrjAi1qB?utm_source=site&utm_medium=home&utm_campaign=seja-aliado",
     linkClassName: "font-extrabold " + linkClassName,
+    target: "_blank",
   },
 	{
     id: "central-de-conteudo",

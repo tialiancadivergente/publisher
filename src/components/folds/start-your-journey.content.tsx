@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
 import { Reveal } from "@/components/ui/reveal";
+import Link from "next/link";
 
 function AnimatedNumber({
   value,
@@ -92,7 +93,9 @@ export function StartYourJourneyContentSection() {
       </Reveal>
       <Reveal delay={220}>
         <button className="bg-dourado hover:bg-dourado/60 transition-colors duration-300 text-white px-8 py-3 uppercase font-bold sm:text-base text-xs mt-6 shadow-lg shadow-dourado/20">
-          Seja Aliado
+          <Link href="https://aliancadivergentead.pro.typeform.com/to/JrjAi1qB?utm_source=site&utm_medium=home&utm_campaign=seja-aliado" target="_blank" rel="noopener noreferrer">
+            Seja Aliado
+          </Link>
         </button>
       </Reveal>
 

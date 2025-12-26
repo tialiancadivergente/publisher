@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { Reveal } from "@/components/ui/reveal";
+import Link from "next/link";
 
 export function ThePacemakerSection() {
   return (
@@ -39,7 +40,13 @@ export function ThePacemakerSection() {
             className="bg-dourado hover:bg-dourado/60 transition-colors duration-300 text-white px-8 py-3 font-bold sm:text-base text-xs mt-6 uppercase focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white shadow-lg shadow-dourado/30"
             aria-label="Se tornar aliado da AlianÇõa Divergente"
           >
-            Seja Aliado
+            <Link
+              href="https://aliancadivergentead.pro.typeform.com/to/JrjAi1qB?utm_source=site&utm_medium=home&utm_campaign=seja-aliado"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Seja Aliado
+            </Link>
           </button>
         </Reveal>
       </div>

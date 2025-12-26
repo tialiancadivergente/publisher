@@ -161,6 +161,7 @@ function NavigationItemRenderer({ item }: { item: NavigationItem }) {
       <NavigationMenuItem>
         <NavigationMenuLink
           asChild
+          target={item.target}
           className={cn(
             item.className,
             item.linkClassName === "navigationMenuTriggerStyle()"
@@ -169,7 +170,13 @@ function NavigationItemRenderer({ item }: { item: NavigationItem }) {
             "bg-transparent font-spectral text-sm xl:text-base text-verde-folha hover:text-areia hover:bg-verde-folha active:text-areia active:bg-verde-folha"
           )}
         >
-          <Link href={item.href}>{item.label}</Link>
+          <Link
+            href={item.href}
+            target={item.target}
+            rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
+          >
+            {item.label}
+          </Link>
         </NavigationMenuLink>
       </NavigationMenuItem>
     );
@@ -189,7 +196,13 @@ function MobileMenu() {
   return (
     <div className="flex items-center justify-end gap-4">
       <button className="bg-verde-folha hover:bg-verde-folha/80 transition-colors duration-300 text-white px-3 py-1 text-[10px] uppercase font-bold">
-        Seja Aliado
+        <Link
+          href="https://aliancadivergentead.pro.typeform.com/to/JrjAi1qB?utm_source=site&utm_medium=home&utm_campaign=seja-aliado"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Seja Aliado
+        </Link>
       </button>
       <Drawer direction="right">
         <DrawerTrigger asChild>
@@ -224,6 +237,12 @@ function MobileMenu() {
                     <DrawerClose asChild>
                       <Link
                         href={item.href}
+                        target={item.target}
+                        rel={
+                          item.target === "_blank"
+                            ? "noopener noreferrer"
+                            : undefined
+                        }
                         className={cn(
                           "block px-4 py-3 rounded-md font-spectral text-base text-verde-folha",
                           "hover:bg-verde-folha hover:text-areia transition-colors",

@@ -22,7 +22,7 @@ export default function Home() {
       <VideoSection />
       <WhoWeAreSection />
       <StartYourJourneySection />
-      <EventsSection />
+      {/* <EventsSection /> */}
       <StoriesOfTheAlliesSection />
       <DivergentUniversitySection />
       <ThePacemakerSection />

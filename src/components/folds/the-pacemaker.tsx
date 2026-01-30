@@ -136,9 +136,9 @@ export function ThePacemakerSection() {
         </Reveal>
         <Reveal className="w-full flex-1 flex flex-col gap-4" delay={420}>
           <div className="w-full flex-1 flex flex-col gap-4">
-            <h3 className="text-4xl md:text-6xl/[80px] text-dourado uppercase">
+            <h2 className="text-4xl md:text-6xl/[80px] text-dourado uppercase">
               Dê play na <br /> sua Permissão
-            </h3>
+            </h2>
             <p className="text-areia-claro text-[18px]/[32px] font-light font-mulish">
               Dentro do Marca Passos, o Aliado tem acesso ao Áudio Diário.{" "}
               <span className="font-bold">

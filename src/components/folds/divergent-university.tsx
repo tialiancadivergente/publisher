@@ -6,6 +6,7 @@ import { Reveal } from "@/components/ui/reveal";
 export function DivergentUniversitySection() {
   return (
     <section
+      id="divergent-university"
       className="w-full bg-[url('/images/bg-universidade-divergente.webp')] bg-cover bg-center bg-no-repeat py-20"
       aria-labelledby="universidade-divergente-heading"
       role="region"

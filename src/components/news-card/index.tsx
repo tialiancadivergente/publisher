@@ -43,12 +43,12 @@ export const NewsCard = React.memo(function NewsCard({
 
   const contentSection = (
     <div className="flex flex-col gap-6">
-      <h2
+      <h3
         id={headingId}
         className="text-2xl md:text-3xl lg:text-4xl text-dourado font-bold"
       >
         {title}
-      </h2>
+      </h3>
       <div className="text-verde-eucalipto text-base md:text-lg leading-7 md:leading-8 font-light font-mulish">
         {description}
       </div>

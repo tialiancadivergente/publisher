@@ -15,17 +15,17 @@ export const footerContentLinks: readonly FooterLink[] = [
   {
     id: "central-conteudo",
     label: "Central de Conteúdo",
-    href: "/central-de-conteudo",
+    href: "https://blog.aliancadivergente.com.br/",
   },
   {
     id: "historias-aliados",
     label: "Histórias dos Aliados",
-    href: "/historias-dos-aliados",
+    href: "#stories-of-the-allies",
   },
   {
     id: "universidade-divergente",
     label: "Universidade Divergente",
-    href: "/universidade-divergente",
+    href: "#divergent-university",
   },
 ] as const;
 
@@ -33,7 +33,7 @@ export const footerAboutLinks: readonly FooterLink[] = [
   {
     id: "quem-somos",
     label: "Quem Somos",
-    href: "/quem-somos",
+    href: "#who-we-are",
   },
   {
     id: "trabalhe-conosco",

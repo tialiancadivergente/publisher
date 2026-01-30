@@ -33,6 +33,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import { scrollToId } from "@/lib/utils/scroll-to-id";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   CircleHelpIcon,
@@ -173,7 +174,12 @@ function NavigationItemRenderer({ item }: { item: NavigationItem }) {
           <Link
             href={item.href}
             target={item.target}
-            rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
+            rel={item.target === "_blank" ? "noopener noreferrer" : undefined}            
+            onClick={(event) => {
+              if (!item.href.startsWith("#")) return;
+              event.preventDefault();
+              scrollToId(item.href.slice(1));
+            }}
           >
             {item.label}
           </Link>
@@ -248,6 +254,11 @@ function MobileMenu() {
                           "hover:bg-verde-folha hover:text-areia transition-colors",
                           "active:bg-verde-folha active:text-areia"
                         )}
+                        onClick={(event) => {
+                          if (!item.href.startsWith("#")) return;
+                          event.preventDefault();
+                          scrollToId(item.href.slice(1));
+                        }}
                       >
                         {item.label}
                       </Link>

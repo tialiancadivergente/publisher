@@ -1,5 +1,6 @@
 import * as React from "react";
 import { EmblaOptionsType } from "embla-carousel";
+import Link from "next/link";
 
 import { PressHighlightCard } from "../cards/press-highlight-card";
 import EmblaCarousel from "../embla-carousel/embla-carousel";
@@ -55,13 +56,13 @@ export function PressSaysSection() {
         className="container flex flex-col gap-12 items-center justify-center text-center"
         delay={220}
       >
-        <button
-          type="button"
+        <Link
+          href="https://blog.aliancadivergente.com.br/"
           className="border-2 border-dourado text-dourado bg-transparent hover:bg-dourado hover:text-white transition-colors duration-300 px-8 py-3 font-bold sm:text-base text-xs mt-6 uppercase focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dourado shadow-lg shadow-dourado/20"
-          aria-label="Ver mais publicaÇõÇæes na Central de ConteÇ§do"
+          aria-label="Ver mais publicações na Central de Conteúdo"
         >
           Ver mais na Central de Conteúdo
-        </button>
+        </Link>
       </Reveal>
     </section>
   );

@@ -1,18 +1,19 @@
 export function WhoWeAreContentSection() {
   return (
     <section
+      id="who-we-are"
       className="w-full bg-[url('/images/bg-quem-somos.webp')] bg-cover bg-center bg-no-repeat pt-32"
       aria-labelledby="quem-somos-heading"
     >
       <div className="container py-28 flex flex-col md:flex-row gap-8 md:gap-56">
         <div className="flex flex-col gap-6">
-          <h2
+          <div
             id="quem-somos-heading"
             className="text-4xl md:text-6xl text-dourado flex md:flex-col gap-6"
           >
-            <span className="block">Quem</span>
-            <span className="block">Somos</span>
-          </h2>
+            <h2 className="block">Quem</h2>
+            <h2 className="block">Somos</h2>
+          </div>
         </div>
         <div className="flex-1 flex flex-col gap-6 text-white text-base md:text-[18px] leading-7 md:leading-[32px] font-light font-mulish">
           <p>

@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Reveal } from "@/components/ui/reveal";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils";
+import { scrollToId } from "@/lib/utils/scroll-to-id";
 
 const TABLET_BREAKPOINT = 1024;
 const DESKTOP_IMAGE_WIDTH = 407;
@@ -88,12 +89,12 @@ export function AlliesStatsSection() {
           className="flex flex-col gap-4 items-center justify-center max-w-[419px] w-full mx-auto text-center lg:text-left"
           delay={140}
         >
-          <h3
+          <h2
             id="allies-stats-heading"
             className="text-4xl md:text-6xl leading-snug text-ouro-velho uppercase"
           >
             +140mil <br /> Aliados
-          </h3>
+          </h2>
           <p className="text-ouro-velho text-xl md:text-2xl font-light">
             com mais Permissão
           </p>
@@ -108,6 +109,7 @@ export function AlliesStatsSection() {
             type="button"
             className="border-2 border-ouro-velho text-ouro-velho bg-transparent hover:bg-ouro-velho hover:text-white transition-colors duration-300 px-8 py-3 font-bold sm:text-base text-xs mt-6 uppercase focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ouro-velho shadow-lg shadow-ouro-velho/20"
             aria-label="Ver histÇürias dos aliados"
+            onClick={() => void scrollToId("stories-of-the-allies")}
           >
             Veja As Histórias dos aliados
           </button>

@@ -13,7 +13,7 @@ export function StoriesOfTheAlliesSection() {
   };
 
   return (
-    <section className="w-full bg-ouro-velho py-24 flex flex-col items-center justify-center gap-16">
+    <section id="stories-of-the-allies" className="w-full bg-ouro-velho py-24 flex flex-col items-center justify-center gap-16">
       <div className="container">
         <Reveal>
           <h2 className="text-4xl md:text-6xl text-creme text-center">

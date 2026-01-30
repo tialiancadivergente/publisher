@@ -4,7 +4,7 @@ import Link from "next/link";
 export function HeroSection() {
   return (
     <div className="container flex flex-col items-center justify-center font-spectral text-verde-eucalipto text-center gap-8 py-24">
-      <Reveal as="h1" className="text-3xl sm:text-7xl font-bold" tabIndex={0}>
+      <Reveal as="h2" className="text-3xl sm:text-7xl font-bold" tabIndex={0}>
         Clareza, Coragem e Avanço
       </Reveal>
       <Reveal

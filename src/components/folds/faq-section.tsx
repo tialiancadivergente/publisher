@@ -21,7 +21,9 @@ export function FAQSection() {
           className="text-left text-creme hover:text-creme/80 py-4 font-bold"
           aria-label={`Expandir ou recolher: ${item.question}`}
         >
-          {item.question}
+          <h3>
+            {item.question}
+          </h3>
         </AccordionTrigger>
         <AccordionContent className="text-creme/90 text-base leading-7 pt-2 pb-4">
           {item.answer}

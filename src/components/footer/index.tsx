@@ -10,6 +10,7 @@ import {
 } from "@/data/footer-links";
 import { Instagram, Youtube } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { scrollToId } from "@/lib/utils/scroll-to-id";
 
 function SocialIcon({ icon }: { icon: "instagram" | "youtube" | "tiktok" }) {
   switch (icon) {
@@ -89,6 +90,11 @@ export function Footer() {
               href={link.href}
               className="text-creme hover:text-dourado transition-colors"
               aria-label={link.label}
+              onClick={(event) => {
+                if (!link.href.startsWith("#")) return;
+                event.preventDefault();
+                scrollToId(link.href.slice(1));
+              }}
             >
               {link.label}
             </Link>

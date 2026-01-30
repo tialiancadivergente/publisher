@@ -55,9 +55,8 @@ export function Footer() {
               width={isMobile ? 94 : 306}
               height={isMobile ? 27 : 40}
               priority
-              sizes={`(max-width: ${isMobile ? 94 : 306}px) ${
-                isMobile ? 94 : 306
-              }px, ${isMobile ? 94 : 306}px`}
+              sizes={`(max-width: ${isMobile ? 94 : 306}px) ${isMobile ? 94 : 306
+                }px, ${isMobile ? 94 : 306}px`}
               style={{ height: "auto", width: isMobile ? 94 : 306 }}
               role="img"
               quality={100}
@@ -112,6 +111,11 @@ export function Footer() {
               href={link.href}
               className="text-creme hover:text-dourado transition-colors"
               aria-label={link.label}
+              onClick={(event) => {
+                if (!link.href.startsWith("#")) return;
+                event.preventDefault();
+                scrollToId(link.href.slice(1));
+              }}
             >
               {link.label}
             </Link>

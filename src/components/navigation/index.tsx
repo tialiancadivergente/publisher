@@ -199,6 +199,9 @@ function NavigationItemRenderer({ item }: { item: NavigationItem }) {
 }
 
 function MobileMenu() {
+  const [drawerOpen, setDrawerOpen] = React.useState(false);
+  const restoreScrollOnCloseRef = React.useRef(true);
+
   return (
     <div className="flex items-center justify-end gap-4">
       <button className="bg-verde-folha hover:bg-verde-folha/80 transition-colors duration-300 text-white px-3 py-1 text-[10px] uppercase font-bold">
@@ -210,7 +213,23 @@ function MobileMenu() {
           Seja Aliado
         </Link>
       </button>
-      <Drawer direction="right">
+      <Drawer
+        direction="right"
+        open={drawerOpen}
+        onOpenChange={(nextOpen) => {
+          if (!nextOpen && restoreScrollOnCloseRef.current) {
+            const y = window.scrollY;
+            // Evita "puxar" a página pro topo ao restaurar o foco no trigger
+            // após o fechamento do Drawer.
+            setTimeout(() => window.scrollTo({ top: y, behavior: "auto" }), 0);
+            setTimeout(() => window.scrollTo({ top: y, behavior: "auto" }), 150);
+          }
+
+          // Reset para o próximo fechamento (exceto quando um clique de âncora desabilitar)
+          restoreScrollOnCloseRef.current = true;
+          setDrawerOpen(nextOpen);
+        }}
+      >
         <DrawerTrigger asChild>
           <button
             className="flex items-center justify-center p-2 text-verde-folha hover:text-dourado transition-colors"
@@ -226,6 +245,7 @@ function MobileMenu() {
             "border-l border-verde-folha/20",
             "mt-0 [&>div:first-child]:hidden"
           )}
+          onCloseAutoFocus={(event) => event.preventDefault()}
         >
           <DrawerHeader className="border-b border-verde-folha/20">
             <DrawerTitle className="text-lg font-spectral font-semibold text-verde-folha text-left">
@@ -240,50 +260,83 @@ function MobileMenu() {
               {navigationItems.map((item) => (
                 <li key={item.id}>
                   {item.type === "link" ? (
-                    <DrawerClose asChild>
-                      <Link
-                        href={item.href}
-                        target={item.target}
-                        rel={
-                          item.target === "_blank"
-                            ? "noopener noreferrer"
-                            : undefined
-                        }
+                    item.href.startsWith("#") ? (
+                      <button
+                        type="button"
                         className={cn(
-                          "block px-4 py-3 rounded-md font-spectral text-base text-verde-folha",
+                          "block w-full text-left px-4 py-3 rounded-md font-spectral text-base text-verde-folha",
                           "hover:bg-verde-folha hover:text-areia transition-colors",
                           "active:bg-verde-folha active:text-areia"
                         )}
-                        onClick={(event) => {
-                          if (!item.href.startsWith("#")) return;
-                          event.preventDefault();
-                          scrollToId(item.href.slice(1));
+                        aria-label={item.label}
+                        onClick={() => {
+                          scrollToId(item.href.slice(1), { delayMs: 0 });
+                          restoreScrollOnCloseRef.current = false;
+                          setDrawerOpen(false);
                         }}
                       >
                         {item.label}
-                      </Link>
-                    </DrawerClose>
+                      </button>
+                    ) : (
+                      <DrawerClose asChild>
+                        <Link
+                          href={item.href}
+                          target={item.target}
+                          rel={
+                            item.target === "_blank"
+                              ? "noopener noreferrer"
+                              : undefined
+                          }
+                          className={cn(
+                            "block px-4 py-3 rounded-md font-spectral text-base text-verde-folha",
+                            "hover:bg-verde-folha hover:text-areia transition-colors",
+                            "active:bg-verde-folha active:text-areia"
+                          )}
+                        >
+                          {item.label}
+                        </Link>
+                      </DrawerClose>
+                    )
                   ) : (
                     <div className="space-y-2">
                       <div className="px-4 py-2 font-spectral font-semibold text-verde-folha text-sm uppercase tracking-wide">
                         {item.label}
                       </div>
                       {item.content.items.map((subItem, index) => (
-                        <DrawerClose
-                          key={subItem.id || `${subItem.title}-${index}`}
-                          asChild
-                        >
-                          <Link
-                            href={subItem.href}
+                        subItem.href.startsWith("#") ? (
+                          <button
+                            key={subItem.id || `${subItem.title}-${index}`}
+                            type="button"
                             className={cn(
-                              "block px-6 py-2 rounded-md font-spectral text-sm text-verde-folha/80",
+                              "block w-full text-left px-6 py-2 rounded-md font-spectral text-sm text-verde-folha/80",
                               "hover:bg-verde-folha hover:text-areia transition-colors",
                               "active:bg-verde-folha active:text-areia"
                             )}
+                            onClick={() => {
+                              scrollToId(subItem.href.slice(1), { delayMs: 0 });
+                              restoreScrollOnCloseRef.current = false;
+                              setDrawerOpen(false);
+                            }}
                           >
                             {subItem.title}
-                          </Link>
-                        </DrawerClose>
+                          </button>
+                        ) : (
+                          <DrawerClose
+                            key={subItem.id || `${subItem.title}-${index}`}
+                            asChild
+                          >
+                            <Link
+                              href={subItem.href}
+                              className={cn(
+                                "block px-6 py-2 rounded-md font-spectral text-sm text-verde-folha/80",
+                                "hover:bg-verde-folha hover:text-areia transition-colors",
+                                "active:bg-verde-folha active:text-areia"
+                              )}
+                            >
+                              {subItem.title}
+                            </Link>
+                          </DrawerClose>
+                        )
                       ))}
                     </div>
                   )}

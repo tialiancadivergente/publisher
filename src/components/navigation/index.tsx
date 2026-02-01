@@ -49,16 +49,33 @@ function NavigationLinkItem({
   layout: string;
 }) {
   const IconComponent = item.icon ? iconMap[item.icon] : null;
+  const isHashHref = item.href.startsWith("#");
 
   if (layout === "list-detailed") {
     return (
       <NavigationMenuLink asChild>
-        <Link href={item.href} className={item.className}>
-          <div className="font-medium">{item.title}</div>
-          {item.description && (
-            <div className="text-muted-foreground">{item.description}</div>
-          )}
-        </Link>
+        {isHashHref ? (
+          <a
+            href={item.href}
+            className={item.className}
+            onClick={(event) => {
+              event.preventDefault();
+              scrollToId(item.href.slice(1), { delayMs: 0 });
+            }}
+          >
+            <div className="font-medium">{item.title}</div>
+            {item.description && (
+              <div className="text-muted-foreground">{item.description}</div>
+            )}
+          </a>
+        ) : (
+          <Link href={item.href} className={item.className}>
+            <div className="font-medium">{item.title}</div>
+            {item.description && (
+              <div className="text-muted-foreground">{item.description}</div>
+            )}
+          </Link>
+        )}
       </NavigationMenuLink>
     );
   }
@@ -66,9 +83,22 @@ function NavigationLinkItem({
   if (layout === "list-simple") {
     return (
       <NavigationMenuLink asChild>
-        <Link href={item.href} className={item.className}>
-          {item.title}
-        </Link>
+        {isHashHref ? (
+          <a
+            href={item.href}
+            className={item.className}
+            onClick={(event) => {
+              event.preventDefault();
+              scrollToId(item.href.slice(1), { delayMs: 0 });
+            }}
+          >
+            {item.title}
+          </a>
+        ) : (
+          <Link href={item.href} className={item.className}>
+            {item.title}
+          </Link>
+        )}
       </NavigationMenuLink>
     );
   }
@@ -76,13 +106,27 @@ function NavigationLinkItem({
   if (layout === "list-icon" && IconComponent) {
     return (
       <NavigationMenuLink asChild>
-        <Link
-          href={item.href}
-          className={`flex-row items-center gap-2 ${item.className || ""}`}
-        >
-          <IconComponent />
-          {item.title}
-        </Link>
+        {isHashHref ? (
+          <a
+            href={item.href}
+            className={`flex items-center gap-2 ${item.className || ""}`}
+            onClick={(event) => {
+              event.preventDefault();
+              scrollToId(item.href.slice(1), { delayMs: 0 });
+            }}
+          >
+            <IconComponent />
+            {item.title}
+          </a>
+        ) : (
+          <Link
+            href={item.href}
+            className={`flex items-center gap-2 ${item.className || ""}`}
+          >
+            <IconComponent />
+            {item.title}
+          </Link>
+        )}
       </NavigationMenuLink>
     );
   }
@@ -158,6 +202,7 @@ function NavigationContent({
 
 function NavigationItemRenderer({ item }: { item: NavigationItem }) {
   if (item.type === "link") {
+    const isHashHref = item.href.startsWith("#");
     return (
       <NavigationMenuItem>
         <NavigationMenuLink
@@ -171,18 +216,27 @@ function NavigationItemRenderer({ item }: { item: NavigationItem }) {
             "bg-transparent font-spectral text-sm xl:text-base text-verde-folha hover:text-areia hover:bg-verde-folha active:text-areia active:bg-verde-folha"
           )}
         >
-          <Link
-            href={item.href}
-            target={item.target}
-            rel={item.target === "_blank" ? "noopener noreferrer" : undefined}            
-            onClick={(event) => {
-              if (!item.href.startsWith("#")) return;
-              event.preventDefault();
-              scrollToId(item.href.slice(1));
-            }}
-          >
-            {item.label}
-          </Link>
+          {isHashHref ? (
+            <a
+              href={item.href}
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToId(item.href.slice(1), { delayMs: 0 });
+              }}
+            >
+              {item.label}
+            </a>
+          ) : (
+            <Link
+              href={item.href}
+              target={item.target}
+              rel={
+                item.target === "_blank" ? "noopener noreferrer" : undefined
+              }
+            >
+              {item.label}
+            </Link>
+          )}
         </NavigationMenuLink>
       </NavigationMenuItem>
     );
@@ -202,6 +256,70 @@ function MobileMenu() {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
   const restoreScrollOnCloseRef = React.useRef(true);
   const pendingScrollIdRef = React.useRef<string | null>(null);
+  const pendingScrollTimerRef = React.useRef<number | null>(null);
+
+  const clearPendingScrollTimer = () => {
+    if (pendingScrollTimerRef.current) {
+      window.clearTimeout(pendingScrollTimerRef.current);
+      pendingScrollTimerRef.current = null;
+    }
+  };
+
+  React.useEffect(() => clearPendingScrollTimer, []);
+
+  React.useEffect(() => {
+    // Como o Drawer é controlado, chamadas diretas a setDrawerOpen(false)
+    // NÃO disparam onOpenChange. Então, garantimos o scroll aqui quando fechar.
+    if (drawerOpen) return;
+    if (!pendingScrollIdRef.current) return;
+
+    const id = pendingScrollIdRef.current;
+    pendingScrollIdRef.current = null;
+    scheduleScrollAfterDrawerClose(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [drawerOpen]);
+
+  const scheduleScrollAfterDrawerClose = (id: string) => {
+    clearPendingScrollTimer();
+
+    const maxAttempts = 50; // ~2.5s
+    const attemptEveryMs = 50;
+    const startDelayMs = 200; // tempo para o Drawer terminar de fechar no mobile
+
+    const attempt = (attemptNumber: number) => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+
+        // Confirma se realmente chegou (alguns lock/anim podem ignorar a 1ª tentativa)
+        const rect = element.getBoundingClientRect();
+        const withinViewport =
+          rect.top >= 0 && rect.top <= window.innerHeight * 0.25;
+
+        if (withinViewport) return;
+      }
+
+      if (attemptNumber >= maxAttempts) {
+        // Última tentativa: tenta mesmo assim (ou loga se não existe)
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        } else {
+          console.error(`Elemento com id '${id}' não encontrado`);
+        }
+        return;
+      }
+
+      pendingScrollTimerRef.current = window.setTimeout(
+        () => attempt(attemptNumber + 1),
+        attemptEveryMs
+      );
+    };
+
+    pendingScrollTimerRef.current = window.setTimeout(
+      () => attempt(0),
+      startDelayMs
+    );
+  };
 
   return (
     <div className="flex items-center justify-end gap-4">
@@ -218,13 +336,7 @@ function MobileMenu() {
         direction="right"
         open={drawerOpen}
         onOpenChange={(nextOpen) => {
-          if (!nextOpen && pendingScrollIdRef.current) {
-            const id = pendingScrollIdRef.current;
-            pendingScrollIdRef.current = null;
-
-            // Espera o Drawer liberar o scroll do body (mobile)
-            setTimeout(() => scrollToId(id, { delayMs: 0 }), 300);
-          } else if (!nextOpen && restoreScrollOnCloseRef.current) {
+          if (!nextOpen && restoreScrollOnCloseRef.current) {
             const y = window.scrollY;
             // Evita "puxar" a página pro topo ao restaurar o foco no trigger
             // após o fechamento do Drawer.
@@ -268,22 +380,25 @@ function MobileMenu() {
                 <li key={item.id}>
                   {item.type === "link" ? (
                     item.href.startsWith("#") ? (
-                      <button
-                        type="button"
-                        className={cn(
-                          "block w-full text-left px-4 py-3 rounded-md font-spectral text-base text-verde-folha",
-                          "hover:bg-verde-folha hover:text-areia transition-colors",
-                          "active:bg-verde-folha active:text-areia"
-                        )}
-                        aria-label={item.label}
-                        onClick={() => {
-                          pendingScrollIdRef.current = item.href.slice(1);
-                          restoreScrollOnCloseRef.current = false;
-                          setDrawerOpen(false);
-                        }}
-                      >
-                        {item.label}
-                      </button>
+                      <DrawerClose asChild>
+                        <a
+                          href={item.href}
+                          className={cn(
+                            "block w-full text-left px-4 py-3 rounded-md font-spectral text-base text-verde-folha",
+                            "hover:bg-verde-folha hover:text-areia transition-colors",
+                            "active:bg-verde-folha active:text-areia"
+                          )}
+                          aria-label={item.label}
+                          onClick={(event) => {
+                            event.preventDefault();
+                            pendingScrollIdRef.current = item.href.slice(1);
+                            restoreScrollOnCloseRef.current = false;
+                            setDrawerOpen(false);
+                          }}
+                        >
+                          {item.label}
+                        </a>
+                      </DrawerClose>
                     ) : (
                       <DrawerClose asChild>
                         <Link
@@ -311,22 +426,27 @@ function MobileMenu() {
                       </div>
                       {item.content.items.map((subItem, index) => (
                         subItem.href.startsWith("#") ? (
-                          <button
+                          <DrawerClose
                             key={subItem.id || `${subItem.title}-${index}`}
-                            type="button"
-                            className={cn(
-                              "block w-full text-left px-6 py-2 rounded-md font-spectral text-sm text-verde-folha/80",
-                              "hover:bg-verde-folha hover:text-areia transition-colors",
-                              "active:bg-verde-folha active:text-areia"
-                            )}
-                            onClick={() => {
-                              pendingScrollIdRef.current = subItem.href.slice(1);
-                              restoreScrollOnCloseRef.current = false;
-                              setDrawerOpen(false);
-                            }}
+                            asChild
                           >
-                            {subItem.title}
-                          </button>
+                            <a
+                              href={subItem.href}
+                              className={cn(
+                                "block w-full text-left px-6 py-2 rounded-md font-spectral text-sm text-verde-folha/80",
+                                "hover:bg-verde-folha hover:text-areia transition-colors",
+                                "active:bg-verde-folha active:text-areia"
+                              )}
+                              onClick={(event) => {
+                                event.preventDefault();
+                                pendingScrollIdRef.current = subItem.href.slice(1);
+                                restoreScrollOnCloseRef.current = false;
+                                setDrawerOpen(false);
+                              }}
+                            >
+                              {subItem.title}
+                            </a>
+                          </DrawerClose>
                         ) : (
                           <DrawerClose
                             key={subItem.id || `${subItem.title}-${index}`}
@@ -381,15 +501,32 @@ function ListItem({
   href,
   ...props
 }: React.ComponentPropsWithoutRef<"li"> & { href: string }) {
+  const isHashHref = href.startsWith("#");
   return (
     <li {...props}>
       <NavigationMenuLink asChild>
-        <Link href={href}>
-          <div className="text-sm leading-none font-medium">{title}</div>
-          <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
-            {children}
-          </p>
-        </Link>
+        {isHashHref ? (
+          <a
+            href={href}
+            className="w-full text-left"
+            onClick={(event) => {
+              event.preventDefault();
+              scrollToId(href.slice(1), { delayMs: 0 });
+            }}
+          >
+            <div className="text-sm leading-none font-medium">{title}</div>
+            <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
+              {children}
+            </p>
+          </a>
+        ) : (
+          <Link href={href}>
+            <div className="text-sm leading-none font-medium">{title}</div>
+            <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
+              {children}
+            </p>
+          </Link>
+        )}
       </NavigationMenuLink>
     </li>
   );

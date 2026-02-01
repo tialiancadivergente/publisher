@@ -52,7 +52,7 @@ export function PressSaysSection() {
       >
         <EmblaCarousel slides={carouselSlides} options={OPTIONS} />
       </Reveal>
-      <Reveal
+      {/* <Reveal
         className="container flex flex-col gap-12 items-center justify-center text-center"
         delay={220}
       >
@@ -63,7 +63,7 @@ export function PressSaysSection() {
         >
           Ver mais na Central de Conteúdo
         </Link>
-      </Reveal>
+      </Reveal> */}
     </section>
   );
 }

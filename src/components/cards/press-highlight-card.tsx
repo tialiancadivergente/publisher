@@ -20,7 +20,12 @@ export function PressHighlightCard({
   publishedAt,
   accentClass,
   className,
+  articleUrl,
 }: PressHighlightCardProps) {
+  const handleClick = () => {
+    window.open(articleUrl, "_blank");
+  };
+
   const formattedDate = new Intl.DateTimeFormat("pt-BR", {
     day: "2-digit",
     month: "2-digit",
@@ -30,13 +35,18 @@ export function PressHighlightCard({
   return (
     <article
       className={cn(
-        "flex h-full flex-col overflow-hidden bg-white shadow-lg",
+        // ADD transition, simple scale+shadow and text accent in h3
+        "flex h-full flex-col overflow-hidden bg-white shadow-lg cursor-pointer transition-transform duration-200 hover:scale-[1.03] hover:shadow-2xl group",
         accentClass,
         className
       )}
       aria-labelledby={`${title}-heading`}
+      onClick={handleClick}
+      role="link"
+      tabIndex={0}
+      aria-label={`${title} - ${excerpt} - ${articleUrl}`}
     >
-      <div className="relative aspect-[352/180] w-full">
+      <div className="relative aspect-[352/180] w-full transition-all duration-200 group-hover:brightness-95">
         <Image
           src={imageSrc}
           alt={imageAlt}
@@ -52,7 +62,7 @@ export function PressHighlightCard({
       <div className="flex flex-1 flex-col gap-4 px-6 py-5 text-left text-verde-eucalipto">
         <h3
           id={`${title}-heading`}
-          className="text-[26px] font-semibold text-verde-eucalipto truncate whitespace-nowrap"
+          className="text-[26px] font-semibold text-verde-eucalipto truncate whitespace-nowrap transition-colors duration-200 group-hover:text-dourado"
           title={title}
         >
           {title}

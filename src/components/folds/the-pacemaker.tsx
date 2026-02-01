@@ -103,10 +103,8 @@ export function ThePacemakerSection() {
     const dataArray = new Uint8Array(bufferLength);
     analyser.getByteFrequencyData(dataArray);
 
-    // background transparente (herda o card)
     ctx.clearRect(0, 0, width, height);
 
-    // configurações de barras
     const barCount = 56; // visual parecido com a referência
     const gap = Math.max(1, Math.floor(2 * dpr));
     const barWidth = Math.max(1, Math.floor((width - gap * (barCount - 1)) / barCount));
@@ -118,7 +116,6 @@ export function ThePacemakerSection() {
       const dataIndex = Math.floor((i / barCount) * bufferLength);
       const v = dataArray[dataIndex] / 255; // 0..1
 
-      // mantém algo visível mesmo em trechos silenciosos enquanto toca
       const normalized = isPlaying ? Math.max(0.08, v) : 0.12;
       const barHeight = normalized * maxBarHeight;
 

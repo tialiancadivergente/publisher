@@ -201,6 +201,7 @@ function NavigationItemRenderer({ item }: { item: NavigationItem }) {
 function MobileMenu() {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
   const restoreScrollOnCloseRef = React.useRef(true);
+  const pendingScrollIdRef = React.useRef<string | null>(null);
 
   return (
     <div className="flex items-center justify-end gap-4">
@@ -217,7 +218,13 @@ function MobileMenu() {
         direction="right"
         open={drawerOpen}
         onOpenChange={(nextOpen) => {
-          if (!nextOpen && restoreScrollOnCloseRef.current) {
+          if (!nextOpen && pendingScrollIdRef.current) {
+            const id = pendingScrollIdRef.current;
+            pendingScrollIdRef.current = null;
+
+            // Espera o Drawer liberar o scroll do body (mobile)
+            setTimeout(() => scrollToId(id, { delayMs: 0 }), 300);
+          } else if (!nextOpen && restoreScrollOnCloseRef.current) {
             const y = window.scrollY;
             // Evita "puxar" a página pro topo ao restaurar o foco no trigger
             // após o fechamento do Drawer.
@@ -270,7 +277,7 @@ function MobileMenu() {
                         )}
                         aria-label={item.label}
                         onClick={() => {
-                          scrollToId(item.href.slice(1), { delayMs: 0 });
+                          pendingScrollIdRef.current = item.href.slice(1);
                           restoreScrollOnCloseRef.current = false;
                           setDrawerOpen(false);
                         }}
@@ -313,7 +320,7 @@ function MobileMenu() {
                               "active:bg-verde-folha active:text-areia"
                             )}
                             onClick={() => {
-                              scrollToId(subItem.href.slice(1), { delayMs: 0 });
+                              pendingScrollIdRef.current = subItem.href.slice(1);
                               restoreScrollOnCloseRef.current = false;
                               setDrawerOpen(false);
                             }}

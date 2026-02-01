@@ -57,13 +57,13 @@ export function MentorProfileCard({
         >
           {description}
         </p>
-        <Link
+        {/* <Link
           href={ctaHref}
           className="inline-flex items-center justify-center border border-verde-folha text-verde-folha px-4 py-3 text-sm font-semibold uppercase tracking-wide hover:bg-areia hover:text-[#06242C] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-areia"
           aria-label={ctaLabel}
         >
           {ctaLabel}
-        </Link>
+        </Link> */}
       </div>
     </article>
   );

@@ -35,16 +35,6 @@ export const footerAboutLinks: readonly FooterLink[] = [
     label: "Quem Somos",
     href: "#who-we-are",
   },
-  {
-    id: "trabalhe-conosco",
-    label: "Trabalhe Conosco",
-    href: "/trabalhe-conosco",
-  },
-  {
-    id: "mapa-site",
-    label: "Mapa do site",
-    href: "/mapa-do-site",
-  },
 ] as const;
 
 export const socialMediaLinks: readonly SocialMediaLink[] = [

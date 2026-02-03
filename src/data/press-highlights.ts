@@ -26,7 +26,7 @@ export const pressHighlightsData: readonly PressHighlight[] = [
     sourceLogoAlt: "Logo do UOL",
     author: "Por Redação",
     publishedAt: "2025-07-07",
-    articleUrl: "https://economiareal.uol.com.br/noticia/feed/evento-que-reune-empresarios-foca-em-legado-e-identidade-das-empresas-633",
+    articleUrl: "https://blog.aliancadivergente.com.br/imprensa/uol-evento-que-reune-empresarios-foca-em-legado-e-identidade-das-empresas/",
     accentClass: "border-b-4 border-[#f7b500]",
   },
   {
@@ -41,7 +41,7 @@ export const pressHighlightsData: readonly PressHighlight[] = [
     sourceLogoAlt: "Logo do O Globo",
     author: "Por O Globo",
     publishedAt: "2025-02-21",
-    articleUrl: "https://oglobo.globo.com/ela/gente/noticia/2025/02/21/conheca-historia-do-empresario-visionario-que-antes-de-se-tornar-multimilionario-acreditou-que-sucesso-nao-era-para-ele.ghtml",
+    articleUrl: "https://blog.aliancadivergente.com.br/imprensa/o-globo-conheca-historia-do-empresario-visionario-que-antes-de-se-tornar-multimilionario-acreditou-que-sucesso-nao-era-para-ele/",
     accentClass: "border-b-4 border-[#004d9b]",
   },
   {
@@ -56,7 +56,7 @@ export const pressHighlightsData: readonly PressHighlight[] = [
     sourceLogoAlt: "Logo da ISTOÉ",
     author: "Por Redação",
     publishedAt: "2025-03-27",
-    articleUrl: "https://istoe.com.br/teoria-relaciona-padroes-invisiveis-a-bloqueios-profissionais-e-emocionais",
+    articleUrl: "https://blog.aliancadivergente.com.br/imprensa/istoe-teoria-relaciona-padroes-invisiveis-a-bloqueios-profissionais-e-emocionais/",
     accentClass: "border-b-4 border-[#d22c27]",
   },
   {
@@ -71,7 +71,7 @@ export const pressHighlightsData: readonly PressHighlight[] = [
     sourceLogoAlt: "Logo do Terra",
     author: "Por Jorge Luiz Brasil",
     publishedAt: "2025-06-12",
-    articleUrl: "https://www.terra.com.br/vida-e-estilo/saude/a-revolucao-emocional-silenciosa-como-a-alianca-divergente-reposiciona-o-brasil-no-mapa-global-do-desenvolvimento-humano,c640bc3aa32ad6b5a720d9b19f76c3d08hvuzx6a.html",
+    articleUrl: "https://blog.aliancadivergente.com.br/imprensa/terra-a-revolucao-emocional-silenciosa-como-a-alianca-divergente-reposiciona-o-brasil-no-mapa-global-do-desenvolvimento-humano/",
     accentClass: "border-b-4 border-[#ff8200]",
   },
   // {

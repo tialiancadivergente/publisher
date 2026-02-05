@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import {
+  extractPhoneDigits,
   handlePhoneInputChange,
   isValidPhoneNumber,
 } from "@/lib/utils/phone-mask";
@@ -11,6 +12,16 @@ export function WhoWeAreCheckSection() {
   const [phoneValue, setPhoneValue] = React.useState("");
   const [error, setError] = React.useState("");
   const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [result, setResult] = React.useState<
+    | { type: "success"; message: string }
+    | { type: "error"; message: string }
+    | null
+  >(null);
+  const abortRef = React.useRef<AbortController | null>(null);
+
+  React.useEffect(() => {
+    return () => abortRef.current?.abort();
+  }, []);
 
   const handlePhoneChange = React.useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -19,12 +30,15 @@ export function WhoWeAreCheckSection() {
       if (error) {
         setError("");
       }
+      if (result) {
+        setResult(null);
+      }
     },
-    [error]
+    [error, result]
   );
 
   const handleSubmit = React.useCallback(
-    (event: React.FormEvent<HTMLFormElement>) => {
+    async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
 
       if (!phoneValue.trim()) {
@@ -39,10 +53,110 @@ export function WhoWeAreCheckSection() {
 
       setIsSubmitting(true);
       setError("");
+      setResult(null);
 
-      setTimeout(() => {
+      abortRef.current?.abort();
+      const controller = new AbortController();
+      abortRef.current = controller;
+
+      const phoneDigits = extractPhoneDigits(phoneValue);
+      const url = `https://api.oaeon.com.br/v1/check-phone?phone=${encodeURIComponent(
+        phoneDigits
+      )}`;
+
+      const defaultErrorMessage = "Este número não é de um dos nossos Aliados.";
+
+      try {
+        const response = await fetch(url, {
+          method: "GET",
+          headers: { Accept: "application/json" },
+          signal: controller.signal,
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+
+        let data: unknown = null;
+        try {
+          data = await response.json();
+        } catch {
+          data = null;
+        }
+
+        const coerceBooleanLike = (value: unknown): boolean | null => {
+          if (typeof value === "boolean") return value;
+          if (typeof value === "number") return value === 1 ? true : value === 0 ? false : null;
+          if (typeof value === "string") {
+            const v = value.trim().toLowerCase();
+            if (["true", "1", "yes", "y", "ok", "verified", "valido", "válido"].includes(v)) return true;
+            if (["false", "0", "no", "n", "invalid", "invalido", "inválido", "unverified"].includes(v)) return false;
+          }
+          return null;
+        };
+
+        const getVerified = (payload: unknown): boolean | null => {
+          if (!payload || typeof payload !== "object") return null;
+          const obj = payload as Record<string, unknown>;
+
+          const direct =
+            obj.verified ?? obj.isVerified ?? obj.valid ?? obj.exists ?? null;
+          const directBool = coerceBooleanLike(direct);
+          if (directBool !== null) return directBool;
+
+          const nested = obj.data;
+          if (nested && typeof nested === "object") {
+            const n = nested as Record<string, unknown>;
+            const v =
+              n.verified ?? n.isVerified ?? n.valid ?? n.exists ?? null;
+            const nestedBool = coerceBooleanLike(v);
+            if (nestedBool !== null) return nestedBool;
+          }
+
+          return null;
+        };
+
+        const getAllyName = (payload: unknown): string | null => {
+          if (!payload || typeof payload !== "object") return null;
+          const obj = payload as Record<string, unknown>;
+
+          const direct = obj.name ?? obj.allyName ?? obj.nome ?? null;
+          if (typeof direct === "string" && direct.trim()) return direct.trim();
+
+          const nested = obj.data;
+          if (nested && typeof nested === "object") {
+            const n = nested as Record<string, unknown>;
+            const v = n.name ?? n.allyName ?? n.nome ?? null;
+            if (typeof v === "string" && v.trim()) return v.trim();
+          }
+
+          return null;
+        };
+
+        const verified = getVerified(data);
+        const allyName = getAllyName(data);
+
+        // Se o backend responder 200, consideramos verificado
+        // a menos que venha explicitamente como "false" no payload.
+        if (verified !== false) {
+          setResult({
+            type: "success",
+            message: allyName
+              ? `Número verificado. Este contato é oficial da Aliança Divergente. Aliado: ${allyName}.`
+              : "Número verificado. Este contato é oficial da Aliança Divergente.",
+          });
+          return;
+        }
+
+        // verified === false: tratamos como não verificado
+        setResult({ type: "error", message: defaultErrorMessage });
+      } catch (err) {
+        // Abort não deve mostrar mensagem
+        if (err instanceof DOMException && err.name === "AbortError") return;
+        setResult({ type: "error", message: defaultErrorMessage });
+      } finally {
         setIsSubmitting(false);
-      }, 1000);
+      }
     },
     [phoneValue]
   );
@@ -113,6 +227,18 @@ export function WhoWeAreCheckSection() {
                 aria-live="polite"
               >
                 {error}
+              </span>
+            )}
+            {!error && result && (
+              <span
+                className={cn(
+                  "text-sm",
+                  result.type === "success" ? "text-green-700" : "text-red-600"
+                )}
+                role={result.type === "success" ? "status" : "alert"}
+                aria-live="polite"
+              >
+                {result.message}
               </span>
             )}
           </div>

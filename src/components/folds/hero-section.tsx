@@ -22,8 +22,8 @@ export function HeroSection() {
           className="bg-dourado hover:bg-dourado/60 transition-colors duration-300 text-white px-8 py-3 uppercase font-bold sm:text-base text-xs mt-6 shadow-lg shadow-dourado/20"
           aria-label="Seja aliado da Aliança Divergente"
         >
-          <Link href="https://aliancadivergentead.pro.typeform.com/to/JrjAi1qB?utm_source=site&utm_medium=home&utm_campaign=seja-aliado" target="_blank" rel="noopener noreferrer">
-            Seja Aliado
+          <Link id="seja_aliado_1" href="https://aliancadivergentead.pro.typeform.com/to/JrjAi1qB?utm_source=site&utm_medium=home&utm_campaign=seja-aliado" target="_blank" rel="noopener noreferrer">
+            Seja Aliados
           </Link>
         </button>
       </Reveal>

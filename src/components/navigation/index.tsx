@@ -325,6 +325,7 @@ function MobileMenu() {
     <div className="flex items-center justify-end gap-4">
       <button className="bg-verde-folha hover:bg-verde-folha/80 transition-colors duration-300 text-white px-3 py-1 text-[10px] uppercase font-bold">
         <Link
+          id="seja_aliado"
           href="https://aliancadivergentead.pro.typeform.com/to/JrjAi1qB?utm_source=site&utm_medium=home&utm_campaign=seja-aliado"
           target="_blank"
           rel="noopener noreferrer"

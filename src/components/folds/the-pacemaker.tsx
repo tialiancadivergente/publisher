@@ -223,6 +223,7 @@ export function ThePacemakerSection() {
             aria-label="Se tornar aliado da AlianÇõa Divergente"
           >
             <Link
+              id="seja_aliado_3"
               href="https://aliancadivergentead.pro.typeform.com/to/JrjAi1qB?utm_source=site&utm_medium=home&utm_campaign=seja-aliado"
               target="_blank"
               rel="noopener noreferrer"

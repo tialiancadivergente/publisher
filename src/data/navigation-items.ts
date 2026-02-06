@@ -54,6 +54,14 @@ export type NavigationItem = DropdownNavigationItem | LinkNavigationItem;
 const linkClassName = "py-2 px-2 xl:px-4 rounded-md";
 
 export const navigationItems: readonly NavigationItem[] = [
+  {
+    id: "seja-aliado",
+    type: "link",
+    label: "Seja Aliado",
+    href: "https://aliancadivergentead.pro.typeform.com/to/JrjAi1qB?utm_source=site&utm_medium=home&utm_campaign=seja-aliado",
+    linkClassName: "font-extrabold " + linkClassName,
+    target: "_blank",
+  },
 	{
     id: "central-de-conteudo",
     type: "link",

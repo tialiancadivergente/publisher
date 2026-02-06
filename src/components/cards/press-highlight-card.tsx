@@ -26,11 +26,20 @@ export function PressHighlightCard({
     window.open(articleUrl, "_blank");
   };
 
+  const dateParts = publishedAt.split("-").map((part) => Number(part));
+  const publishedDate =
+    dateParts.length === 3 &&
+    Number.isFinite(dateParts[0]) &&
+    Number.isFinite(dateParts[1]) &&
+    Number.isFinite(dateParts[2])
+      ? new Date(dateParts[0], dateParts[1] - 1, dateParts[2])
+      : new Date(publishedAt);
+
   const formattedDate = new Intl.DateTimeFormat("pt-BR", {
     day: "2-digit",
     month: "2-digit",
     year: "numeric",
-  }).format(new Date(publishedAt));
+  }).format(publishedDate);
 
   return (
     <article

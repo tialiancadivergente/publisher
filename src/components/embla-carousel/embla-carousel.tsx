@@ -14,7 +14,11 @@ type PropType = {
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props;
-  const [emblaRef] = useEmblaCarousel(options, [
+  const emblaOptions = React.useMemo(
+    () => ({ ...(options || {}), align: "start" as const }),
+    [options]
+  );
+  const [emblaRef] = useEmblaCarousel(emblaOptions, [
     Autoplay({ delay: 4000, stopOnInteraction: false }),
   ]);
 

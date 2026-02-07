@@ -85,19 +85,21 @@ export function PressHighlightCard({
         <div className="mt-auto flex flex-col gap-3 text-xs text-verde-eucalipto/70 uppercase tracking-[0.2em]">
           <div className="flex items-center justify-between gap-4">
             <span className="flex items-center">
-              <Image
-                src={sourceLogo}
-                alt={sourceLogoAlt}
-                width={0}
-                height={24}
-                quality={100}
-                className="object-contain object-left h-6 w-auto"
-                sizes="(max-width: 640px) 80px, 120px"
-                loading="lazy"
-                decoding="async"
-                fetchPriority="low"
-                style={{ height: 24, width: "auto" }}
-              />
+              {sourceLogo && (
+                <Image
+                  src={sourceLogo}
+                  alt={sourceLogoAlt}
+                  width={0}
+                  height={24}
+                  quality={100}
+                  className="object-contain object-left h-6 w-auto"
+                  sizes="(max-width: 640px) 80px, 120px"
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
+                  style={{ height: 24, width: "auto" }}
+                />
+              )}
             </span>
             <div className="text-[0.7rem] font-medium normal-case tracking-normal font-mulish text-right">
               {author} - <time dateTime={publishedAt}>{formattedDate}</time>

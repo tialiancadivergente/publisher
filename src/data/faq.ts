@@ -71,11 +71,11 @@ export const faqData: readonly FAQItem[] = [
     answer:
       "A Aliança Divergente oferece garantia de 30 dias após a compra. Dentro deste período, caso não esteja satisfeito, você pode solicitar o reembolso total através do suporte. Após o prazo de garantia, não realizamos cancelamentos ou reembolsos.",
   },
-  // {
-  //   id: "renovar-acesso",
-  //   question: "Como renovar meu acesso à Aliança Divergente?",
-  //   answer:
-  //     "O acesso à Aliança Divergente é de 1 ano. A renovação de acesso é automática em caso de não manifestação do consumidor.",
-  // },
+  {
+    id: "renovar-acesso",
+    question: "Como renovar meu acesso à Aliança Divergente?",
+    answer:
+      "O acesso à Aliança Divergente tem validade de 1 ano. A renovação não é automática e ocorre somente mediante solicitação do consumidor.",
+  },
 ] as const;
 

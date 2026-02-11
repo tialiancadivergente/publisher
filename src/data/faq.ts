@@ -75,7 +75,7 @@ export const faqData: readonly FAQItem[] = [
     id: "renovar-acesso",
     question: "Como renovar meu acesso à Aliança Divergente?",
     answer:
-      "O acesso à Aliança Divergente é vitalício após a compra. Não há necessidade de renovação, você mantém acesso a todos os conteúdos, atualizações e novos materiais lançados durante sua jornada como Aliado.",
+      "O acesso à Aliança Divergente é de 1 ano. A renovação de acesso é automática em caso de não manifestação do consumidor.",
   },
 ] as const;
 

@@ -23,7 +23,7 @@ export function HeroSection() {
           aria-label="Seja aliado da Aliança Divergente"
         >
           <Link id="seja_aliado_1" href="https://aliancadivergentead.pro.typeform.com/to/JrjAi1qB?utm_source=site&utm_medium=home&utm_campaign=seja-aliado" target="_blank" rel="noopener noreferrer">
-            Seja Aliados
+            Seja Aliado
           </Link>
         </button>
       </Reveal>

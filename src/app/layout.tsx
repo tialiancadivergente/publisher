@@ -12,6 +12,7 @@ import {
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import Providers from "./providers";
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
@@ -151,9 +152,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-        <Header />
-        {children}
-        <Footer />
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );

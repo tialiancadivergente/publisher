@@ -16,7 +16,7 @@ interface ContainerProps {
 	submitError?: string | null;
 }
 
-export default function ContainerTeste({
+export default function Container({
 	titleRedLine,
 	redLine,
 	formName,

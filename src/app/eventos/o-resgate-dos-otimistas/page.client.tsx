@@ -77,27 +77,24 @@ export default function EventosResgateDosOtimistasPageClient() {
   // ************* FINAL - CODIGO LEGADO *************
 
   useEffect(() => {
-    if (params && params.temperature) {
-      normalizeTemperature(params.temperature);
-      const redLineVersion = params.headline;
+    const redLineVersion = "h0";
 
-      const redLineText = Headline.find(
-        (benefit) => benefit.id === redLineVersion
-      )?.text;
+    const redLineText = Headline.find(
+      (benefit) => benefit.id === redLineVersion
+    )?.text;
 
-      const titleRedLineText = Headline.find(
-        (benefit) => benefit.id === redLineVersion
-      )?.title;
+    const titleRedLineText = Headline.find(
+      (benefit) => benefit.id === redLineVersion
+    )?.title;
 
-      if (redLineText) {
-        setRedLine(redLineText);
-      }
-
-      if (titleRedLineText) {
-        setTitleRedLine(titleRedLineText);
-      }
+    if (redLineText) {
+      setRedLine(redLineText);
     }
-  }, [params]);
+
+    if (titleRedLineText) {
+      setTitleRedLine(titleRedLineText);
+    }
+  }, []);
 
   const handleLeadCaptureSubmit = async (data: LeadCaptureSubmitData) => {
     setSubmitError(null);

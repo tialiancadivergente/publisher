@@ -10,8 +10,6 @@ import {
   Spectral,
 } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
 import Providers from "./providers";
 
 const organizationJsonLd = {
@@ -85,6 +83,10 @@ const spectral = Spectral({
 export const metadata: Metadata = {
   title: "Como Romper Padrões Emocionais e Transformar Sua Vida | Aliança Divergente",
   description: "Descubra métodos práticos para superar a dependência emocional, romper padrões que travam sua vida e evoluir com apoio real. Faça parte da Aliança Divergente.",
+  alternates: {
+    canonical:
+      "https://www.aliancadivergente.com.br/",
+  },
   icons: {
     icon: [
       {

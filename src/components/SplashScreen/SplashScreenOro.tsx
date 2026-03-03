@@ -26,9 +26,9 @@ export default function SplashScreenOro({ children }: { children: React.ReactNod
     const isDarkValue = parts[2] || "";
 
     if (params.theme === "2" || isDarkValue === "h2") {
-      setIsDark(false);
-    } else {
       setIsDark(true);
+    } else {
+      setIsDark(false);
     }
   }, [params.theme]);
 
@@ -78,7 +78,7 @@ export default function SplashScreenOro({ children }: { children: React.ReactNod
         >
           <motion.img 
             src={isDark ? "/images/logo_o_resgate_dos_otimistas.webp" : "/images/logo-oro-dark.webp"} 
-            alt="Logo"
+            alt="Logotipo oficial de O Resgate dos Otimistas"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5 }}

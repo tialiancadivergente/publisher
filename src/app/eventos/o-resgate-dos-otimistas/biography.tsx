@@ -20,9 +20,9 @@ export default function Biography() {
 		>
 			<div className="mx-auto sm:px-4 lg:w-[1080px] w-full">
 				<div className="mt-[220px] md:mt-24">
-					<div className="text-2xl md:text-3xl font-bold uppercase text-[#006D71] text-left md:text-center">
+					<h2 className="text-2xl md:text-3xl font-bold uppercase text-[#006D71] text-left md:text-center">
 						Que bom que você não desistiu.
-					</div>
+					</h2>
 					<div className="font-mulish text-[#07242C] text-base text-left md:text-center my-8 max-w-[688px] mx-auto font-extralight">
 						<span className="font-bold">Chega de dar o seu máximo e no fim ficar se questionando o que faltou.</span> {' '}
 						<span className="font-">Depois desse evento você nunca mais vai se perguntar o que falta para você ter o resultado merecido pelo seu esforço.</span>{' '}
@@ -35,16 +35,16 @@ export default function Biography() {
 
 				<div className="flex justify-center md:justify-end mt-[400px] xs:mt-[800px] 2xs:mt-[850px] sm:mt-[1100px] md:mt-[535px] w-full">
 					<div className="w-full max-w-[512px] text-[#07242C]">
-						<div className="font-spectral text-2xl md:text-[32px] font-bold">
+						<h2 className="font-spectral text-2xl md:text-[32px] font-bold">
 							QUEM VAI SER O SEU MENTOR NESSA JORNADA?
-						</div>
+						</h2>
 						<div className="flex flex-col mt-4 mb-6 text-xl md:text-2xl font-bold">
-							<p className="text-[#006D71]">
+							<h3 className="text-[#006D71]">
 								Elton Euler
-							</p>
-							<p className="text-[#07242C]">
+							</h3>
+							<h3 className="text-[#07242C]">
 								Líder e Idealizador da Aliança Divergente
-							</p>
+							</h3>
 						</div>
 						<div className="flex flex-col gap-6 font-regular font-raleway">
 							<p>

@@ -32,10 +32,13 @@ export default function HeroSection({
 				className={`mx-auto sm:px-4 2md:pt-6 pt-2 relative lg:w-[1080px] w-full flex justify-center md:justify-start`}
 			>
 				<div className="w-full 2md:max-w-[528px] max-w-[440px]">
+					<h1 className="sr-only">
+						FAÇA SEU DIAGNÓSTICO DE DEPENDÊNCIA EMOCIONAL GRATUITO.
+					</h1>
 					<div className="mt-[225px] mb-2 flex justify-center md:justify-start md:hidden">
 						<Image
 							src="/images/logo-oro-dark.webp"
-							alt="Logotipo Resgate dos otimistas"
+							alt="Logotipo oficial de O Resgate dos Otimistas"
 							width={480}
 							height={147}
 							priority
@@ -59,11 +62,11 @@ export default function HeroSection({
 						</div>
 					</div>
 					<div className="mt-4 mb-2 font-bebas-neue text-left">
-						<div
+						<h2
 							className={`2md:text-[36px] text-2xl leading-none text-left !text-[#07242C] font-spectral font-extrabold`}
 						>
 							{titleRedLine}
-						</div>
+						</h2>
 					</div>
 
 					<div

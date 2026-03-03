@@ -90,8 +90,13 @@ const config = {
         "2md": "900px",
       }
     },
-  },
-  plugins: [require("tailwindcss-animate")],
+  },  
+  plugins: [
+    require("tailwindcss-animate"),
+    function (api: { addVariant: (name: string, definition: string) => void }) {
+      api.addVariant("light", ".light &");
+    },
+  ],
 };
 
 export default config;

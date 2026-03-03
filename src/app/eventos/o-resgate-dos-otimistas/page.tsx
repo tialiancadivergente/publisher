@@ -12,7 +12,6 @@ import {
 } from "@/lib/tracking/lead-tracking-browser";
 import {
   normalizeTemperature,
-  type NormalizedTemperature,
 } from "@/lib/temperature-utils";
 import { useCreateLeadCapture } from "@/app/modules/lead-capture/hook/use-create-lead-capture";
 import type {
@@ -20,6 +19,7 @@ import type {
 } from "@/app/modules/lead-capture/lead-capture.model";
 import ContainerTeste from "./container";
 import { Headline } from "./headline";
+import SplashScreenOro from "@/components/SplashScreen/SplashScreenOro";
 
 export default function Formv2() {
   const params = useParams();
@@ -29,10 +29,7 @@ export default function Formv2() {
     null
   );
   const [redLine, setRedLine] = useState<React.ReactNode | null>(null);
-  const [temperatura, setTemperatura] = useState<NormalizedTemperature | undefined>(
-    undefined
-  );
-  const [theme, setTheme] = useState<string>("1");
+  const [theme, setTheme] = useState<string>("2");
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [formFields, setFormFields] = useState<Record<string, string> | null>(
     null
@@ -105,9 +102,6 @@ export default function Formv2() {
       if (titleRedLineText) {
         setTitleRedLine(titleRedLineText);
       }
-
-      setTemperatura(temperaturaValue);
-      setTheme(params.theme as string);
     }
   }, [params]);
 
@@ -115,7 +109,7 @@ export default function Formv2() {
     setSubmitError(null);
 
     try {
-      const resolvedTagId = tag_id(temperatura);
+      const resolvedTagId = tag_id("org");
       const { currentUrl, currentPath, currentPage } = getTrackingPageInfo();
       const { utmObject, getUtmValue } = getTrackingUtmInfo();
       const cookies = getTrackingCookies();
@@ -124,7 +118,7 @@ export default function Formv2() {
       const payloadDynamo: Record<string, unknown> = {
         email: data.email,
         phone: data.normalizedPhone,
-        temperature: temperatura,
+        temperature: "org",
         tipo: `redline-${params.headline}`,
         version: params.version,
         parametroCompleto: `${currentPage}${currentPath}`,
@@ -174,7 +168,7 @@ export default function Formv2() {
           ip: "",
           user_agent: navigator.userAgent || "",
           cookies,
-          temperature: temperatura,
+          temperature: "org",
         },
       };
 
@@ -186,7 +180,7 @@ export default function Formv2() {
         throw new Error("requestId nao retornado na resposta.");
       }
 
-      window.location.href = `/quiz-oro/?temperature=${temperatura}&theme=${theme}&requestId=${encodeURIComponent(
+      window.location.href = `/quiz-oro/?temperature=org&theme=${theme}&requestId=${encodeURIComponent(
         requestId
       )}&email=${encodeURIComponent(data.email)}&phone=${encodeURIComponent(data.normalizedPhone)}`;
     } catch (error) {
@@ -196,12 +190,14 @@ export default function Formv2() {
   };
 
   return (
-    <ContainerTeste
-      titleRedLine={titleRedLine}
-      redLine={redLine}
-      formName={launch}
-      onSubmit={handleLeadCaptureSubmit}
-      submitError={submitError}
-    />
+    <SplashScreenOro>
+      <ContainerTeste
+        titleRedLine={titleRedLine}
+        redLine={redLine}
+        formName={launch}
+        onSubmit={handleLeadCaptureSubmit}
+        submitError={submitError}
+      />
+    </SplashScreenOro>
   );
 }

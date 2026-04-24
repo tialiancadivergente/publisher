@@ -39,7 +39,7 @@ export function DivergentAgentSection() {
             className="w-full h-auto"
           />
         </Reveal>
-        <Reveal delay={220}>
+        <Reveal delay={260}>
           <Link
             id="seja_aliado_3"
             href="https://indiquei.app/g9myzN"

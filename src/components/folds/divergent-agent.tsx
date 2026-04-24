@@ -40,20 +40,20 @@ export function DivergentAgentSection() {
           />
         </Reveal>
         <Reveal delay={220}>
-          <button
-            type="button"
-            className="bg-verde-folha hover:bg-verde-folha/60 transition-colors duration-300 text-white px-8 py-3 font-bold sm:text-base text-xs mt-6 uppercase focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white shadow-lg shadow-verde-folha/30"
-            aria-label="Se tornar aliado da Aliança Divergente"
+          <Link
+            id="seja_aliado_3"
+            href="https://indiquei.app/g9myzN"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <Link
-              id="seja_aliado_3"
-              href="https://indiquei.app/g9myzN"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              type="button"
+              className="bg-verde-folha hover:bg-verde-folha/60 transition-colors duration-300 text-white px-8 py-3 font-bold sm:text-base text-xs mt-6 uppercase focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white shadow-lg shadow-verde-folha/30"
+              aria-label="Se tornar aliado da Aliança Divergente"
             >
               Torne-se um Agente Divergente
-            </Link>
-          </button>
+            </button>
+          </Link>
         </Reveal>
       </div>
     </section>

@@ -47,7 +47,7 @@ export function DivergentAgentSection() {
           >
             <Link
               id="seja_aliado_3"
-              href="https://aliancadivergentead.pro.typeform.com/to/JrjAi1qB?utm_source=site&utm_medium=home&utm_campaign=seja-aliado"
+              href="https://indiquei.app/g9myzN"
               target="_blank"
               rel="noopener noreferrer"
             >

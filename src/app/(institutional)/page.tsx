@@ -10,6 +10,7 @@ import { OurMentorsSection } from "@/components/folds/our-mentors";
 import { PressSaysSection } from "@/components/folds/press-says";
 import { AlliesStatsSection } from "@/components/folds/allies-stats";
 import { FAQSection } from "@/components/folds/faq-section";
+import { DivergentAgentSection } from "@/components/folds/divergent-agent";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
       <OurMentorsSection />
       <PressSaysSection />
       <AlliesStatsSection />
+      <DivergentAgentSection />
       <FAQSection />
     </main>
   );

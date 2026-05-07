@@ -3,117 +3,141 @@ import Image from "next/image";
 const privacyPolicyTitle = "POLÍTICA DE PRIVACIDADE";
 
 const privacyPolicyContent = `
-Esta declaração de privacidade entrará em vigor em 22 de outubro de 2024.
+A presente Política de Privacidade aplica-se à EDITORA DIVERGENTE LTDA, pessoa jurídica de direito privado inscrita no CNPJ nº 48.424.807/0001-88, e à AEON LTDA, pessoa jurídica de direito privado inscrita no CNPJ nº 59.301.463/0001-36, com sede em: Av. Paulista, 1471. Edifício Barão de Cristina. CJ 1110. Bela Vista. São Paulo – SP. CEP 01311-927. Brasil doravante denominadas, em conjunto, “Aliança Divergente” ou “Controladora”. 
 
-A ALIANÇA DIVERGENTE LTDA valoriza a privacidade e tem o compromisso de proteger e processar suas informações pessoais de forma responsável. Esta declaração de privacidade descreve como a ALIANÇA DIVERGENTE LTDA coleta, utiliza e compartilha suas informações.
+A Aliança Divergente é uma plataforma digital de desenvolvimento humano e mentoria online, responsável pelo tratamento dos dados pessoais coletados por meio do site www.aliancadivergente.com.br e do aplicativo Marca Passos, atuando como Controladora nos termos do art. 5º, VI, da Lei nº 13.709/2018 (Lei Geral de Proteção de Dados – LGPD). 
 
-Este site (aliancadivergente.com.br), todo o seu conteúdo e seus sub endereços (o "WEBSITE") são de propriedade de ALIANÇA DIVERGENTE LTDA, inscrita no CNPJ nº 48.424.807/0001-88, com sede em Rua Salviano José da Silva nº 400 - Eldorado, São José dos Campos - SP, CEP: 12238-573 (o "Controlador") e segue a Política de Privacidade a seguir descrita:
+A Aliança Divergente está comprometida em proteger e tratar seus dados de forma responsável e transparente. Para demonstrar esse compromisso, este documento integra o Programa de Conformidade da Aliança Divergente à Lei Geral de Proteção de Dados Pessoais e às demais normas aplicáveis ao tema. 
 
-Ao acessar e/ou utilizar o site do controlador, seus sub endereços e o infoproduto ALIANÇA DIVERGENTE, o Usuário declara ter no mínimo 18 (dezoito) anos e ter capacidade plena e expressa para a aceitação dos termos e condições desta Política de Privacidade e dos Termos de Uso para todos os fins de direito.
+Esta Política de Privacidade descreve as práticas adotadas pela Aliança Divergente em relação às informações pessoais e sensíveis coletadas, utilizadas, tratadas, armazenadas e compartilhadas com clientes e parceiros de negócios, aplicando-se a todos os Usuários e potenciais Usuários dos serviços oferecidos pela Controladora, inclusive aqueles que acessam os sites e demais meios por ela operados. 
 
-Caso o Usuário não se enquadre na descrição acima e/ou não concorde, ainda que em parte, com os termos e condições contidos nesta Política de Privacidade, não deverá acessar e/ou utilizar os serviços oferecidos pelo Controlador, bem como os sites e serviços por ele operados.
+Ao acessar e/ou utilizar o site da Controladora e seus subendereços, o Usuário declara possuir, no mínimo, 18 (dezoito) anos de idade e capacidade plena para aceitar os termos desta Política de Privacidade e dos Termos de Uso, para todos os fins de direito. 
 
-Todo o conteúdo explicitado nesta política utiliza como referência, quando aplicável, a Lei Geral de Proteção de Dados Pessoais, dentre outras normas nacionais e internacionais relativas à privacidade e proteção de dados pessoais.
+Caso o Usuário não se enquadre nessa condição e/ou não concorde, ainda que parcialmente, com os termos desta Política, não deverá acessar ou utilizar os serviços oferecidos pelo Controlador, bem como os sites e serviços por ele operados. 
 
-INFORMAÇÕES PESSOAIS COLETADAS E UTILIZADAS
+Ademais, o conteúdo desta Política utiliza como referência, quando aplicável, a Lei Geral de Proteção de Dados Pessoais, bem como outras normas nacionais e internacionais relacionadas à privacidade e à proteção de dados pessoais. 
 
-Para que seja possível entregar os nossos serviços e proporcionar uma melhor experiência de navegação, a ALIANÇA DIVERGENTE LTDA coletará dos Usuários alguns dados pessoais quando efetuarem o cadastro ou estiverem navegando na plataforma. Todos os dados coletados são utilizados apenas para as finalidades de prestação dos serviços oferecidos pela ALIANÇA DIVERGENTE LTDA e para as finalidades descritas nesta Política.
+DEFINIÇÕES 
 
-O Usuário está ciente e concorda que fornece informação de forma consciente e voluntária por meio de formulário de cadastro ou através dos sites operados pela Controladora.
+Usuário: todas as pessoas físicas que utilizam ou visitam o(s) site(s) e/ou aplicativo(s), maiores de 18 (dezoito) anos ou emancipadas e plenamente capazes de praticar os atos da vida civil, bem como aquelas relativamente incapazes, desde que devidamente representadas ou assistidas. 
 
-Quando o Usuário realiza o cadastro e/ou preenche formulários oferecidos pelo controlador inclusive nos sites por ela operados, determinados Dados Pessoais solicitados, informados neste documento, serão mantidos protegidos em sigilo e serão utilizados apenas para o propósito que motivou o cadastro.
+Dados Pessoais: quaisquer informações fornecidas e/ou coletadas pelo Controlador e/ou suas afiliadas, por qualquer meio, ainda que públicas, que identifiquem, ou que, quando combinadas com outras informações tratadas pelo Controlador, possam identificar um indivíduo, ou por meio das quais informações de contato de uma pessoa natural possam ser obtidas. Os Dados Pessoais podem estar em qualquer mídia ou formato, inclusive registros eletrônicos ou físicos. Não se incluem, para fins desta Política, dados estritamente comerciais, como telefone, endereço ou e-mail corporativo. 
 
-O website poderá coletar dados enquanto você navega pelo site, dados esses que não te identificam pessoalmente, como velocidade de conexão, endereço de IP, localização geográfica etc.
+Dado Pessoal Sensível: dado pessoal sobre origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato, dados relativos à saúde ou à vida sexual, dado genético ou biométrico, quando vinculado a uma pessoa natural. 
 
-Ao navegar em nossas páginas, poderemos utilizar uma tecnologia comum na rede internacional de computadores, chamada "cookies", através dos quais são armazenadas algumas informações em seu computador. Este armazenamento possibilita uma maior facilidade de navegação, em muitos casos, uma experiência personalizada para você.
+Titular: pessoa natural a quem se referem os dados pessoais objeto de tratamento. 
 
-A maioria dos navegadores permite que você apague esses arquivos de seu computador. No entanto, caso o usuário configure seu navegador para bloquear os cookies, a experiência de navegação poderá restar prejudicada.
+Consentimento: manifestação livre, informada e inequívoca pela qual o titular concorda com o tratamento de seus dados pessoais para uma finalidade determinada. 
 
-Algumas transações on-line podem envolver chamadas telefônicas realizadas entre a ALIANÇA DIVERGENTE LTDA e o titular dos dados. Também podem envolver bate-papos on-line via WhatsApp.
+Controlador: pessoa natural ou jurídica, de direito público ou privado, a quem competem as decisões referentes ao tratamento de dados pessoais. 
 
-Sendo assim, em virtude de todas essas informações pessoais coletadas, fica claro e esclarecido que o Controlador poderá usá-las para um melhor suporte em seus produtos e serviços prestados. O titular dos dados poderá ser notificado de uma atualização ou correção de produto.
+Operador: pessoa natural ou jurídica, de direito público ou privado, que realiza o tratamento de dados pessoais em nome do Controlador. 
 
-Após a efetivação da sua compra, será liberado a você o acesso ao "Marca-Passo" onde está localizado todo o conteúdo do produto adquirido. Informações de uso da plataforma podem ser coletadas durante ou após o seu acesso ao aplicativo a fim de que sejam estabelecidas estatísticas com relação ao uso e à eficácia dos produtos, melhoria e personalização da experiência do Cliente.
+Armazenamento em nuvem: tecnologia utilizada para guardar os dados coletados em serviços on-line. 
 
-Exemplo: quando você acessa a plataforma por dispositivos diferentes como notebook, computador, celular ou outro dispositivo de acesso. Os Dados coletados neste caso são: a sua localização aproximada, seu endereço de IP, informações do seu dispositivo de acesso (tipo de sistema operacional, modelo do aparelho), informação da sua conexão de internet, tipo do seu navegador e as páginas e conteúdos que você acessa em nossos Serviços.
+LGPD: Lei Geral de Proteção de Dados — Lei nº 13.709/2018, que regula o tratamento de dados pessoais no Brasil. 
 
-Você também será adicionado a um infoproduto ALIANÇA DIVERGENTE LTDA: esse é um grupo no WhatsApp com outros alunos, cuja troca de informações pessoais nesse ambiente não é de responsabilidade do "Controlador".
+ANPD: Autoridade Nacional de Proteção de Dados, órgão responsável pela fiscalização do cumprimento da LGPD no Brasil. 
 
-Você também será adicionado ao Instagram no Perfil da Tribo, e esse será o ambiente que complementará o Marca-Passo e será utilizado para interação entre os alunos.
+COLETA E USO DE INFORMAÇÕES PESSOAIS 
 
-FINALIDADE DA COLETA DOS DADOS
+Para que seja possível prestar os serviços e proporcionar uma melhor experiência de navegação, a Aliança Divergente coletará alguns dados pessoais dos Usuários quando realizarem cadastro ou navegarem na plataforma. Todos os dados coletados são utilizados exclusivamente para as finalidades de prestação dos serviços e conforme descrito nesta Política. 
 
-Ao acessar o endereço eletrônico do Controlador é solicitado ao usuário o nome, e-mail e telefone celular com DDD.
+O Usuário está ciente de que fornece informações de forma consciente e voluntária por meio de formulários de cadastro ou dos sites operados pela Controladora. 
 
-Os dados como CPF, endereço completo, data de nascimento e dados de cartão de crédito são solicitados na página de checkout.
+Quando o Usuário realiza cadastro e/ou preenche formulários oferecidos pelo Controlador, inclusive em seus sites, determinados Dados Pessoais serão mantidos em sigilo e utilizados apenas para a finalidade que motivou o cadastro. 
 
-Todos esses dados coletados são para a entrega do conteúdo ora contratado, processamento de pagamentos e direcionamento de Serviços do seu interesse.
+O website poderá coletar dados durante a navegação que não identificam diretamente o Usuário, como velocidade de conexão, endereço de IP e localização geográfica, entre outros. 
 
-SOBRE O CANCELAMENTO DO ENVIO DE INFORMAÇÕES
+Ao navegar nas páginas, poderão ser utilizados “cookies”, tecnologia que permite o armazenamento de informações no dispositivo do Usuário, facilitando a navegação e, em muitos casos, proporcionando uma experiência personalizada. 
 
-As informações pessoais fornecidas ao Controlador, assim como as informações pessoais que são coletadas indiretamente, podem ser usadas para fins de marketing, ou seja, para mantê-lo informado sobre eventos e produtos a serem vendidos.
+A maioria dos navegadores permite a exclusão desses arquivos; contudo, caso o Usuário opte por bloqueá-los, a experiência de navegação poderá ser prejudicada. 
 
-A qualquer momento, é possível optar por não receber materiais de marketing da ALIANÇA DIVERGENTE LTDA, seguindo as instruções de cancelamento de subscrição incluídas em cada e-mail recebido.
+A Aliança Divergente poderá utilizar as informações pessoais coletadas para oferecer conteúdos e serviços mais alinhados aos interesses do Usuário, promovendo uma experiência personalizada. 
 
-É importante mencionar que, ao preencher qualquer novo formulário, ficará caracterizada a reinserção do seu e-mail à lista. Portanto, caso seja de seu interesse, a requisição de cancelamento deverá ser feita novamente.
+Além disso, determinadas transações podem envolver contato telefônico ou interações via WhatsApp. Tais interações poderão ser monitoradas e, quando aplicável, registradas, para fins de treinamento, garantia de qualidade ou manutenção de evidências de determinada transação ou interação. 
 
-Para alterar suas informações pessoais ou mesmo excluí-las do nosso banco de dados, basta enviar um e-mail para dpo@aliancadivergente.com.br.
+Dessa forma, os dados coletados poderão ser utilizados para aprimorar o suporte e a qualidade dos serviços prestados, bem como para informar o titular sobre atualizações ou correções de produtos. 
 
-COMPARTILHAMENTO E TRATAMENTO DE INFORMAÇÕES PESSOAIS
+Após a confirmação da compra, será liberado o acesso à plataforma Marca Passos, onde se encontra o conteúdo adquirido. Informações de uso poderão ser coletadas durante ou após o acesso, com a finalidade de gerar estatísticas, avaliar a eficácia dos produtos e aprimorar a experiência do cliente. 
 
-Como o Controlador possui sua sede no Brasil, todos os dados pessoais e tratamentos realizados seguem essa jurisdição.
+Exemplo: quando o Usuário acessa a plataforma por diferentes dispositivos (notebook, computador ou celular). Nesses casos, poderão ser coletados dados como localização aproximada, endereço de IP, informações do dispositivo (sistema operacional e modelo), dados da conexão de internet, tipo de navegador e páginas acessadas nos serviços. 
 
-Apenas o Controlador possui acesso aos dados pessoais coletados por meio de seus portais eletrônicos para os fins contratados, razão pela qual tal acesso é restrito à ALIANÇA DIVERGENTE LTDA, seus parceiros e demais prestadores de serviços, e está restrito às funções e atividades por cada um desempenhadas.
+FINALIDADE DA COLETA DOS DADOS 
 
-O Controlador não compartilha com terceiros, sob nenhuma forma (aluguel, venda ou cessão), os dados pessoais dos usuários visitantes ou dos usuários das áreas restritas. É facultado ao Controlador a contratação de Operadores para tratamento desses dados com o objetivo estrito de fornecimento de infraestrutura de Tecnologia da Informação.
+Ao acessar o endereço eletrônico do Controlador, poderão ser solicitados nome, e-mail e telefone celular com DDD. Dados como CPF, endereço completo, data de nascimento e informações de cartão de crédito são solicitados na página de checkout. 
 
-ARMAZENAMENTO DOS DADOS
+A solicitação de alteração de senha da plataforma Marca Passos será enviada por e-mail após a confirmação da compra. 
 
-A ALIANÇA DIVERGENTE LTDA armazenará os dados pessoais coletados pelo tempo necessário para cumprimento das finalidades para as quais eles são coletados, incluindo obrigações legais, contratuais, de prestação de contas ou requisição de autoridades competentes.
+Todos esses dados são coletados para viabilizar a entrega do conteúdo contratado, o processamento de pagamentos, o envio de comunicações de marketing e o acesso a eventos, para os quais solicitamos o registro do Usuário. Também são utilizados para a oferta de serviços de seu interesse, otimização de campanhas de tráfego pago e análise de públicos. 
 
-Em caso de o titular dos dados desejar solicitar que a ALIANÇA DIVERGENTE LTDA não utilize mais suas informações de registro para fornecer serviços, entre em contato com o Controlador por meio do e-mail: dpo@aliancadivergente.com.br.
+Além disso, os dados contribuem para a criação de uma experiência personalizada, bem como para o aprimoramento dos serviços e maior eficiência no atendimento técnico e operacional. 
 
-O titular dos dados pessoais pode exercer o direito de obter do controlador, em relação aos dados do titular por ele tratados, a qualquer momento e mediante requisição: confirmação da existência de tratamento; acesso aos dados; correção de dados incompletos, inexatos ou desatualizados; anonimização, bloqueio ou eliminação de dados desnecessários, excessivos ou tratados em desconformidade com o disposto na Lei Geral de Proteção de Dados (LGPD); eliminação dos dados pessoais tratados com o consentimento do titular; informação das entidades públicas e privadas com as quais o controlador realizou uso compartilhado de dados; informação sobre a possibilidade de não fornecer consentimento e sobre as consequências da negativa; e revogação do consentimento nos exatos termos da LGPD.
+Adicionalmente, os dados poderão ser utilizados para fins de auditoria interna, quando necessário, e para decisões automatizadas que visem facilitar a prestação de serviços, inclusive adicionais aos inicialmente contratados, desde que haja interesse do cliente. 
 
-Os dados pessoais serão eliminados após o término de seu tratamento, no âmbito e nos limites técnicos das atividades.
+TRATAMENTO DE DADOS PARA FUNCIONALIDADES AVANÇADAS E SEGURANÇA 
 
-Em caso de pedido de exclusão pelo titular, a Lei Geral de Proteção de Dados autoriza a conservação de tais dados, razão pela qual o controlador reserva para si o direito de preservar e divulgar todo e qualquer dado, a seu exclusivo critério, necessário para o cumprimento de obrigação legal, regulatória, derivada de ordem judicial, ou para proteger os direitos, propriedades ou segurança da ALIANÇA DIVERGENTE LTDA e seus usuários.
+A Aliança Divergente utiliza dados pessoais para viabilizar funcionalidades avançadas e garantir a segurança da plataforma. Por meio de Inteligência Artificial (IA), o sistema cria uma jornada de desenvolvimento personalizada, podendo solicitar, de forma opcional e mediante consentimento expresso e destacado, dados sensíveis do Usuário, como estado emocional e desafios. A recusa no fornecimento desses dados impede apenas a personalização avançada, sem inviabilizar o uso geral dos serviços. 
 
-SEGURANÇA DE INFORMAÇÕES PESSOAIS
+O aplicativo Marca Passos também poderá solicitar acesso à geolocalização do Usuário, mediante consentimento livre e inequívoco. Esse dado possui duas finalidades: viabilizar o funcionamento de ferramentas e protocolos específicos do aplicativo e permitir o compartilhamento opcional de localização para networking na comunidade. A recusa ou a desativação posterior deste acesso poderá limitar ou impossibilitar o funcionamento de determinadas ferramentas. 
 
-O Controlador guardará todos os Dados Pessoais na sua base de dados ou em base de dados mantidas "na nuvem" nos Estados Unidos pelos fornecedores de serviços contratados pela ALIANÇA DIVERGENTE LTDA, os quais estão devidamente de acordo com a legislação de dados vigente.
+Para garantir a proteção do ecossistema, os dados são armazenados com criptografia e controle de acesso, sem monitoramento humano contínuo ou indiscriminado. O acesso por profissionais ocorre apenas quando estritamente necessário e sob acordo formal de confidencialidade (NDA). A plataforma utiliza sistemas automatizados e IA exclusivamente para identificar violações aos Termos de Uso, prevenir fraudes e mitigar riscos, sendo a análise humana de conteúdo pontual, proporcional e restrita ao recebimento de denúncias ou alertas do sistema. 
 
-A ALIANÇA DIVERGENTE LTDA e seus fornecedores utilizam vários procedimentos de segurança para proteger a confidencialidade, segurança e integridade de seus Dados Pessoais, prevenindo a ocorrência de eventuais danos em virtude do tratamento desses dados.
+Por fim, caso sejam identificados indícios de práticas ilícitas, especialmente crimes previstos no Estatuto da Criança e do Adolescente ou na legislação penal, a Controladora poderá adotar medidas de contenção, preservar evidências e acionar as autoridades competentes. Tais ações visam à proteção da coletividade e ao cumprimento de dever legal, não configurando vigilância permanente ou quebra de sigilo, sempre em respeito aos princípios da necessidade, finalidade e minimização de dados. 
 
-Em conformidade ao art. 48 da Lei nº 13.709, o Controlador comunicará ao Titular e à Autoridade Nacional de Proteção de Dados (ANPD) a ocorrência de incidente de segurança que possa acarretar risco ou dano relevante ao Titular.
+SOBRE O CANCELAMENTO DO ENVIO DE INFORMAÇÕES 
 
-COOKIES
+As informações pessoais fornecidas, bem como aquelas coletadas indiretamente, poderão ser utilizadas para fins de marketing, incluindo o envio de comunicações sobre eventos e produtos. 
 
-Ao acessar a plataforma, a ALIANÇA DIVERGENTE LTDA utilizará "Cookies" para reconhecer o perfil do usuário, personalizar sua experiência, bem como os serviços e demais conteúdos disponíveis na plataforma.
+A qualquer momento, é possível optar por não receber tais comunicações, seguindo as instruções de cancelamento disponíveis nos e-mails recebidos. 
 
-O usuário pode não aceitar os "Cookies" para utilizar a plataforma da ALIANÇA DIVERGENTE LTDA.
+Importante destacar que, ao preencher novos formulários, o e-mail poderá ser reinserido na lista de envio. Caso deseje, será necessário solicitar novamente o cancelamento. 
 
-DÚVIDAS SOBRE PRIVACIDADE E ACESSO
+Para alterar ou excluir suas informações pessoais do banco de dados, basta enviar um e-mail para: dpo@aliancadivergente.com.br. 
 
-Caso o Titular dos dados tenha dúvidas sobre esta Política de Privacidade ou sobre como a ALIANÇA DIVERGENTE LTDA lida com o tratamento e uso de suas informações, deve entrar em contato com o Controlador por meio do e-mail: dpo@imperio55.com.br. Este e-mail não substituirá os canais oficiais de atendimento da ALIANÇA DIVERGENTE LTDA.
+COMPARTILHAMENTO E TRATAMENTO DE INFORMAÇÕES PESSOAIS 
 
-A confirmação de existência ou o acesso a dados pessoais serão providenciados, mediante requisição do titular, no prazo de até 15 (quinze) dias, contados da data do requerimento do titular, ressalvados e observados os segredos comercial e industrial, na forma da lei.
+Como o Controlador possui sede no Brasil, todos os dados pessoais e respectivos tratamentos são regidos pela legislação brasileira. 
 
-CASOS DE AUSÊNCIA DE RESPONSABILIDADE
+O acesso aos dados pessoais é restrito à Aliança Divergente, seus parceiros e prestadores de serviços, limitado às atividades por eles desempenhadas. O Controlador não aluga, vende ou cede dados pessoais dos usuários. 
 
-A ALIANÇA DIVERGENTE LTDA não se responsabiliza pela desatualização, imprecisão, incorreção, falsidade e/ou quebra da confidencialidade dos dados de acesso pelo próprio usuário, bem como não se responsabiliza por atos de negligência, imprudência ou imperícia dos titulares no cuidado que devem ter em relação aos seus dados individuais.
+Poderão ser contratados Operadores para tratar os dados, exclusivamente para fins de fornecimento de infraestrutura de tecnologia da informação. 
 
-A ALIANÇA DIVERGENTE LTDA não pode ser responsabilizada por atos de terceiros, exceto se comprovada falha culposa ou dolosa no sistema de segurança adotado. Incidentes de segurança que possam gerar risco ou dano relevante a usuários/clientes serão comunicados à Autoridade Nacional de Proteção de Dados, para as providências necessárias.
+ARMAZENAMENTO DOS DADOS 
 
-ATUALIZAÇÃO DA POLÍTICA DE PRIVACIDADE
+Os dados pessoais serão armazenados pelo tempo necessário ao cumprimento das finalidades para as quais foram coletados, incluindo obrigações legais, contratuais e regulatórias. 
 
-A ALIANÇA DIVERGENTE LTDA reserva o direito de revisar e atualizar esta Política de Privacidade e Proteção de Dados Pessoais em intervalos planejados não superiores a 12 (doze) meses, a partir da data de sua publicação, ou ante a ocorrência de algumas das seguintes condições: edição ou alteração de leis e/ou regulamentos relevantes; alteração de diretrizes estratégicas pela ALIANÇA DIVERGENTE LTDA; expiração da data de validade do documento, se aplicável; mudanças significativas de tecnologia na ALIANÇA DIVERGENTE LTDA; e análises de risco em Relatório de Impacto de Proteção de Dados Pessoais que indiquem a necessidade de modificação no documento para readequação da organização visando a prevenir ou mitigar riscos relevantes.
+Caso o titular deseje que suas informações deixem de ser utilizadas para prestação de serviços, poderá entrar em contato pelo e-mail informado. 
 
-É recomendado que o titular de dados verifique periodicamente se há mudanças ou atualizações.
+Em caso de solicitação de exclusão, o Controlador poderá manter determinados dados quando necessário para cumprimento de obrigações legais, regulatórias ou judiciais, bem como para proteção de seus direitos e de terceiros. 
 
-Esta é a segunda versão da Política de Privacidade.
+SEGURANÇA DAS INFORMAÇÕES PESSOAIS 
 
-A motivação das alterações se deve às adaptações necessárias após a aprovação e vigência da Lei Geral de Proteção de Dados.
+Os Dados Pessoais poderão ser armazenados em bases próprias ou em serviços de nuvem localizados no exterior, contratados pela Aliança Divergente, em conformidade com a legislação aplicável. 
+
+A Aliança Divergente e seus fornecedores adotam medidas de segurança para proteger a confidencialidade, integridade e segurança dos dados pessoais, prevenindo acessos não autorizados ou situações indevidas. 
+
+Nos termos do art. 48 da Lei nº 13.709/2018, o Controlador comunicará ao Titular e à ANPD a ocorrência de incidentes de segurança que possam gerar risco ou dano relevante. 
+
+COOKIES 
+
+Ao acessar a plataforma, a Aliança Divergente utilizará cookies para reconhecer o perfil do usuário, personalizar sua experiência e aprimorar os serviços e conteúdos disponibilizados. 
+
+O usuário pode gerenciar ou recusar os cookies por meio das configurações do navegador, ciente de que isso poderá impactar sua experiência na plataforma. 
+
+Cookies são pequenos arquivos de texto armazenados no dispositivo do usuário durante a navegação, permitindo o funcionamento adequado das páginas e a memorização de determinadas preferências. 
+
+DÚVIDAS SOBRE PRIVACIDADE E ACESSO 
+
+Em caso de dúvidas sobre esta Política ou sobre o tratamento de dados pessoais, o Titular poderá entrar em contato com o Controlador por meio do e-mail: dpo@aliancadivergente.com.br. 
+
+Este canal não substitui os demais canais oficiais de atendimento da Aliança Divergente. 
+
+ATUALIZAÇÃO DA POLÍTICA DE PRIVACIDADE 
+
+A Aliança Divergente poderá revisar e atualizar esta Política periodicamente, refletindo eventuais alterações legais ou regulatórias. As alterações produzirão efeitos a partir de sua publicação no site. 
+
+Recomenda-se que o titular consulte esta Política regularmente para verificar eventuais atualizações. Esta é a primeira versão da Política de Privacidade. 
 `;
 
 export default function PoliticasDePrivacidadePage() {

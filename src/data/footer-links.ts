@@ -2,6 +2,7 @@ export interface FooterLink {
   readonly id: string;
   readonly label: string;
   readonly href: string;
+  readonly openInNewTab?: boolean;
 }
 
 export interface SocialMediaLink {
@@ -35,6 +36,18 @@ export const footerAboutLinks: readonly FooterLink[] = [
     label: "Quem Somos",
     href: "#who-we-are",
   },
+  {
+    id: "politica-de-privacidade",
+    label: "Política de privacidade",
+    href: "/politicas-de-privacidade",
+    openInNewTab: true,
+  },
+  {
+    id: "termos-de-uso",
+    label: "Termos de uso",
+    href: "/termos-de-uso",
+    openInNewTab: true,
+  },
 ] as const;
 
 export const socialMediaLinks: readonly SocialMediaLink[] = [
@@ -59,10 +72,10 @@ export const socialMediaLinks: readonly SocialMediaLink[] = [
 ] as const;
 
 export const footerAddress = {
-  street: "R. Salviano José da Silva, 400",
-  neighborhood: "Eldorado",
-  city: "São José dos Campos/SP",
-  zipCode: "CEP: 12238-573",
+  street: "Av. Paulista, 1471 Edif. Barão de Cristina, CJ 1110",
+  neighborhood: "Bela Vista",
+  city: "São Paulo-SP",
+  zipCode: "CEP: 01311-927",
 } as const;
 
 export const footerDisclaimer =

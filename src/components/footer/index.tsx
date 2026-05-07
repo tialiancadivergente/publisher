@@ -109,6 +109,8 @@ export function Footer() {
             <Link
               key={link.id}
               href={link.href}
+              target={link.openInNewTab ? "_blank" : "_self"}
+              rel={link.openInNewTab ? "noopener noreferrer" : undefined}
               className="text-creme hover:text-dourado transition-colors"
               aria-label={link.label}
               onClick={(event) => {
@@ -154,9 +156,19 @@ export function Footer() {
             {footerDisclaimer}
           </p>
           <p className="text-white text-[10px]/[16px] text-right font-bold">
-            © 2025. ALL RIGHTS RESERVED. TODOS OS DIREITOS RESERVADOS.
+            © 2026. ALL RIGHTS RESERVED. TODOS OS DIREITOS RESERVADOS.
           </p>
         </div>
+      </div>
+      <div className="mt-4 text-white text-[14px]/[16px] leading-relaxed text-left">
+        AVISO LEGAL:
+        <p>
+          Os resultados podem variar de pessoa para pessoa. Este método tem
+          caráter educacional e de desenvolvimento pessoal, não garantindo ganhos
+          financeiros imediatos ou específicos. O sucesso depende da aplicação prática de
+          cada participante. Este site não é afiliado, endossado ou patrocinado pelo
+          Google ou Meta.
+        </p>
       </div>
     </footer>
   );

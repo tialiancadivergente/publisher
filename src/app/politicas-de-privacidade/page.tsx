@@ -3,7 +3,7 @@ import Image from "next/image";
 const privacyPolicyTitle = "POLÍTICA DE PRIVACIDADE";
 
 const privacyPolicyContent = `
-A presente Política de Privacidade aplica-se à EDITORA DIVERGENTE LTDA, pessoa jurídica de direito privado inscrita no CNPJ nº 48.424.807/0001-88, e à AEON LTDA, pessoa jurídica de direito privado inscrita no CNPJ nº 59.301.463/0001-36, com sede em: Av. Paulista, 1471. Edifício Barão de Cristina. CJ 1110. Bela Vista. São Paulo – SP. CEP 01311-927. Brasil doravante denominadas, em conjunto, “Aliança Divergente” ou “Controladora”. 
+A presente Política de Privacidade aplica-se à AEON LTDA, pessoa jurídica de direito privado inscrita no CNPJ nº 48.424.807/0001-88, e à AEON LTDA, pessoa jurídica de direito privado inscrita no CNPJ nº 59.301.463/0001-36, com sede em: Av. Paulista, 1471. Edifício Barão de Cristina. CJ 1110. Bela Vista. São Paulo – SP. CEP 01311-927. Brasil doravante denominadas, em conjunto, “Aliança Divergente” ou “Controladora”. 
 
 A Aliança Divergente é uma plataforma digital de desenvolvimento humano e mentoria online, responsável pelo tratamento dos dados pessoais coletados por meio do site www.aliancadivergente.com.br e do aplicativo Marca Passos, atuando como Controladora nos termos do art. 5º, VI, da Lei nº 13.709/2018 (Lei Geral de Proteção de Dados – LGPD). 
 

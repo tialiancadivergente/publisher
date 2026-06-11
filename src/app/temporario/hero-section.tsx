@@ -13,13 +13,13 @@ export default function HeroSection() {
 		<>
 			<header className="w-full h-[68px] md:h-[88px] bg-[#104448] border-b border-[#F4F0E1]/20 flex items-center justify-between px-5 md:px-[72px] py-0 md:py-[24px] z-30">
 				<img
-					src="/images/oro/institucional/logo_alianca.png"
+					src="/images/oro/Institucional/logo_alianca.png"
 					alt="Aliança Divergente"
 					className="hidden md:block w-auto h-[28px] object-contain select-none pointer-events-none"
 				/>
 
 				<img
-					src="/images/oro/institucional/logo_alianca_mobile.png"
+					src="/images/oro/Institucional/logo_alianca_mobile.png"
 					alt="Aliança Divergente"
 					className="block md:hidden w-auto h-[29px] object-contain select-none pointer-events-none"
 				/>

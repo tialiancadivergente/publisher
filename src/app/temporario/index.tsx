@@ -193,12 +193,6 @@ export default function Formv9() {
   };
 
   return (
-    <ContainerTeste
-      titleRedLine={titleRedLine}
-      redLine={redLine}
-      formName={launch}
-      onSubmit={handleLeadCaptureSubmit}
-      submitError={submitError}
-    />
+    <ContainerTeste />
   );
 }

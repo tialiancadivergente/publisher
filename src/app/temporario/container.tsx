@@ -17,30 +17,10 @@ import EleventhSection from "./eleventh-section";
 import TwelfthSection from "./twelfth-section";
 import Footer from "./footer";
 
-interface ContainerProps {
-	titleRedLine: React.ReactNode | null;
-	redLine: React.ReactNode | null;
-	formName: string;
-	onSubmit: (data: LeadCaptureSubmitData) => void | Promise<void>;
-	submitError?: string | null;
-}
-
-export default function ContainerTeste({
-	titleRedLine,
-	redLine,
-	formName,
-	onSubmit,
-	submitError,
-}: ContainerProps) {
+export default function ContainerTeste() {
 	return (
 		<>
-			<HeroSection
-				titleRedLine={titleRedLine}
-				redLine={redLine}
-				formName={formName}
-				onSubmit={onSubmit}
-				submitError={submitError}
-			/>
+			<HeroSection />
 
 			<Biography />
 

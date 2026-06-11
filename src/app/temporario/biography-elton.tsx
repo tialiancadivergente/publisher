@@ -44,10 +44,10 @@ export default function BiographyElton() {
 							<picture className="block w-[319px] md:w-[662px]">
 								<source
 									media="(min-width: 768px)"
-									srcSet="/images/oro/Institucional/img_01_desktop.png"
+									srcSet="/images/oro/institucional/img_01_desktop.png"
 								/>
 								<img
-									src="/images/oro/Institucional/img_01_terceira donbra_mobile.webp"
+									src="/images/oro/institucional/img_01_terceira donbra_mobile.webp"
 									alt=""
 									className="w-[319px] md:w-[662px] h-auto md:h-[328px] rounded-[6px] object-cover"
 								/>
@@ -58,10 +58,10 @@ export default function BiographyElton() {
 							<picture className="block w-[319px] md:w-[662px] order-2 md:order-1">
 								<source
 									media="(min-width: 768px)"
-									srcSet="/images/oro/Institucional/img_02_desktop.png"
+									srcSet="/images/oro/institucional/img_02_desktop.png"
 								/>
 								<img
-									src="/images/oro/Institucional/img_02_terceira donbra_mobile.webp"
+									src="/images/oro/institucional/img_02_terceira donbra_mobile.webp"
 									alt=""
 									className="w-[319px] md:w-[662px] h-auto md:h-[328px] rounded-[6px] object-cover"
 								/>
@@ -99,10 +99,10 @@ export default function BiographyElton() {
 							<picture className="block w-[319px] md:w-[610px]">
 								<source
 									media="(min-width: 768px)"
-									srcSet="/images/oro/Institucional/img_03_desktop.png"
+									srcSet="/images/oro/institucional/img_03_desktop.png"
 								/>
 								<img
-									src="/images/oro/Institucional/img_03_terceira dobra_mobile.webp"
+									src="/images/oro/institucional/img_03_terceira dobra_mobile.webp"
 									alt=""
 									className="w-[319px] md:w-[610px] h-auto md:h-[328px] rounded-[6px] object-cover"
 								/>
@@ -113,10 +113,10 @@ export default function BiographyElton() {
 							<picture className="block w-[319px] md:w-[610px] order-2 md:order-1">
 								<source
 									media="(min-width: 768px)"
-									srcSet="/images/oro/Institucional/img_04_desktop.png"
+									srcSet="/images/oro/institucional/img_04_desktop.png"
 								/>
 								<img
-									src="/images/oro/Institucional/img_04_terceira dobra_mobile.webp"
+									src="/images/oro/institucional/img_04_terceira dobra_mobile.webp"
 									alt=""
 									className="w-[319px] md:w-[610px] h-auto md:h-[328px] rounded-[6px] object-cover"
 								/>

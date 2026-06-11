@@ -5,22 +5,22 @@ import React from "react";
 export default function FifthSection() {
 	const stats = [
 		{
-			icon: "/images/oro/institucional/icone_01.png",
+			icon: "/images/oro/Institucional/icone_01.png",
 			value: "+190 mil",
 			text: "pessoas já receberam apoio da Aliança Divergente",
 		},
 		{
-			icon: "/images/oro/institucional/icone_02.png",
+			icon: "/images/oro/Institucional/icone_02.png",
 			value: "+53 mil",
 			text: "sonhos conquistados, ou em andamento, na nossa plataforma",
 		},
 		{
-			icon: "/images/oro/institucional/icone_03.png",
+			icon: "/images/oro/Institucional/icone_03.png",
 			value: "+8 mil",
 			text: "pessoas já celebraram suas conquistas com a gente",
 		},
 		{
-			icon: "/images/oro/institucional/icone_04.png",
+			icon: "/images/oro/Institucional/icone_04.png",
 			value: "+80 países",
 			text: "com membros espalhados pelo mundo",
 		},
@@ -28,7 +28,7 @@ export default function FifthSection() {
 
 	return (
 		<section
-			className={`min-h-[1728px] md:min-h-[1075px] flex flex-col items-center justify-start overflow-hidden bg-[url('/images/oro/institucional/bg_quinta_dobra_mobile.webp')] md:bg-[url('/images/oro/institucional/bg_quinta_dobra_desktop.webp')] bg-cover bg-top md:bg-center bg-no-repeat`}
+			className={`min-h-[1728px] md:min-h-[1075px] flex flex-col items-center justify-start overflow-hidden bg-[url('/images/oro/Institucional/bg_quinta_dobra_mobile.webp')] md:bg-[url('/images/oro/Institucional/bg_quinta_dobra_desktop.webp')] bg-cover bg-top md:bg-center bg-no-repeat`}
 		>
 			<div className="mx-auto w-full max-w-[1080px]">
 				<div className="flex flex-col items-center pt-[650px] md:pt-[380px]">
@@ -37,13 +37,13 @@ export default function FifthSection() {
 					</h2>
 
 					<img
-						src="/images/oro/institucional/logo_quinta_dobra_mobile.png"
+						src="/images/oro/Institucional/logo_quinta_dobra_mobile.png"
 						alt="Aliança Divergente"
 						className="block md:hidden mt-[4px] w-[282px] h-auto"
 					/>
 
 					<img
-						src="/images/oro/institucional/logo_quinta_dobra_desktop.png"
+						src="/images/oro/Institucional/logo_quinta_dobra_desktop.png"
 						alt="Aliança Divergente"
 						className="hidden md:block mt-[4px] w-[429px] h-auto"
 					/>

@@ -18,73 +18,73 @@ export default function EighthSection() {
 
 					<div className="mt-[40px] md:mt-[64px] grid grid-cols-1 md:grid-cols-3 gap-[20px]">
 						<img
-							src="/images/oro/institucional/cida.png"
+							src="/images/oro/Institucional/cida.png"
 							alt="Cida Torres"
 							className="hidden md:block w-[340px] h-[434px] rounded-[16px] object-cover"
 						/>
 
 						<img
-							src="/images/oro/institucional/cida_mobile.png"
+							src="/images/oro/Institucional/cida_mobile.png"
 							alt="Cida Torres"
 							className="block md:hidden w-[319px] h-[426px] rounded-[12px] object-cover"
 						/>
 
 						<img
-							src="/images/oro/institucional/elton.png"
+							src="/images/oro/Institucional/elton.png"
 							alt="Elton"
 							className="hidden md:block w-[340px] h-[434px] rounded-[16px] object-cover"
 						/>
 
 						<img
-							src="/images/oro/institucional/elton_mobile.png"
+							src="/images/oro/Institucional/elton_mobile.png"
 							alt="Elton"
 							className="block md:hidden w-[319px] h-[444px] rounded-[12px] object-cover"
 						/>
 
 						<img
-							src="/images/oro/institucional/jaque.png"
+							src="/images/oro/Institucional/jaque.png"
 							alt="Jacque Boesso"
 							className="hidden md:block w-[340px] h-[434px] rounded-[16px] object-cover"
 						/>
 
 						<img
-							src="/images/oro/institucional/jacque_mobile.png"
+							src="/images/oro/Institucional/jacque_mobile.png"
 							alt="Jacque Boesso"
 							className="block md:hidden w-[319px] h-[444px] rounded-[12px] object-cover"
 						/>
 
 						<img
-							src="/images/oro/institucional/rafael.png"
+							src="/images/oro/Institucional/rafael.png"
 							alt="Rafael Jordão"
 							className="hidden md:block w-[340px] h-[434px] rounded-[16px] object-cover"
 						/>
 
 						<img
-							src="/images/oro/institucional/rafael_mobile.png"
+							src="/images/oro/Institucional/rafael_mobile.png"
 							alt="Rafael Jordão"
 							className="block md:hidden w-[319px] h-[426px] rounded-[12px] object-cover"
 						/>
 
 						<img
-							src="/images/oro/institucional/ramon.png"
+							src="/images/oro/Institucional/ramon.png"
 							alt="Ramon Galimberti"
 							className="hidden md:block w-[340px] h-[434px] rounded-[16px] object-cover"
 						/>
 
 						<img
-							src="/images/oro/institucional/ramon_mobile.png"
+							src="/images/oro/Institucional/ramon_mobile.png"
 							alt="Ramon Galimberti"
 							className="block md:hidden w-[319px] h-[426px] rounded-[12px] object-cover"
 						/>
 
 						<img
-							src="/images/oro/institucional/renato.png"
+							src="/images/oro/Institucional/renato.png"
 							alt="Renato Torres"
 							className="hidden md:block w-[340px] h-[434px] rounded-[16px] object-cover"
 						/>
 
 						<img
-							src="/images/oro/institucional/renato_mobile.png"
+							src="/images/oro/Institucional/renato_mobile.png"
 							alt="Renato Torres"
 							className="block md:hidden w-[319px] h-[444px] rounded-[12px] object-cover"
 						/>

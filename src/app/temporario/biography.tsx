@@ -75,10 +75,10 @@ export default function Biography() {
 					<picture className="mt-[28px] md:mt-[48px] block w-full max-w-[319px] md:max-w-[1059px]">
 						<source
 							media="(min-width: 768px)"
-							srcSet="/images/oro/institucional/img_segunda_dobra_desktop.webp"
+							srcSet="/images/oro/Institucional/img_segunda_dobra_desktop.webp"
 						/>
 						<img
-							src="/images/oro/institucional/img_segunda_dobra_mobile.webp"
+							src="/images/oro/Institucional/img_segunda_dobra_mobile.webp"
 							alt=""
 							className="w-[319px] h-[239px] md:w-[1059px] md:h-[394px] rounded-[12px] md:rounded-[16px] object-cover"
 						/>

@@ -71,7 +71,7 @@ export default function TwelfthSection() {
 												`}
 											>
 												<img
-													src="/images/oro/institucional/seta_perguntas.png"
+													src="/images/oro/Institucional/seta_perguntas.png"
 													alt=""
 													className="h-12 w-12"
 												/>

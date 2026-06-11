@@ -86,7 +86,7 @@ export default function NinthSection() {
 									className="w-[319px] min-h-[410px] md:min-h-0 md:w-[520px] md:h-[232px] rounded-[12px] md:rounded-[16px] bg-[#006D7133] border-b-[4px] border-[#006D7133] px-[24px] md:pl-[24px] md:pr-[32px] pt-[32px] md:pt-[24px] pb-[24px] flex flex-col items-center md:flex-row md:items-start gap-[24px] md:gap-[32px]"
 								>
 									<img
-										src={`/images/oro/institucional/${item.image}`}
+										src={`/images/oro/Institucional/${item.image}`}
 										alt={item.name}
 										className="w-[121px] h-[121px] md:w-[110px] md:h-[110px] rounded-full object-cover shrink-0"
 									/>
@@ -111,7 +111,7 @@ export default function NinthSection() {
 											aria-label={isOpen ? "Recolher texto" : "Expandir texto"}
 										>
 											<img
-												src="/images/oro/institucional/seta.png"
+												src="/images/oro/Institucional/seta.png"
 												alt=""
 												className={`w-[58px] h-auto object-contain transition-transform duration-300 ${
 													isOpen ? "rotate-180" : ""
@@ -132,13 +132,13 @@ export default function NinthSection() {
 					</div>
 
 					<img
-						src="/images/oro/institucional/logo_aqui_voce_pode_mais.png"
+						src="/images/oro/Institucional/logo_aqui_voce_pode_mais.png"
 						alt="Aqui você pode mais"
 						className="hidden md:block mt-[152px] w-[560px] h-auto"
 					/>
 
 					<img
-						src="/images/oro/institucional/Aqui_voce_pode_Mais_mobile.png"
+						src="/images/oro/Institucional/Aqui_voce_pode_Mais_mobile.png"
 						alt="Aqui você pode mais"
 						className="block md:hidden mt-[56px] w-[203px] h-[195px] object-contain"
 					/>

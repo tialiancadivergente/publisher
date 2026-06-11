@@ -19,7 +19,7 @@ export default function Footer() {
 			<div className="mx-auto flex min-h-[427px] w-full max-w-[1432px] flex-col items-center px-7 py-[28px] lg:min-h-[172px] lg:flex-row lg:items-center lg:justify-between lg:px-10 lg:py-0">
 				<div className="flex flex-col items-center lg:items-start">
 					<Image
-						src="/images/oro/institucional/logo_desktop_rodape.png"
+						src="/images/oro/Institucional/logo_desktop_rodape.png"
 						alt="Aliança Divergente"
 						width={284}
 						height={37}
@@ -27,7 +27,7 @@ export default function Footer() {
 					/>
 
 					<Image
-						src="/images/oro/institucional/image2.png"
+						src="/images/oro/Institucional/image2.png"
 						alt="Verificado por Reclame Aqui"
 						width={146}
 						height={35}
@@ -66,7 +66,7 @@ export default function Footer() {
 						<div className="flex items-center gap-4">
 							<Link href="#" className="transition-opacity hover:opacity-80">
 								<Image
-									src="/images/oro/institucional/Instagram.png"
+									src="/images/oro/Institucional/Instagram.png"
 									alt="Instagram"
 									width={24}
 									height={24}
@@ -75,7 +75,7 @@ export default function Footer() {
 
 							<Link href="#" className="transition-opacity hover:opacity-80">
 								<Image
-									src="/images/oro/institucional/youtube.png"
+									src="/images/oro/Institucional/youtube.png"
 									alt="YouTube"
 									width={24}
 									height={24}
@@ -84,7 +84,7 @@ export default function Footer() {
 
 							<Link href="#" className="transition-opacity hover:opacity-80">
 								<Image
-									src="/images/oro/institucional/tiktok.png"
+									src="/images/oro/Institucional/tiktok.png"
 									alt="TikTok"
 									width={24}
 									height={24}

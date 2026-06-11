@@ -5,7 +5,7 @@ import React from "react";
 export default function BiographyRamon() {
 	return (
 		<section
-			className={`min-h-[903px] md:min-h-[1070px] flex flex-col items-center p-4 md:p-0 justify-start overflow-hidden bg-[#000000] bg-[url('/images/oro/institucional/bg_quarta_dobra_mobile.webp')] md:bg-[url('/images/oro/institucional/bg_quarta_dobra_desktop.webp')] bg-cover bg-top md:bg-center bg-no-repeat z-0`}
+			className={`min-h-[903px] md:min-h-[1070px] flex flex-col items-center p-4 md:p-0 justify-start overflow-hidden bg-[#000000] bg-[url('/images/oro/Institucional/bg_quarta_dobra_mobile.webp')] md:bg-[url('/images/oro/Institucional/bg_quarta_dobra_desktop.webp')] bg-cover bg-top md:bg-center bg-no-repeat z-0`}
 		>
 			<div className="mx-auto w-full max-w-[1080px]">
 				<div className="mx-auto flex w-full flex-col items-center pt-[340px] md:pt-[540px]">

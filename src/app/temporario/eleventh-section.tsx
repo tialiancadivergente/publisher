@@ -16,12 +16,12 @@ export default function EleventhSection() {
 					w-full
 					max-w-[1920px]
 					justify-center
-					bg-[url('/images/oro/institucional/bg_dobra_11_mobile.png')]
+					bg-[url('/images/oro/Institucional/bg_dobra_11_mobile.png')]
 					bg-cover
 					bg-center
 					bg-no-repeat
 					lg:min-h-[1045px]
-					lg:bg-[url('/images/oro/institucional/bg_dobra_11_desktop.png')]
+					lg:bg-[url('/images/oro/Institucional/bg_dobra_11_desktop.png')]
 				"
 			>
 				<div className="relative z-10 flex w-full justify-center px-7 pt-[52px] lg:px-10 lg:pt-[92px]">

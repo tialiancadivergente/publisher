@@ -32,7 +32,7 @@ export default function SeventhSection() {
 					<div className="mt-[40px] md:mt-[64px] flex flex-col items-center gap-[12px]">
 						<div className="flex flex-col md:flex-row gap-0 md:gap-[12px]">
 							<img
-								src="/images/oro/institucional/rectangle19.png"
+								src="/images/oro/Institucional/rectangle19.png"
 								alt=""
 								className="hidden md:block w-[610px] h-[360px] rounded-[16px] object-cover"
 							/>
@@ -51,7 +51,7 @@ export default function SeventhSection() {
 							</div>
 
 							<img
-								src="/images/oro/institucional/rectangle24.png"
+								src="/images/oro/Institucional/rectangle24.png"
 								alt=""
 								className="block md:hidden w-[319px] h-[319px] rounded-b-[12px] object-cover"
 							/>
@@ -73,13 +73,13 @@ export default function SeventhSection() {
 							</div>
 
 							<img
-								src="/images/oro/institucional/rectangle20.png"
+								src="/images/oro/Institucional/rectangle20.png"
 								alt=""
 								className="hidden md:block w-[610px] h-[360px] rounded-[16px] object-cover"
 							/>
 
 							<img
-								src="/images/oro/institucional/rectangle25.png"
+								src="/images/oro/Institucional/rectangle25.png"
 								alt=""
 								className="block md:hidden w-[319px] h-[319px] rounded-b-[12px] object-cover"
 							/>
@@ -87,7 +87,7 @@ export default function SeventhSection() {
 
 						<div className="flex flex-col md:flex-row gap-0 md:gap-[12px]">
 							<img
-								src="/images/oro/institucional/rectangle21.png"
+								src="/images/oro/Institucional/rectangle21.png"
 								alt=""
 								className="hidden md:block w-[610px] h-[360px] rounded-[16px] object-cover"
 							/>
@@ -104,7 +104,7 @@ export default function SeventhSection() {
 							</div>
 
 							<img
-								src="/images/oro/institucional/rectangle26.png"
+								src="/images/oro/Institucional/rectangle26.png"
 								alt=""
 								className="block md:hidden w-[319px] h-[319px] rounded-b-[12px] object-cover"
 							/>
@@ -124,13 +124,13 @@ export default function SeventhSection() {
 							</div>
 
 							<img
-								src="/images/oro/institucional/rectangle22.png"
+								src="/images/oro/Institucional/rectangle22.png"
 								alt=""
 								className="hidden md:block w-[610px] h-[360px] rounded-[16px] object-cover"
 							/>
 
 							<img
-								src="/images/oro/institucional/rectangle27.png"
+								src="/images/oro/Institucional/rectangle27.png"
 								alt=""
 								className="block md:hidden w-[319px] h-[319px] rounded-b-[12px] object-cover"
 							/>
@@ -138,7 +138,7 @@ export default function SeventhSection() {
 
 						<div className="flex flex-col md:flex-row gap-0 md:gap-[12px]">
 							<img
-								src="/images/oro/institucional/rectangle23.png"
+								src="/images/oro/Institucional/rectangle23.png"
 								alt=""
 								className="hidden md:block w-[610px] h-[360px] rounded-[16px] object-cover"
 							/>
@@ -156,7 +156,7 @@ export default function SeventhSection() {
 							</div>
 
 							<img
-								src="/images/oro/institucional/rectangle28.png"
+								src="/images/oro/Institucional/rectangle28.png"
 								alt=""
 								className="block md:hidden w-[319px] h-[319px] rounded-b-[12px] object-cover"
 							/>

@@ -13,13 +13,13 @@ export default function HeroSection() {
 		<>
 			<header className="w-full h-[68px] md:h-[88px] bg-[#104448] border-b border-[#F4F0E1]/20 flex items-center justify-between px-5 md:px-[72px] py-0 md:py-[24px] z-30">
 				<img
-					src="/images/oro/institucional/logo_alianca.png"
+					src="/images/oro/Institucional/logo_alianca.png"
 					alt="Aliança Divergente"
 					className="hidden md:block w-auto h-[28px] object-contain select-none pointer-events-none"
 				/>
 
 				<img
-					src="/images/oro/institucional/logo_alianca_mobile.png"
+					src="/images/oro/Institucional/logo_alianca_mobile.png"
 					alt="Aliança Divergente"
 					className="block md:hidden w-auto h-[29px] object-contain select-none pointer-events-none"
 				/>
@@ -101,7 +101,7 @@ export default function HeroSection() {
 					<div className="w-[252px] h-full bg-[#104448] px-5 pt-6 pb-8 flex flex-col">
 						<div className="flex items-start justify-between">
 							<img
-								src="/images/oro/institucional/logo_alianca_mobile.png"
+								src="/images/oro/Institucional/logo_alianca_mobile.png"
 								alt="Aliança Divergente"
 								className="w-auto h-[29px] object-contain select-none pointer-events-none"
 							/>
@@ -162,7 +162,7 @@ export default function HeroSection() {
 
 			<section
 				id="hero"
-				className="relative h-[735px] md:h-[860px] flex flex-col items-center p-4 md:p-0 justify-start md:justify-center overflow-hidden bg-[#071117] bg-[url('/images/oro/institucional/bg_mobile_primeira_dobra.png')] md:bg-[url('/images/oro/institucional/bg_desktop_primeira_dobra.webp')] bg-cover bg-center z-0"
+				className="relative h-[735px] md:h-[860px] flex flex-col items-center p-4 md:p-0 justify-start md:justify-center overflow-hidden bg-[#071117] bg-[url('/images/oro/Institucional/bg_mobile_primeira_dobra.png')] md:bg-[url('/images/oro/Institucional/bg_desktop_primeira_dobra.webp')] bg-cover bg-center z-0"
 			>
 				<div className="mx-auto sm:px-4 2md:pt-6 pt-2 relative lg:w-[1080px] w-full flex justify-center md:justify-start">
 					<div className="w-full max-w-[318px] md:max-w-[610px] -mt-[20px] md:-mt-[180px] md:ml-[-40px]">

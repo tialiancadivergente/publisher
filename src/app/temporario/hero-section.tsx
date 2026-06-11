@@ -162,7 +162,7 @@ export default function HeroSection() {
 
 			<section
 				id="hero"
-				className="relative h-[735px] md:h-[860px] flex flex-col items-center p-4 md:p-0 justify-start md:justify-center overflow-hidden bg-[#071117] bg-[url('/images/oro/institucional/bg_mobile_primeira_dobra.png')] md:bg-[url('/images/oro/institucional/bg_desktop_primeira_dobra.webp')] bg-cover bg-center z-0"
+				className="relative h-[735px] md:h-[860px] flex flex-col items-center p-4 md:p-0 justify-start md:justify-center overflow-hidden bg-[#071117] bg-[url('/images/oro/Institucional/bg_mobile_primeira_dobra.png')] md:bg-[url('/images/oro/Institucional/bg_desktop_primeira_dobra.webp')] bg-cover bg-center z-0"
 			>
 				<div className="mx-auto sm:px-4 2md:pt-6 pt-2 relative lg:w-[1080px] w-full flex justify-center md:justify-start">
 					<div className="w-full max-w-[318px] md:max-w-[610px] -mt-[20px] md:-mt-[180px] md:ml-[-40px]">

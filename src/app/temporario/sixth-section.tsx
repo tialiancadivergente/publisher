@@ -37,13 +37,13 @@ export default function SixthSection() {
 					</div>
 
 					<img
-						src="/images/oro/institucional/bg_sexta_dobra_mobile.png"
+						src="/images/oro/Institucional/bg_sexta_dobra_mobile.png"
 						alt="Método PDA"
 						className="block md:hidden mt-[40px] w-[311px] h-auto"
 					/>
 
 					<img
-						src="/images/oro/institucional/bg_sexta_dobra_desktop.png"
+						src="/images/oro/Institucional/bg_sexta_dobra_desktop.png"
 						alt="Método PDA"
 						className="hidden md:block mt-[64px] w-[415px] h-auto"
 					/>
@@ -64,7 +64,7 @@ export default function SixthSection() {
 										</h3>
 
 										<img
-											src="/images/oro/institucional/eyeglasses_2_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24 1.png"
+											src="/images/oro/Institucional/eyeglasses_2_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24 1.png"
 											alt=""
 											className="w-[32px] h-[32px] object-contain"
 										/>
@@ -98,7 +98,7 @@ export default function SixthSection() {
 										</h3>
 
 										<img
-											src="/images/oro/institucional/eyeglasses_2_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24 1.png"
+											src="/images/oro/Institucional/eyeglasses_2_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24 1.png"
 											alt=""
 											className="w-[41px] h-[41px] object-contain"
 										/>
@@ -134,7 +134,7 @@ export default function SixthSection() {
 										</h3>
 
 										<img
-											src="/images/oro/institucional/alt_route_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24 1.png"
+											src="/images/oro/Institucional/alt_route_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24 1.png"
 											alt=""
 											className="w-[24px] h-[26.67px] object-contain"
 										/>
@@ -166,7 +166,7 @@ export default function SixthSection() {
 										</h3>
 
 										<img
-											src="/images/oro/institucional/alt_route_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24 1.png"
+											src="/images/oro/Institucional/alt_route_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24 1.png"
 											alt=""
 											className="w-[40px] h-[40px] object-contain"
 										/>
@@ -201,7 +201,7 @@ export default function SixthSection() {
 										</h3>
 
 										<img
-											src="/images/oro/institucional/Sprint.png"
+											src="/images/oro/Institucional/Sprint.png"
 											alt=""
 											className="w-[32px] h-[32px] object-contain"
 										/>
@@ -234,7 +234,7 @@ export default function SixthSection() {
 										</h3>
 
 										<img
-											src="/images/oro/institucional/Sprint.png"
+											src="/images/oro/Institucional/Sprint.png"
 											alt=""
 											className="w-[40px] h-[41px] object-contain"
 										/>

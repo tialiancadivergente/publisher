@@ -13,13 +13,13 @@ export default function TenthSection() {
 
 					<div className="mt-[40px] md:mt-[64px] flex flex-col md:flex-row items-center gap-[24px] md:gap-[40px]">
 						<img
-							src="/images/oro/institucional/bloco_elton_desktop.png"
+							src="/images/oro/Institucional/bloco_elton_desktop.png"
 							alt=""
 							className="hidden md:block w-[340px] h-[497px] object-contain"
 						/>
 
 						<img
-							src="/images/oro/institucional/bloco_elton_mobile.png"
+							src="/images/oro/Institucional/bloco_elton_mobile.png"
 							alt=""
 							className="block md:hidden w-screen h-auto object-cover"
 						/>
@@ -51,7 +51,7 @@ export default function TenthSection() {
 
 							<div className="mt-auto w-[271px] md:w-[620px] flex items-end justify-between">
 								<img
-									src="/images/oro/institucional/o_globo_logo.png"
+									src="/images/oro/Institucional/o_globo_logo.png"
 									alt="O Globo"
 									className="w-[96.876953125px] h-auto md:w-[148px]"
 								/>

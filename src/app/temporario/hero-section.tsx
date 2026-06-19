@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export default function HeroSection() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,15 +13,15 @@ export default function HeroSection() {
 		<>
 			<header className="w-full h-[68px] md:h-[88px] bg-[#104448] border-b border-[#F4F0E1]/20 flex items-center justify-between px-5 md:px-[72px] py-0 md:py-[24px] z-30">
 				<img
-					src="/images/oro/Institucional/logo_alianca.png"
+					src="/images/logo/logo_1.svg"
 					alt="Aliança Divergente"
 					className="hidden md:block w-auto h-[28px] object-contain select-none pointer-events-none"
 				/>
 
 				<img
-					src="/images/oro/Institucional/logo_alianca_mobile.png"
+					src="/images/logo/logo_1.svg"
 					alt="Aliança Divergente"
-					className="block md:hidden w-auto h-[29px] object-contain select-none pointer-events-none"
+					className="block md:hidden w-auto h-[20px] object-contain select-none pointer-events-none"
 				/>
 
 				<nav className="hidden md:flex items-center justify-end gap-6 h-[40px]">
@@ -29,30 +29,10 @@ export default function HeroSection() {
 						href="https://blog.aliancadivergente.com.br/"
 						target="_blank"
 						rel="noopener noreferrer"
-						className="font-spectral font-normal text-[14px] leading-[24px] text-center text-[#F4F0E1] flex items-center gap-1"
-					>
-						Central de Conteúdo
-						<ChevronDown size={14} />
-					</a>
-
-					<a
-						href="#ninth-section"
 						className="font-spectral font-normal text-[14px] leading-[24px] text-center text-[#F4F0E1]"
 					>
-						Histórias dos Aliados
+						Central de Conteúdo
 					</a>
-
-					<a href="#" className="font-spectral font-normal text-[14px] leading-[24px] text-center text-[#F4F0E1] flex items-center gap-1">
-						Eventos
-						<ChevronDown size={14} />
-					</a>
-
-					<a href="#" className="font-spectral font-normal text-[14px] leading-[24px] text-center text-[#F4F0E1] flex items-center gap-1">
-						Quem Somos
-						<ChevronDown size={14} />
-					</a>
-
-					<div className="w-px h-[24px] bg-[#F4F0E1]/40" />
 
 					<a
 						href="https://www.marca-passos.com/login"
@@ -121,28 +101,9 @@ export default function HeroSection() {
 								href="https://blog.aliancadivergente.com.br/"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="font-spectral font-normal text-[16px] leading-[32px] text-[#F4F0E1] flex items-center gap-2"
-							>
-								Central de Conteúdo
-								<ChevronDown size={18} />
-							</a>
-
-							<a
-								href="#ninth-section"
-								onClick={() => setIsMenuOpen(false)}
 								className="font-spectral font-normal text-[16px] leading-[32px] text-[#F4F0E1]"
 							>
-								Histórias dos Aliados
-							</a>
-
-							<a href="#" className="font-spectral font-normal text-[16px] leading-[32px] text-[#F4F0E1] flex items-center gap-2">
-								Eventos
-								<ChevronDown size={18} />
-							</a>
-
-							<a href="#" className="font-spectral font-normal text-[16px] leading-[32px] text-[#F4F0E1] flex items-center gap-2">
-								Quem Somos
-								<ChevronDown size={18} />
+								Central de Conteúdo
 							</a>
 						</nav>
 

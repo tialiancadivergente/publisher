@@ -6,6 +6,7 @@ const testimonials = [
 	{
 		name: "Júlia Lidiane",
 		image: "julia_desktop.png",
+		popupImage: "/images/aliados/julia.svg",
 		short:
 			"Professora, endividada e emocionalmente exausta, Júlia encontrou na Aliança Divergente um caminho para sair do vitimismo e construir seu próprio negócio. Hoje, seu cursinho tem mais de 200 alunos e fatura acima de R$30 mil.",
 		mobileShort:
@@ -19,6 +20,7 @@ Ao aplicar o nosso método, Júlia começou a reorganizar sua postura, enfrentar
 	{
 		name: "Cauê Bampi",
 		image: "caue_desktop.png",
+		popupImage: "/images/aliados/caue.svg",
 		short:
 			"Cauê chegou com baixo faturamento, estresse e dificuldades nas relações. Ao mudar sua postura como homem, marido e pai, viu o financeiro responder: saiu de R$6 mil para R$22 mil e passou a viver com mais presença dentro de casa.",
 		mobileShort:
@@ -32,6 +34,7 @@ A virada veio quando ele deixou de olhar apenas para o dinheiro e passou a encar
 	{
 		name: "Yasmin Fernandes",
 		image: "yasmin_desktop.png",
+		popupImage: "/images/aliados/yasmin.svg",
 		short:
 			"Yasmin estava em um casamento desgastado e vivia no controle, na urgência e no esforço. Com a AD, reconstruiu o diálogo com o marido, comprou sua casa, iniciou uma transição de carreira e passou a viver com mais calma e direção.",
 		mobileShort:
@@ -45,6 +48,7 @@ Com as nossas ferramentas e apoio da comunidade, reconstruiu o diálogo com o ma
 	{
 		name: "Veridiana Cordeiro",
 		image: "veridiana_desktop.png",
+		popupImage: "/images/aliados/veridiana.svg",
 		short:
 			"Veridiana carregava anos de dor, luto e controle. Aqui, encontrou clareza para reorganizar suas relações, restaurar o casamento e fortalecer a vida financeira da família, saindo de um déficit empresarial para a expansão dos negócios.",
 		mobileShort:
@@ -59,6 +63,7 @@ Na Aliança, Veridiana encontrou ferramentas para olhar para si com responsabili
 
 export default function NinthSection() {
 	const [openCards, setOpenCards] = useState<number[]>([]);
+	const [activePopupIndex, setActivePopupIndex] = useState<number | null>(null);
 
 	const toggleCard = (index: number) => {
 		setOpenCards((current) =>
@@ -66,6 +71,28 @@ export default function NinthSection() {
 				? current.filter((item) => item !== index)
 				: [...current, index]
 		);
+	};
+
+	const openPopup = (index: number) => {
+		setActivePopupIndex(index);
+	};
+
+	const closePopup = () => {
+		setActivePopupIndex(null);
+	};
+
+	const goToPrevious = () => {
+		setActivePopupIndex((current) => {
+			if (current === null) return current;
+			return (current - 1 + testimonials.length) % testimonials.length;
+		});
+	};
+
+	const goToNext = () => {
+		setActivePopupIndex((current) => {
+			if (current === null) return current;
+			return (current + 1) % testimonials.length;
+		});
 	};
 
 	return (
@@ -83,7 +110,8 @@ export default function NinthSection() {
 							return (
 								<div
 									key={item.name}
-									className="w-[319px] min-h-[410px] md:min-h-0 md:w-[520px] md:h-[232px] rounded-[12px] md:rounded-[16px] bg-[#006D7133] border-b-[4px] border-[#006D7133] px-[24px] md:pl-[24px] md:pr-[32px] pt-[32px] md:pt-[24px] pb-[24px] flex flex-col items-center md:flex-row md:items-start gap-[24px] md:gap-[32px]"
+									onClick={() => openPopup(index)}
+									className="w-[319px] min-h-[410px] md:min-h-0 md:w-[520px] md:h-[232px] rounded-[12px] md:rounded-[16px] bg-[#006D7133] border-b-[4px] border-[#006D7133] px-[24px] md:pl-[24px] md:pr-[32px] pt-[32px] md:pt-[24px] pb-[24px] flex flex-col items-center md:flex-row md:items-start gap-[24px] md:gap-[32px] md:cursor-pointer"
 								>
 									<img
 										src={`/images/oro/Institucional/${item.image}`}
@@ -100,13 +128,16 @@ export default function NinthSection() {
 											{isOpen ? item.full : item.mobileShort}
 										</p>
 
-										<p className="hidden md:block mt-[16px] w-[322px] h-[100px] font-mulish font-light text-[#FFFFFF] text-[14px] leading-[20px]">
+										<p className="hidden md:block mt-[16px] w-[322px] min-h-[100px] font-mulish font-light text-[#FFFFFF] text-[14px] leading-[20px]">
 											{item.short}
 										</p>
 
 										<button
 											type="button"
-											onClick={() => toggleCard(index)}
+											onClick={(event) => {
+												event.stopPropagation();
+												toggleCard(index);
+											}}
 											className="mt-[20px] md:hidden flex items-center justify-center"
 											aria-label={isOpen ? "Recolher texto" : "Expandir texto"}
 										>
@@ -121,7 +152,11 @@ export default function NinthSection() {
 
 										<button
 											type="button"
-											className="hidden md:block mt-[12px] w-[58px] font-mulish font-bold italic text-[#CA9A63] text-[12px] leading-[100%] text-right"
+											onClick={(event) => {
+												event.stopPropagation();
+												openPopup(index);
+											}}
+											className="hidden md:block mt-[16px] w-[58px] font-mulish font-bold italic text-[#CA9A63] text-[12px] leading-[100%] text-right"
 										>
 											Ler mais...
 										</button>
@@ -144,6 +179,45 @@ export default function NinthSection() {
 					/>
 				</div>
 			</div>
+
+			{activePopupIndex !== null && (
+				<div className="hidden md:flex fixed inset-0 z-50 flex-col items-center justify-center bg-[#001B1B]/80">
+					<img
+						src={testimonials[activePopupIndex].popupImage}
+						alt={testimonials[activePopupIndex].name}
+						className="w-[900px] max-w-[58vw] h-auto"
+					/>
+
+					<div className="mt-[24px] flex items-center justify-center gap-[32px]">
+						<button
+							type="button"
+							onClick={goToPrevious}
+							aria-label="Depoimento anterior"
+							className="font-mulish text-[#FFFFFF] text-[42px] leading-none"
+						>
+							←
+						</button>
+
+						<button
+							type="button"
+							onClick={closePopup}
+							aria-label="Fechar popup"
+							className="font-mulish text-[#FFFFFF] text-[42px] leading-none"
+						>
+							×
+						</button>
+
+						<button
+							type="button"
+							onClick={goToNext}
+							aria-label="Próximo depoimento"
+							className="font-mulish text-[#FFFFFF] text-[42px] leading-none"
+						>
+							→
+						</button>
+					</div>
+				</div>
+			)}
 		</section>
 	);
 }

@@ -104,7 +104,7 @@ export default function Biography() {
 
 							<div className="mt-[40px] md:mt-[56px] grid grid-cols-1 md:grid-cols-2 w-[241px] md:w-[755px]">
 								<div className="flex flex-col items-center pb-[32px] md:pb-[40px] md:border-r md:border-b md:border-[#D3CAC0]/20">
-									<div className="font-spectral font-bold text-[#C0964B] text-[32px] leading-[42px] md:text-[40px] md:leading-[56px] text-center w-[241px] md:w-[377.5px]">
+									<div className="font-spectral font-bold text-[#C0964B] hover:text-[#FFFFFF] transition-colors duration-300 text-[32px] leading-[42px] md:text-[40px] md:leading-[56px] text-center w-[241px] md:w-[377.5px]">
 										332 milhões
 									</div>
 
@@ -118,7 +118,7 @@ export default function Biography() {
 								</div>
 
 								<div className="flex flex-col items-center py-[32px] md:pt-0 md:pb-[40px] md:border-b md:border-[#D3CAC0]/20">
-									<div className="font-spectral font-bold text-[#C0964B] text-[32px] leading-[42px] md:text-[40px] md:leading-[56px] text-center w-[241px] md:w-[377.5px]">
+									<div className="font-spectral font-bold text-[#C0964B] hover:text-[#ffff] transition-colors duration-300 text-[32px] leading-[42px] md:text-[40px] md:leading-[56px] text-center w-[241px] md:w-[377.5px]">
 										546 mil
 									</div>
 
@@ -133,7 +133,7 @@ export default function Biography() {
 								</div>
 
 								<div className="flex flex-col items-center py-[32px] md:pt-[40px] md:pb-0 md:border-r md:border-[#D3CAC0]/20">
-									<div className="font-spectral font-bold text-[#C0964B] text-[32px] leading-[42px] md:text-[40px] md:leading-[56px] text-center w-[241px] md:w-[377.5px]">
+									<div className="font-spectral font-bold text-[#C0964B] hover:text-[#ffff] transition-colors duration-300 text-[32px] leading-[42px] md:text-[40px] md:leading-[56px] text-center w-[241px] md:w-[377.5px]">
 										6,2 milhões
 									</div>
 
@@ -147,7 +147,7 @@ export default function Biography() {
 								</div>
 
 								<div className="flex flex-col items-center pt-[32px] md:pt-[40px] md:pb-0">
-									<div className="font-spectral font-bold text-[#C0964B] text-[32px] leading-[42px] md:text-[40px] md:leading-[56px] text-center w-[241px] md:w-[377.5px]">
+									<div className="font-spectral font-bold text-[#C0964B] hover:text-[#ffff] transition-colors duration-300 text-[32px] leading-[42px] md:text-[40px] md:leading-[56px] text-center w-[241px] md:w-[377.5px]">
 										484 milhões
 									</div>
 

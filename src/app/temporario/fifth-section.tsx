@@ -65,7 +65,7 @@ export default function FifthSection() {
 								<img
 									src={item.icon}
 									alt=""
-									className="w-[56px] h-[56px] min-w-[56px] min-h-[56px] object-contain"
+									className="w-[56px] h-[56px] min-w-[56px] min-h-[56px] object-contain transition-transform duration-500 ease-in-out hover:-translate-y-2"
 								/>
 
 								<h3 className="mt-[16px] font-spectral font-bold text-[#006D71] text-[32px] leading-[42px] md:text-[40px] md:leading-[56px] text-center w-[238px] md:w-[216.5px]">

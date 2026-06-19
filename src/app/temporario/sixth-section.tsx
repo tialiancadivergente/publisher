@@ -49,7 +49,7 @@ export default function SixthSection() {
 					/>
 
 					<div className="mt-[80px] md:mt-[96px] flex flex-col items-center gap-[16px] md:gap-[24px]">
-						<div className="w-[319px] h-[384px] md:w-[880px] md:h-[257px] bg-[#006D71] rounded-[16px] p-[24px]">
+						<div className="w-[319px] h-[384px] md:w-[880px] md:h-[257px] bg-[#006D71] rounded-[16px] p-[24px] transition-transform duration-500 ease-in-out hover:-translate-y-2">
 							<div className="flex flex-col md:hidden">
 								<div className="flex items-center gap-[16px]">
 									<div className="w-[56px] h-[56px] rounded-full bg-[#917E5A] flex items-center justify-center shrink-0">
@@ -119,7 +119,7 @@ export default function SixthSection() {
 							</div>
 						</div>
 
-						<div className="w-[319px] h-[360px] md:w-[880px] md:h-[224px] bg-[#006D71] rounded-[16px] p-[24px]">
+						<div className="w-[319px] h-[360px] md:w-[880px] md:h-[224px] bg-[#006D71] rounded-[16px] p-[24px] transition-transform duration-500 ease-in-out hover:-translate-y-2">
 							<div className="flex flex-col md:hidden">
 								<div className="flex items-center gap-[16px]">
 									<div className="w-[56px] h-[56px] rounded-full bg-[#917E5A] flex items-center justify-center shrink-0">
@@ -186,7 +186,7 @@ export default function SixthSection() {
 							</div>
 						</div>
 
-						<div className="w-[319px] h-[360px] md:w-[880px] md:h-[225px] bg-[#006D71] rounded-[16px] p-[24px]">
+						<div className="w-[319px] h-[360px] md:w-[880px] md:h-[225px] bg-[#006D71] rounded-[16px] p-[24px] transition-transform duration-500 ease-in-out hover:-translate-y-2">
 							<div className="flex flex-col md:hidden">
 								<div className="flex items-center gap-[16px]">
 									<div className="w-[56px] h-[56px] rounded-full bg-[#917E5A] flex items-center justify-center shrink-0">

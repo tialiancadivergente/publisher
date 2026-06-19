@@ -19,20 +19,27 @@ export default function Footer() {
 			<div className="mx-auto flex min-h-[427px] w-full max-w-[1432px] flex-col items-center px-7 py-[28px] lg:min-h-[172px] lg:flex-row lg:items-center lg:justify-between lg:px-10 lg:py-0">
 				<div className="flex flex-col items-center lg:items-start">
 					<Image
-						src="/images/oro/Institucional/logo_desktop_rodape.png"
+						src="/images/logo/logo_1.svg"
 						alt="Aliança Divergente"
 						width={284}
 						height={37}
 						className="h-auto w-[243px] object-contain lg:w-[284px]"
 					/>
 
-					<Image
-						src="/images/oro/Institucional/image2.png"
-						alt="Verificado por Reclame Aqui"
-						width={146}
-						height={35}
-						className="mt-[18px] h-auto w-[144.5px] rounded-[4px] object-contain lg:w-[146px]"
-					/>
+					<Link
+						href="https://www.reclameaqui.com.br/empresa/e2x-ltda/"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="transition-opacity hover:opacity-80"
+					>
+						<Image
+							src="/images/oro/Institucional/image2.png"
+							alt="Verificado por Reclame Aqui"
+							width={146}
+							height={35}
+							className="mt-[18px] h-auto w-[144.5px] rounded-[4px] object-contain lg:w-[146px]"
+						/>
+					</Link>
 				</div>
 
 				<div className="mt-[30px] grid grid-cols-2 gap-x-[52px] gap-y-[18px] font-spectral text-[14px] italic leading-[120%] text-white lg:mt-0 lg:flex lg:gap-[72px]">
@@ -64,7 +71,12 @@ export default function Footer() {
 						<p>Nossas Redes</p>
 
 						<div className="flex items-center gap-4">
-							<Link href="#" className="transition-opacity hover:opacity-80">
+							<Link
+								href="https://www.instagram.com/aliancadivergente?igsh=MTRjaGUyNXo3cGlsbg=="
+								target="_blank"
+								rel="noopener noreferrer"
+								className="transition-opacity hover:opacity-80"
+							>
 								<Image
 									src="/images/oro/Institucional/Instagram.png"
 									alt="Instagram"
@@ -73,7 +85,12 @@ export default function Footer() {
 								/>
 							</Link>
 
-							<Link href="#" className="transition-opacity hover:opacity-80">
+							<Link
+								href="https://www.youtube.com/@AliancaDivergente"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="transition-opacity hover:opacity-80"
+							>
 								<Image
 									src="/images/oro/Institucional/youtube.png"
 									alt="YouTube"
@@ -82,10 +99,29 @@ export default function Footer() {
 								/>
 							</Link>
 
-							<Link href="#" className="transition-opacity hover:opacity-80">
+							<Link
+								href="https://www.tiktok.com/@aliancadivergente"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="transition-opacity hover:opacity-80"
+							>
 								<Image
 									src="/images/oro/Institucional/tiktok.png"
 									alt="TikTok"
+									width={24}
+									height={24}
+								/>
+							</Link>
+
+							<Link
+								href="https://www.linkedin.com/company/alian%C3%A7a-divergente/"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="transition-opacity hover:opacity-80"
+							>
+								<Image
+									src="/images/logo/linkedin.png"
+									alt="LinkedIn"
 									width={24}
 									height={24}
 								/>

@@ -1,8 +1,73 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
 export default function EighthSection() {
+	const mentors = [
+		{
+			name: "Cida Torres",
+			desktopImage: "/images/oro/Institucional/cida.png",
+			mobileImage: "/images/oro/Institucional/cida_mobile.png",
+			popupImage: "/images/card/cida.svg",
+			mobileHeight: "h-[426px]",
+		},
+		{
+			name: "Elton",
+			desktopImage: "/images/oro/Institucional/elton.png",
+			mobileImage: "/images/oro/Institucional/elton_mobile.png",
+			popupImage: "/images/card/elton.svg",
+			mobileHeight: "h-[444px]",
+		},
+		{
+			name: "Jacque Boesso",
+			desktopImage: "/images/oro/Institucional/jaque.png",
+			mobileImage: "/images/oro/Institucional/jacque_mobile.png",
+			popupImage: "/images/card/jaque.svg",
+			mobileHeight: "h-[444px]",
+		},
+		{
+			name: "Rafael Jordão",
+			desktopImage: "/images/oro/Institucional/rafael.png",
+			mobileImage: "/images/oro/Institucional/rafael_mobile.png",
+			popupImage: "/images/card/rafael.svg",
+			mobileHeight: "h-[426px]",
+		},
+		{
+			name: "Ramon Galimberti",
+			desktopImage: "/images/oro/Institucional/ramon.png",
+			mobileImage: "/images/oro/Institucional/ramon_mobile.png",
+			popupImage: "/images/card/ramon.svg",
+			mobileHeight: "h-[426px]",
+		},
+		{
+			name: "Renato Torres",
+			desktopImage: "/images/oro/Institucional/renato.png",
+			mobileImage: "/images/oro/Institucional/renato_mobile.png",
+			popupImage: "/images/card/renato.svg",
+			mobileHeight: "h-[444px]",
+		},
+	];
+
+	const [activeMentorIndex, setActiveMentorIndex] = useState<number | null>(null);
+
+	const closePopup = () => {
+		setActiveMentorIndex(null);
+	};
+
+	const goToPreviousMentor = () => {
+		setActiveMentorIndex((current) => {
+			if (current === null) return current;
+			return (current - 1 + mentors.length) % mentors.length;
+		});
+	};
+
+	const goToNextMentor = () => {
+		setActiveMentorIndex((current) => {
+			if (current === null) return current;
+			return (current + 1) % mentors.length;
+		});
+	};
+
 	return (
 		<section className="min-h-[3062px] md:min-h-[1252px] flex flex-col items-center justify-start overflow-hidden bg-[#F5F0EB]">
 			<div className="mx-auto w-full max-w-[1080px]">
@@ -17,80 +82,69 @@ export default function EighthSection() {
 					</p>
 
 					<div className="mt-[40px] md:mt-[64px] grid grid-cols-1 md:grid-cols-3 gap-[20px]">
-						<img
-							src="/images/oro/Institucional/cida.png"
-							alt="Cida Torres"
-							className="hidden md:block w-[340px] h-[434px] rounded-[16px] object-cover"
-						/>
+						{mentors.map((mentor, index) => (
+							<React.Fragment key={mentor.name}>
+								<button
+									type="button"
+									onClick={() => setActiveMentorIndex(index)}
+									className="hidden md:block w-[340px] h-[434px] rounded-[16px] overflow-hidden cursor-pointer"
+								>
+									<img
+										src={mentor.desktopImage}
+										alt={mentor.name}
+										className="w-full h-full object-cover"
+									/>
+								</button>
 
-						<img
-							src="/images/oro/Institucional/cida_mobile.png"
-							alt="Cida Torres"
-							className="block md:hidden w-[319px] h-[426px] rounded-[12px] object-cover"
-						/>
-
-						<img
-							src="/images/oro/Institucional/elton.png"
-							alt="Elton"
-							className="hidden md:block w-[340px] h-[434px] rounded-[16px] object-cover"
-						/>
-
-						<img
-							src="/images/oro/Institucional/elton_mobile.png"
-							alt="Elton"
-							className="block md:hidden w-[319px] h-[444px] rounded-[12px] object-cover"
-						/>
-
-						<img
-							src="/images/oro/Institucional/jaque.png"
-							alt="Jacque Boesso"
-							className="hidden md:block w-[340px] h-[434px] rounded-[16px] object-cover"
-						/>
-
-						<img
-							src="/images/oro/Institucional/jacque_mobile.png"
-							alt="Jacque Boesso"
-							className="block md:hidden w-[319px] h-[444px] rounded-[12px] object-cover"
-						/>
-
-						<img
-							src="/images/oro/Institucional/rafael.png"
-							alt="Rafael Jordão"
-							className="hidden md:block w-[340px] h-[434px] rounded-[16px] object-cover"
-						/>
-
-						<img
-							src="/images/oro/Institucional/rafael_mobile.png"
-							alt="Rafael Jordão"
-							className="block md:hidden w-[319px] h-[426px] rounded-[12px] object-cover"
-						/>
-
-						<img
-							src="/images/oro/Institucional/ramon.png"
-							alt="Ramon Galimberti"
-							className="hidden md:block w-[340px] h-[434px] rounded-[16px] object-cover"
-						/>
-
-						<img
-							src="/images/oro/Institucional/ramon_mobile.png"
-							alt="Ramon Galimberti"
-							className="block md:hidden w-[319px] h-[426px] rounded-[12px] object-cover"
-						/>
-
-						<img
-							src="/images/oro/Institucional/renato.png"
-							alt="Renato Torres"
-							className="hidden md:block w-[340px] h-[434px] rounded-[16px] object-cover"
-						/>
-
-						<img
-							src="/images/oro/Institucional/renato_mobile.png"
-							alt="Renato Torres"
-							className="block md:hidden w-[319px] h-[444px] rounded-[12px] object-cover"
-						/>
+								<img
+									src={mentor.mobileImage}
+									alt={mentor.name}
+									className={`block md:hidden w-[319px] ${mentor.mobileHeight} rounded-[12px] object-cover`}
+								/>
+							</React.Fragment>
+						))}
 					</div>
 				</div>
 			</div>
+
+			{activeMentorIndex !== null && (
+				<div className="hidden md:flex fixed inset-0 z-50 flex-col items-center justify-center bg-[#07242C]/70">
+					<img
+						src={mentors[activeMentorIndex].popupImage}
+						alt={mentors[activeMentorIndex].name}
+						className="w-[1120px] max-w-[78vw] h-auto"
+					/>
+
+					<div className="mt-[24px] flex items-center justify-center gap-[28px]">
+						<button
+							type="button"
+							onClick={goToPreviousMentor}
+							aria-label="Mentor anterior"
+							className="font-mulish text-[#FFFFFF] text-[42px] leading-none"
+						>
+							←
+						</button>
+
+						<button
+							type="button"
+							onClick={closePopup}
+							aria-label="Fechar popup"
+							className="font-mulish text-[#FFFFFF] text-[42px] leading-none"
+						>
+							×
+						</button>
+
+						<button
+							type="button"
+							onClick={goToNextMentor}
+							aria-label="Próximo mentor"
+							className="font-mulish text-[#FFFFFF] text-[42px] leading-none"
+						>
+							→
+						</button>
+					</div>
+				</div>
+			)}
 		</section>
 	);
 }

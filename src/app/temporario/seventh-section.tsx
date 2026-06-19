@@ -39,7 +39,9 @@ export default function SeventhSection() {
 
 							<div className="w-[319px] h-[268px] md:w-[430px] md:h-[360px] bg-[#D3CAC0] rounded-t-[12px] md:rounded-[16px] p-[24px] md:flex md:flex-col md:justify-between">
 								<h3 className="w-[271px] md:w-[382px] font-spectral font-bold text-[#006D71] text-[24px] leading-[36px] md:text-[32px] md:leading-[36px]">
-									Mentor de bolso
+									Mentor
+									<br />
+									de bolso
 								</h3>
 
 								<p className="mt-[16px] md:mt-0 w-[271px] md:w-[382px] font-mulish font-light text-[#07242C] text-[16px] leading-[24px] md:text-[18px] md:leading-[32px]">
@@ -94,7 +96,9 @@ export default function SeventhSection() {
 
 							<div className="w-[319px] h-[184px] md:w-[430px] md:h-[360px] bg-[#D3CAC0] rounded-t-[12px] md:rounded-[16px] p-[24px] md:flex md:flex-col md:justify-between">
 								<h3 className="w-[271px] md:w-[376px] font-spectral font-bold text-[#006D71] text-[24px] leading-[36px] md:text-[32px] md:leading-[36px]">
-									Trilhas de aprendizagem
+									Trilhas
+									<br />
+									de aprendizagem
 								</h3>
 
 								<p className="mt-[16px] md:mt-0 w-[271px] md:w-[382px] font-mulish font-light text-[#07242C] text-[16px] leading-[24px] md:text-[18px] md:leading-[32px]">
@@ -113,7 +117,9 @@ export default function SeventhSection() {
 						<div className="flex flex-col md:flex-row gap-0 md:gap-[12px]">
 							<div className="w-[319px] h-[220px] md:w-[430px] md:h-[360px] bg-[#F4F0E1] rounded-t-[12px] md:rounded-[16px] p-[24px] md:flex md:flex-col md:justify-between">
 								<h3 className="w-[271px] md:w-[376px] font-spectral font-bold text-[#006D71] text-[24px] leading-[36px] md:text-[32px] md:leading-[36px]">
-									Encontros Semanais
+									Encontros
+									<br />
+									Semanais
 								</h3>
 
 								<p className="mt-[16px] md:mt-0 w-[271px] md:w-[382px] font-mulish font-light text-[#07242C] text-[16px] leading-[24px] md:text-[18px] md:leading-[32px]">
@@ -145,7 +151,9 @@ export default function SeventhSection() {
 
 							<div className="w-[319px] h-[220px] md:w-[430px] md:h-[360px] bg-[#D3CAC0] rounded-t-[12px] md:rounded-[16px] p-[24px] md:flex md:flex-col md:justify-between">
 								<h3 className="w-[271px] md:w-[391px] font-spectral font-bold text-[#006D71] text-[24px] leading-[36px] md:text-[32px] md:leading-[36px]">
-									Mapeamento de padrões
+									Mapeamento
+									<br />
+									de padrões
 								</h3>
 
 								<p className="mt-[16px] md:mt-0 w-[271px] md:w-[382px] font-mulish font-light text-[#07242C] text-[16px] leading-[24px] md:text-[18px] md:leading-[32px]">

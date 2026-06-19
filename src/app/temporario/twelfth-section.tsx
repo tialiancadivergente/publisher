@@ -3,17 +3,98 @@
 import React, { useState } from "react";
 
 const questions = [
-	"O que é a Aliança Divergente?",
-	"A Aliança Divergente é o mesmo que coaching, terapia ou religião?",
-	"O que está incluso na Aliança Divergente?",
-	"Como faço para ter acesso ao Marca Passos?",
-	"E se eu entrar e não gostar? Consigo meu dinheiro de volta?",
-	"Quais são as formas de pagamento?",
-	"Ainda tenho dúvidas. Como faço para conversar com alguém da equipe?",
+	{
+		question: "O que é a Aliança Divergente?",
+		answer: (
+			<>
+				Somos um programa de desenvolvimento pessoal contínuo que apoia pessoas
+				na conquista de resultados na saúde, nos relacionamentos e na vida
+				financeira, através de um método estruturado, com ferramentas práticas e
+				mentores preparados.
+			</>
+		),
+	},
+	{
+		question:
+			"A Aliança Divergente é o mesmo que coaching, terapia ou religião?",
+		answer: (
+			<>
+				Não. A Aliança Divergente é uma jornada de desenvolvimento pessoal
+				contínuo. Não substituímos acompanhamento psicológico, psiquiátrico,
+				médico ou orientação religiosa. Nosso trabalho é oferecer método,
+				ferramentas, mentores, tecnologia e comunidade para apoiar pessoas na
+				construção de uma vida mais leve, saudável e próspera.
+			</>
+		),
+	},
+	{
+		question: "O que está incluso na Aliança Divergente?",
+		answer: (
+			<>
+				Acesso ao aplicativo Marca Passos, com: videoaulas, áudios dos mentores,
+				exercícios dirigidos, reflexões, comunidade e o mentor de bolso (IA
+				desenvolvida por nós, com base nos fundamentos da Aliança, que fala em
+				tempo real com você), além de eventos online e presenciais.
+			</>
+		),
+	},
+	{
+		question: "Como faço para ter acesso ao Marca Passos?",
+		answer: (
+			<>
+				Apenas membros da Aliança Divergente têm acesso ao Marca Passos. Para se
+				tornar um membro,{" "}
+				<a
+					href="https://www.marca-passos.com/login"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="font-bold italic underline"
+				>
+					clique aqui.
+				</a>
+			</>
+		),
+	},
+	{
+		question: "E se eu entrar e não gostar? Consigo meu dinheiro de volta?",
+		answer: (
+			<>
+				Oferecemos garantia de 30 dias após a compra. Dentro deste período,
+				caso não esteja satisfeito, você pode solicitar o reembolso total
+				através do suporte ao aluno.
+			</>
+		),
+	},
+	{
+		question: "Quais são as formas de pagamento?",
+		answer: (
+			<>
+				Aceitamos diversas formas de pagamento, incluindo cartão de crédito,
+				débito e boleto bancário. As opções de pagamento são apresentadas
+				durante o processo de assinatura, na plataforma oficial.
+			</>
+		),
+	},
+	{
+		question:
+			"Ainda tenho dúvidas. Como faço para conversar com alguém da equipe?",
+		answer: (
+			<>
+				A forma mais segura e rápida de falar com a nossa equipe, é{" "}
+				<a
+					href="https://wa.me/5512981606832"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="font-bold italic underline"
+				>
+					clicando aqui
+				</a>{" "}
+				para realizar um cadastro. É rápido e em alguns minutos alguém vai te
+				chamar!
+			</>
+		),
+	},
 ];
-
-const answer =
-	"Somos um programa de desenvolvimento pessoal contínuo que apoia pessoas na conquista de resultados na saúde, nos relacionamentos e na vida financeira, através de um método estruturado, com ferramentas práticas e mentores preparados.";
 
 export default function TwelfthSection() {
 	const [openedIndex, setOpenedIndex] = useState<number>(0);
@@ -28,12 +109,12 @@ export default function TwelfthSection() {
 						</h2>
 
 						<div className="mt-[44px] flex w-full max-w-[319px] flex-col gap-4 lg:mt-[64px] lg:max-w-[880px]">
-							{questions.map((question, index) => {
+							{questions.map((item, index) => {
 								const isOpen = openedIndex === index;
 
 								return (
 									<div
-										key={question}
+										key={item.question}
 										className={`
 											w-full
 											overflow-hidden
@@ -52,7 +133,7 @@ export default function TwelfthSection() {
 											className="flex w-full items-start justify-between gap-4 text-left"
 										>
 											<span className="max-w-[223px] font-mulish text-[18px] font-bold leading-[24px] text-[#F4F0E1] lg:max-w-[720px] lg:text-[20px] lg:leading-[32px]">
-												{question}
+												{item.question}
 											</span>
 
 											<span
@@ -89,7 +170,7 @@ export default function TwelfthSection() {
 										>
 											<div className="overflow-hidden">
 												<p className="mt-4 w-full font-mulish text-[16px] font-normal leading-[24px] text-[#F4F0E1] lg:max-w-[832px] lg:text-[18px] lg:leading-[32px]">
-													{answer}
+													{item.answer}
 												</p>
 											</div>
 										</div>

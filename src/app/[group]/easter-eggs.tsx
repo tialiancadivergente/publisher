@@ -65,14 +65,14 @@ const easterEggs: EasterEgg[] = [
     title: "Easter egg 7",
     className:
       "left-[36%] top-[106.9%] h-10 w-7 rotate-[-12deg]",
-    photoSrc: "/images/08-08/006.webp",
+    photoSrc: "/images/08-08/007.webp",
   },
   {
     id: 8,
     title: "Easter egg 8",
     className:
       "left-[74.5%] top-[114.0%] h-8 w-6 rotate-[18deg]",
-    photoSrc: "/images/08-08/006.webp",
+    photoSrc: "/images/08-08/008.webp",
   },
 ];
 

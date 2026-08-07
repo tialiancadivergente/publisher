@@ -24,7 +24,7 @@ export interface LeadCaptureFormProps {
   submitLabel?: string;
   submittingLabel?: string;
   submitError?: string | null;
-  onSubmit: (data: LeadCaptureSubmitData) => void | Promise<void>;
+  onSubmit: (data: LeadCaptureSubmitData) => boolean | void | Promise<boolean | void>;
 }
 
 function formatPhoneByDdi(value: string, ddi: string): string {
@@ -80,6 +80,7 @@ export function LeadCaptureForm({
     handleSubmit,
     watch,
     setValue,
+    reset,
     formState: { errors, isSubmitting },
   } = useForm<LeadCaptureFormValues>({
     resolver: zodResolver(leadCaptureFormSchema),
@@ -94,10 +95,14 @@ export function LeadCaptureForm({
   const ddi = watch("ddi");
 
   const submitHandler: SubmitHandler<LeadCaptureFormValues> = async (values) => {
-    await onSubmit({
+    const shouldReset = await onSubmit({
       ...values,
       normalizedPhone: normalizePhone(values),
     });
+
+    if (shouldReset) {
+      reset();
+    }
   };
 
   return (

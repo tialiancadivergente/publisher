@@ -81,7 +81,7 @@ export function EasterEggs() {
 
   return (
     <>
-      <div className="absolute inset-x-0 top-0 h-[890px]">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[890px]">
         {easterEggs.map((egg) => (
           <button
             key={egg.id}
@@ -89,7 +89,7 @@ export function EasterEggs() {
             aria-label={`Abrir foto do ${egg.title}`}
             onClick={() => setSelectedEgg(egg)}
             className={cn(
-              "absolute block cursor-pointer transition-transform duration-200 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#06282e]",
+              "pointer-events-auto absolute block cursor-pointer transition-transform duration-200 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#06282e]",
               egg.className,
             )}
           />

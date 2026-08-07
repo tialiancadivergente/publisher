@@ -2,11 +2,35 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Countdown } from "./countdown";
-import { EasterEggs } from "./easter-eggs";
 
-const vipGroupUrl = "https://www.aliancadivergente.com.br/";
+const trafficVipGroupUrl = "https://sendflow.click/i/0808traf";
+const organicVipGroupUrl = "https://sendflow.click/i/0808org";
+const alliesVipGroupUrl = "https://www.aliancadivergente.com.br/";
 
-export default function Page0808() {
+type Page0808Props = {
+  params: Promise<{
+    group: string;
+  }>;
+};
+
+function resolveVipGroupUrl(group: string) {
+  const normalizedGroup = group.trim().toLowerCase();
+
+  if (normalizedGroup.endsWith("t")) {
+    return trafficVipGroupUrl;
+  }
+
+  // if (normalizedGroup.endsWith("a")) {
+  //   return alliesVipGroupUrl;
+  // }
+
+  return organicVipGroupUrl;
+}
+
+export default async function Page0808({ params }: Page0808Props) {
+  const { group } = await params;
+  const vipGroupUrl = resolveVipGroupUrl(group);
+
   return (
     <main className="bg-[#06282e] font-spectral text-white">
       <section
@@ -66,6 +90,7 @@ export default function Page0808() {
               </p>
               <Link
                 href={vipGroupUrl}
+                target="_blank"
                 className="mt-6 inline-flex h-14 w-full items-center justify-center gap-1 rounded-full bg-[#17f66c] px-5 font-mulish text-[14px] font-extrabold uppercase text-black shadow-[inset_0_-4px_0_rgba(0,0,0,0.2),0_9px_18px_rgba(8,255,99,0.2)] transition-transform duration-200 hover:scale-[1.015] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#3e3215]"
               >
                 Entrar no grupo VIP

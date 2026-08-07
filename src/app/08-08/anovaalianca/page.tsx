@@ -10,10 +10,10 @@ function PlayIcon({ size }: { size: number }) {
 	);
 }
 
-export default function Page() {
+export default function Anovaalianca() {
 	return (
-		<main className="min-h-338 w-full bg-[#000C14]">
-			<section className="relative h-338 w-full overflow-hidden bg-[#000C14]">
+		<main className="min-h-[1352px] w-full bg-[#000C14]">
+			<section className="relative h-[1352px] w-full overflow-hidden bg-[#000C14]">
 				<div
 					aria-hidden="true"
 					className="absolute inset-0 md:hidden"
@@ -36,7 +36,7 @@ export default function Page() {
 					}}
 				/>
 
-				<div className="relative z-10 mx-auto h-full w-full max-w-120 md:max-w-360">
+				<div className="relative z-10 mx-auto h-full w-full max-w-[480px] md:max-w-[1440px]">
 					<Image
 						src="/images/novaalianca/v1/logo_mobile.svg"
 						alt="A revelação da Nova Aliança"
@@ -68,13 +68,13 @@ export default function Page() {
 							Duração XXhXXm
 						</p>
 
-						<div className="mt-2.5 flex h-7.25 items-center">
-							<span className="flex h-4.5 w-4.75 shrink-0 items-center justify-center text-xl leading-none text-[#FFCE31]">
+						<div className="mt-2.5 flex h-[29px] items-center">
+							<span className="flex h-[18px] w-[19px] shrink-0 items-center justify-center text-xl leading-none text-[#FFCE31]">
 								★
 							</span>
 
 							<span
-								className="ml-1.25 text-xl font-medium text-white"
+								className="ml-[5px] text-xl font-medium text-white"
 								style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
 							>
 								10
@@ -100,13 +100,13 @@ export default function Page() {
 							Duração XXhXXm
 						</p>
 
-						<div className="mt-3.5 flex h-7.25 items-center">
-							<span className="flex h-4.5 w-4.75 shrink-0 items-center justify-center text-xl leading-none text-[#FFCE31]">
+						<div className="mt-3.5 flex h-[29px] items-center">
+							<span className="flex h-[18px] w-[19px] shrink-0 items-center justify-center text-xl leading-none text-[#FFCE31]">
 								★
 							</span>
 
 							<span
-								className="ml-1.25 text-xl font-medium text-white"
+								className="ml-[5px] text-xl font-medium text-white"
 								style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
 							>
 								10
@@ -256,7 +256,7 @@ export default function Page() {
 							alt="Aliança Divergente"
 							width={260}
 							height={49}
-							className="h-auto w-65"
+							className="h-auto w-[260px]"
 						/>
 
 						<div
@@ -300,7 +300,7 @@ export default function Page() {
 						style={{ left: "185px", right: "185px", bottom: "55px" }}
 					>
 						<p
-							className="flex w-65 flex-col text-white/80"
+							className="flex w-[260px] flex-col text-white/80"
 							style={{
 								fontFamily: "Mulish, sans-serif",
 								fontSize: "14px",
@@ -316,7 +316,7 @@ export default function Page() {
 							alt="Aliança Divergente"
 							width={245}
 							height={46}
-							className="h-auto w-61.25"
+							className="h-auto w-[245px]"
 						/>
 
 						<div

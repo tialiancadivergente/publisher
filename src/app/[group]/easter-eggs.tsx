@@ -22,56 +22,56 @@ const easterEggs: EasterEgg[] = [
     id: 1,
     title: "Easter egg 1",
     className:
-      "left-[37.5%] top-[69.5%] h-8 w-5 rotate-[-7deg]",
+      "left-[37.5%] top-[83.5%] h-8 w-5 rotate-[-7deg]",
     photoSrc: "/images/08-08/001.webp",
   },
   {
     id: 2,
     title: "Easter egg 2",
     className:
-      "left-[23.5%] top-[84.5%] h-8 w-6 rotate-[8deg]",
+      "left-[23.5%] top-[98.5%] h-8 w-6 rotate-[8deg]",
     photoSrc: "/images/08-08/002.webp",
   },
   {
     id: 3,
     title: "Easter egg 3",
     className:
-      "left-[47.5%] top-[81.2%] h-4 w-8 rotate-[-26deg]",
+      "left-[47.5%] top-[95.2%] h-4 w-8 rotate-[-26deg]",
     photoSrc: "/images/08-08/003.webp",
   },
   {
     id: 4,
     title: "Easter egg 4",
     className:
-      "left-[75%] top-[77.3%] h-6 w-6",
+      "left-[75%] top-[91%] h-6 w-6",
     photoSrc: "/images/08-08/004.webp",
   },
   {
     id: 5,
     title: "Easter egg 5",
     className:
-      "left-[63%] top-[86.8%] h-14 w-3 rotate-[4deg]",
+      "left-[63%] top-[99.9%] h-14 w-3 rotate-[4deg]",
     photoSrc: "/images/08-08/005.webp",
   },
   {
     id: 6,
     title: "Easter egg 6",
     className:
-      "left-[16%] top-[94.8%] h-7 w-10 rotate-[-7deg]",
+      "left-[16%] top-[108.8%] h-7 w-10 rotate-[-7deg]",
     photoSrc: "/images/08-08/006.webp",
   },
   {
     id: 7,
     title: "Easter egg 7",
     className:
-      "left-[36%] top-[92.9%] h-10 w-7 rotate-[-12deg]",
+      "left-[36%] top-[106.9%] h-10 w-7 rotate-[-12deg]",
     photoSrc: "/images/08-08/006.webp",
   },
   {
     id: 8,
     title: "Easter egg 8",
     className:
-      "left-[74.5%] top-[99.9%] h-8 w-6 rotate-[18deg]",
+      "left-[74.5%] top-[114.0%] h-8 w-6 rotate-[18deg]",
     photoSrc: "/images/08-08/006.webp",
   },
 ];

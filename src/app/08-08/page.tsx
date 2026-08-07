@@ -27,7 +27,7 @@ export default function Page0808() {
         <div className="relative z-10 flex min-h-[1140px] flex-col px-7 pb-10 pt-8">
           <header className="px-7 pb-8 pt-8 text-center">
             <Image
-              src="/images/08-08/logo-nova-alianca.png"
+              src="/images/08-08/logo-nova-alianca.svg"
               alt="A revelacao da Nova Alianca"
               width={233}
               height={69}
@@ -38,7 +38,7 @@ export default function Page0808() {
           </header>
 
           <div className="relative z-20 mt-0 mx-auto w-[245px] px-3 py-3 text-center text-[#082a2b]">
-            <p className="font-spectral text-[19px] font-bold italic leading-[1.28]">
+            <p className="font-spectral mobile:text-[16px] text-[19px] font-bold italic leading-[1.28]">
               Consegue encontrar
               <br />
               8 ITENS ESCONDIDOS

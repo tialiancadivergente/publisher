@@ -85,6 +85,7 @@ const config = {
       },
 
       screens: {
+        mobile: { max: "420px" },
         xs: "480px", // exemplo: novo breakpoint customizado 'xs'
         "2xs": "580px", // exemplo: novo breakpoint customizado 'xs'
         "2md": "900px",

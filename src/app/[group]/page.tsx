@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Countdown } from "./countdown";
+import { EasterEggs } from "./easter-eggs";
 
 const trafficVipGroupUrl = "https://sendflow.click/i/0808traf";
 const organicVipGroupUrl = "https://sendflow.click/i/0808org";
@@ -71,7 +72,7 @@ export default async function Page0808({ params }: Page0808Props) {
             </p>
           </div>
 
-          {/* <EasterEggs /> */}
+          <EasterEggs />
 
           <div className="mt-[590px] pb-0">
             <aside

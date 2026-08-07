@@ -11,7 +11,7 @@ type ContainerProps = {
 	submitError?: string | null;
 };
 
-function resolveVipGroupUrl(group: string) {
+export function resolveVipGroupUrl(group: string) {
   const normalizedGroup = group.trim().toLowerCase();
 
   if (normalizedGroup.endsWith("t")) {

@@ -1,6 +1,6 @@
 "use client";
 
-import { Phone } from "lucide-react";
+import { LoaderCircle, Phone } from "lucide-react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, type SubmitHandler } from "react-hook-form";
 import { Input } from "@/components/ui/input";
@@ -168,10 +168,16 @@ export function LeadCaptureForm({
 
       <button
         type="submit"
-        className={buttonClassName}
+        className={cn(
+          buttonClassName,
+          isSubmitting && "cursor-wait opacity-85 hover:scale-100 animate-pulse"
+        )}
         disabled={isSubmitting}
       >
-        <span>
+        <span className="inline-flex items-center justify-center gap-2">
+          {isSubmitting ? (
+            <LoaderCircle className="h-4 w-4 animate-spin" aria-hidden="true" />
+          ) : null}
           {isSubmitting ? submittingLabel : submitLabel}
         </span>
       </button>

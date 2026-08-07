@@ -1,8 +1,7 @@
 "use client";
 
-import React from "react";
-import { useState, useEffect } from "react";
-import { useParams, useSearchParams } from "next/navigation";
+import { useState } from "react";
+import { useParams } from "next/navigation";
 import { type LeadCaptureSubmitData } from "@/app/components/form/lead-capture-form";
 import { LEAD_TRACK_CONFIG } from "@/lib/config/lead-track-config";
 import {
@@ -15,27 +14,11 @@ import { useCreateLeadCapture } from "@/app/modules/lead-capture/hook/use-create
 import type {
   LeadRegistrationPayload,
 } from "@/app/modules/lead-capture/lead-capture.model";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogTitle,
-} from "@/components/ui/dialog";
-import ContainerTeste from "./container";
-import { Headline } from "./headline";
+import ContainerTeste, { resolveVipGroupUrl } from "./container";
 
 export default function Formv1() {
   const params = useParams<{ group: string }>();
-  const searchParams = useSearchParams();
-  const [titleRedLine, setTitleRedLine] = useState<React.ReactNode | null>(
-    null
-  );
-  const [redLine, setRedLine] = useState<React.ReactNode | null>(null);
   const [submitError, setSubmitError] = useState<string | null>(null);
-  const [successModalOpen, setSuccessModalOpen] = useState(false);
-  const [formFields, setFormFields] = useState<Record<string, string> | null>(
-    null
-  );
 
   const group = params.group ?? "";
   const temperatura = group.trim().toLowerCase().split("-").at(-1);
@@ -80,9 +63,8 @@ export default function Formv1() {
       };
 
       await mutationCreate.mutateAsync(payload);
-      setSuccessModalOpen(true);
 
-      return true;
+      window.location.href = resolveVipGroupUrl(group);
     } catch (error) {
       console.error("Erro ao enviar cadastro:", error);
       setSubmitError("Nao foi possivel enviar seu cadastro agora.");
@@ -91,27 +73,11 @@ export default function Formv1() {
   };
 
   return (
-    <>
-      <ContainerTeste
-        group={group}
-        formName={launch}
-        onSubmit={handleLeadCaptureSubmit}
-        submitError={submitError}
-      />
-
-      <Dialog open={successModalOpen} onOpenChange={setSuccessModalOpen}>
-        <DialogContent
-          overlayClassName="bg-black/75 backdrop-blur-sm"
-          className="w-[calc(100vw-32px)] max-w-[390px] rounded-[8px] border border-white/15 bg-[#061f24] p-7 text-center text-white shadow-2xl"
-        >
-          <DialogTitle className="font-spectral text-2xl font-bold text-[#17f66c]">
-            Cadastro realizado com sucesso!
-          </DialogTitle>
-          <DialogDescription className="font-mulish text-base leading-relaxed text-white/85">
-            Você já está cadastrado para receber as informações do grupo VIP.
-          </DialogDescription>
-        </DialogContent>
-      </Dialog>
-    </>
+    <ContainerTeste
+      group={group}
+      formName={launch}
+      onSubmit={handleLeadCaptureSubmit}
+      submitError={submitError}
+    />
   );
 }

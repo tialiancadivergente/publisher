@@ -87,14 +87,24 @@ export default function HeroSection({
 								</strong>{" "}
 								para saber o que vai rolar 08.08
 							</p>
-							<Link
+							<a
 								href={vipGroupUrl}
 								target="_blank"
+								rel="noopener noreferrer"
+								onMouseEnter={(event) => {
+									event.currentTarget.href = vipGroupUrl;
+								}}
+								onFocus={(event) => {
+									event.currentTarget.href = vipGroupUrl;
+								}}
+								onClick={(event) => {
+									event.currentTarget.href = vipGroupUrl;
+								}}
 								className="mt-6 inline-flex h-14 w-full items-center justify-center gap-1 rounded-full bg-[#17f66c] px-5 font-mulish text-[14px] font-extrabold uppercase text-black shadow-[inset_0_-4px_0_rgba(0,0,0,0.2),0_9px_18px_rgba(8,255,99,0.2)] transition-transform duration-200 hover:scale-[1.015] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#3e3215]"
 							>
 								ENTRAR NO GRUPO VIP
 								<ArrowUpRight className="h-5 w-5" aria-hidden="true" />
-							</Link>
+							</a>
 						</aside>
 					</div>
 

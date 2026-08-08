@@ -31,7 +31,7 @@ function HeartIcon({ active }: { active: boolean }) {
 }
 
 export default function Anovaalianca() {
-	const [isPlaying, setIsPlaying] = useState(false);
+	const [isPlaying, setIsPlaying] = useState(true);
 	const [liked, setLiked] = useState(false);
 	const episodeRef = useRef<HTMLDivElement>(null);
 
@@ -289,7 +289,7 @@ export default function Anovaalianca() {
 							<div className="relative h-[178.466px] w-[317.531px] overflow-hidden rounded-[9.56px]">
 								{isPlaying ? (
 									<iframe
-										src="https://www.youtube.com/embed/kUyQ53g17Mg?autoplay=1&playsinline=1&rel=0"
+										src="https://www.youtube.com/embed/kUyQ53g17Mg?autoplay=1&mute=1&start=359&playsinline=1&rel=0"
 										title="A travessia – A História por trás da Maior Mudança da Aliança"
 										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 										allowFullScreen
@@ -427,7 +427,7 @@ export default function Anovaalianca() {
 							<div className="relative h-[241.625px] w-[429.904px] overflow-hidden rounded-[12.94px]">
 								{isPlaying ? (
 									<iframe
-										src="https://www.youtube.com/embed/kUyQ53g17Mg?autoplay=1&playsinline=1&rel=0"
+										src="https://www.youtube.com/embed/kUyQ53g17Mg?autoplay=1&mute=1&start=359&playsinline=1&rel=0"
 										title="A travessia – A História por trás da Maior Mudança da Aliança"
 										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 										allowFullScreen

@@ -6,13 +6,7 @@ import { useRef, useState } from "react";
 
 function PlayIcon({ size }: { size: number }) {
 	return (
-		<svg
-			width={size}
-			height={size}
-			viewBox="0 0 24 24"
-			fill="none"
-			aria-hidden="true"
-		>
+		<svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true">
 			<circle cx="12" cy="12" r="11" fill="white" />
 			<path d="M10 8.5L16 12L10 15.5V8.5Z" fill="#C0964B" />
 		</svg>
@@ -43,12 +37,8 @@ export default function Anovaalianca() {
 
 	const handleWatchNow = () => {
 		setIsPlaying(true);
-
 		requestAnimationFrame(() => {
-			episodeRef.current?.scrollIntoView({
-				behavior: "smooth",
-				block: "center",
-			});
+			episodeRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
 		});
 	};
 
@@ -98,84 +88,52 @@ export default function Anovaalianca() {
 						style={{ top: "36.29px", left: "102px", width: "233px" }}
 					/>
 
-					<div
-						className="absolute md:hidden"
-						style={{ top: "104px", left: "64px", width: "351px" }}
-					>
+					<div className="absolute md:hidden" style={{ top: "104px", left: "64px", width: "351px" }}>
 						<p
 							className="text-sm font-normal text-white/60"
-							style={{
-								fontFamily: "Mulish, sans-serif",
-								lineHeight: "150%",
-							}}
+							style={{ fontFamily: "Mulish, sans-serif", lineHeight: "150%" }}
 						>
 							Duração 1h30
 						</p>
 
 						<div className="mt-[6px] flex h-[29px] items-center">
-							<span className="flex h-[18px] w-[19px] shrink-0 items-center justify-center text-xl leading-none text-[#FFCE31]">
-								★
-							</span>
-
 							<span
-								className="ml-[5px] text-xl font-medium text-white"
-								style={{
-									fontFamily: "Outfit, sans-serif",
-									lineHeight: "150%",
-								}}
+								className="text-xl font-medium text-white"
+								style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
 							>
 								10
 							</span>
 
 							<span
 								className="ml-2 whitespace-nowrap text-base font-normal text-white/60"
-								style={{
-									fontFamily: "Outfit, sans-serif",
-									lineHeight: "150%",
-								}}
+								style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
 							>
-								EPISÓDIO 1 | 08.08 às 08h08
+								Episódio 1 | 08.08 às 08h08
 							</span>
 						</div>
 					</div>
 
-					<div
-						className="absolute hidden md:block"
-						style={{ top: "152px", left: "187px", width: "350px" }}
-					>
+					<div className="absolute hidden md:block" style={{ top: "152px", left: "187px", width: "350px" }}>
 						<p
 							className="text-sm font-normal text-white/60"
-							style={{
-								fontFamily: "Mulish, sans-serif",
-								lineHeight: "150%",
-							}}
+							style={{ fontFamily: "Mulish, sans-serif", lineHeight: "150%" }}
 						>
 							Duração 1h30
 						</p>
 
 						<div className="mt-3.5 flex h-[29px] items-center">
-							<span className="flex h-[18px] w-[19px] shrink-0 items-center justify-center text-xl leading-none text-[#FFCE31]">
-								★
-							</span>
-
 							<span
-								className="ml-[5px] text-xl font-medium text-white"
-								style={{
-									fontFamily: "Outfit, sans-serif",
-									lineHeight: "150%",
-								}}
+								className="text-xl font-medium text-white"
+								style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
 							>
 								10
 							</span>
 
 							<span
 								className="ml-2 whitespace-nowrap text-base font-normal text-white/60"
-								style={{
-									fontFamily: "Outfit, sans-serif",
-									lineHeight: "150%",
-								}}
+								style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
 							>
-								EPISÓDIO 1 | 08.08 às 08h08
+								Episódio 1 | 08.08 às 08h08
 							</span>
 						</div>
 					</div>
@@ -225,7 +183,7 @@ export default function Anovaalianca() {
 							lineHeight: "140%",
 						}}
 					>
-						A travessia
+						A Travessia
 					</p>
 
 					<p
@@ -258,7 +216,7 @@ export default function Anovaalianca() {
 							lineHeight: "140%",
 						}}
 					>
-						A travessia
+						A Travessia
 					</p>
 
 					<p
@@ -271,9 +229,7 @@ export default function Anovaalianca() {
 							lineHeight: "180%",
 						}}
 					>
-						Toda vez que alguém acessou algo e conseguiu traduzir para o mundo,
-						a humanidade deu um salto. Nesse episódio, você vai iniciar a travessia
-						para um mundo novo.
+						Toda vez que alguém acessou algo e conseguiu traduzir para o mundo, a humanidade deu um salto. Nesse episódio, você vai iniciar a travessia para um mundo novo.
 					</p>
 
 					<button
@@ -294,14 +250,9 @@ export default function Anovaalianca() {
 						}}
 					>
 						<PlayIcon size={20.861} />
-
 						<span
 							className="font-medium"
-							style={{
-								fontFamily: "Outfit, sans-serif",
-								fontSize: "14.08px",
-								lineHeight: "150%",
-							}}
+							style={{ fontFamily: "Outfit, sans-serif", fontSize: "14.08px", lineHeight: "150%" }}
 						>
 							Ver Agora
 						</span>
@@ -325,14 +276,9 @@ export default function Anovaalianca() {
 						}}
 					>
 						<PlayIcon size={25.033} />
-
 						<span
 							className="font-medium"
-							style={{
-								fontFamily: "Outfit, sans-serif",
-								fontSize: "14.08px",
-								lineHeight: "150%",
-							}}
+							style={{ fontFamily: "Outfit, sans-serif", fontSize: "14.08px", lineHeight: "150%" }}
 						>
 							Ver Agora
 						</span>
@@ -370,10 +316,7 @@ export default function Anovaalianca() {
 
 							<h2
 								className="mt-[10px] text-[18px] font-semibold text-white"
-								style={{
-									fontFamily: "Outfit, sans-serif",
-									lineHeight: "135%",
-								}}
+								style={{ fontFamily: "Outfit, sans-serif", lineHeight: "135%" }}
 							>
 								A travessia – A História por trás da Maior Mudança da Aliança.
 							</h2>
@@ -382,44 +325,29 @@ export default function Anovaalianca() {
 								<div className="flex items-center gap-[12px]">
 									<span
 										className="text-[14px] font-normal text-[#B5B5B5]"
-										style={{
-											fontFamily: "Outfit, sans-serif",
-											lineHeight: "150%",
-										}}
+										style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
 									>
 										Episódio 1
 									</span>
 
 									<button
 										type="button"
-										aria-label={
-											liked
-												? "Remover episódio dos favoritos"
-												: "Marcar episódio como favorito"
-										}
+										aria-label={liked ? "Remover episódio dos favoritos" : "Marcar episódio como favorito"}
 										aria-pressed={liked}
 										onClick={() => setLiked((value) => !value)}
 										className="flex h-[13.921px] w-[15.559px] items-center justify-center"
-										style={{
-											filter: liked
-												? "drop-shadow(0px 3.27px 16px #FFCE77)"
-												: "none",
-										}}
+										style={{ filter: liked ? "drop-shadow(0px 3.27px 16px #FFCE77)" : "none" }}
 									>
 										<HeartIcon active={liked} />
 									</button>
 								</div>
 
-								<div
-									className="flex items-center gap-[5px] text-[16px] font-normal text-[#FFCE31]"
-									style={{
-										fontFamily: "Outfit, sans-serif",
-										lineHeight: "150%",
-									}}
+								<span
+									className="text-[14px] font-normal text-[#B5B5B5]"
+									style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
 								>
-									<span>★</span>
-									<span>4.7</span>
-								</div>
+									às 08h08
+								</span>
 							</div>
 						</div>
 
@@ -436,23 +364,26 @@ export default function Anovaalianca() {
 
 							<h2
 								className="mt-[10px] text-[18px] font-semibold text-white"
-								style={{
-									fontFamily: "Outfit, sans-serif",
-									lineHeight: "135%",
-								}}
+								style={{ fontFamily: "Outfit, sans-serif", lineHeight: "135%" }}
 							>
 								Disponível em breve – 10.08
 							</h2>
 
-							<p
-								className="mt-[7px] text-[14px] font-normal text-[#B5B5B5]"
-								style={{
-									fontFamily: "Outfit, sans-serif",
-									lineHeight: "150%",
-								}}
-							>
-								Episódio 2
-							</p>
+							<div className="mt-[7px] flex items-center justify-between">
+								<span
+									className="text-[14px] font-normal text-[#B5B5B5]"
+									style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
+								>
+									Episódio 2
+								</span>
+
+								<span
+									className="text-[14px] font-normal text-[#B5B5B5]"
+									style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
+								>
+									às 08h08
+								</span>
+							</div>
 						</div>
 
 						<div className="w-full">
@@ -468,31 +399,31 @@ export default function Anovaalianca() {
 
 							<h2
 								className="mt-[10px] text-[18px] font-semibold text-white"
-								style={{
-									fontFamily: "Outfit, sans-serif",
-									lineHeight: "135%",
-								}}
+								style={{ fontFamily: "Outfit, sans-serif", lineHeight: "135%" }}
 							>
 								Disponível em breve – 12.08
 							</h2>
 
-							<p
-								className="mt-[7px] text-[14px] font-normal text-[#B5B5B5]"
-								style={{
-									fontFamily: "Outfit, sans-serif",
-									lineHeight: "150%",
-								}}
-							>
-								Episódio 3
-							</p>
+							<div className="mt-[7px] flex items-center justify-between">
+								<span
+									className="text-[14px] font-normal text-[#B5B5B5]"
+									style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
+								>
+									Episódio 3
+								</span>
+
+								<span
+									className="text-[14px] font-normal text-[#B5B5B5]"
+									style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
+								>
+									às 08h08
+								</span>
+							</div>
 						</div>
 					</div>
 
 					<div className="absolute left-1/2 top-[677px] hidden h-[550px] w-[1440px] -translate-x-1/2 md:block">
-						<div
-							ref={episodeRef}
-							className="absolute left-[134.05px] top-0 w-[429.904px]"
-						>
+						<div ref={episodeRef} className="absolute left-[134.05px] top-0 w-[429.904px]">
 							<div className="relative h-[241.625px] w-[429.904px] overflow-hidden rounded-[12.94px]">
 								{isPlaying ? (
 									<iframe
@@ -523,10 +454,7 @@ export default function Anovaalianca() {
 
 							<h2
 								className="mt-[14px] text-[24px] font-semibold text-white"
-								style={{
-									fontFamily: "Outfit, sans-serif",
-									lineHeight: "135%",
-								}}
+								style={{ fontFamily: "Outfit, sans-serif", lineHeight: "135%" }}
 							>
 								A travessia – A História por trás da Maior Mudança da Aliança.
 							</h2>
@@ -535,44 +463,29 @@ export default function Anovaalianca() {
 								<div className="flex items-center gap-[16px]">
 									<span
 										className="text-[18px] font-normal text-[#B5B5B5]"
-										style={{
-											fontFamily: "Outfit, sans-serif",
-											lineHeight: "150%",
-										}}
+										style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
 									>
 										Episódio 1
 									</span>
 
 									<button
 										type="button"
-										aria-label={
-											liked
-												? "Remover episódio dos favoritos"
-												: "Marcar episódio como favorito"
-										}
+										aria-label={liked ? "Remover episódio dos favoritos" : "Marcar episódio como favorito"}
 										aria-pressed={liked}
 										onClick={() => setLiked((value) => !value)}
 										className="flex h-[18.848px] w-[21.065px] items-center justify-center"
-										style={{
-											filter: liked
-												? "drop-shadow(0px 3.27px 16px #FFCE77)"
-												: "none",
-										}}
+										style={{ filter: liked ? "drop-shadow(0px 3.27px 16px #FFCE77)" : "none" }}
 									>
 										<HeartIcon active={liked} />
 									</button>
 								</div>
 
-								<div
-									className="flex items-center gap-[7px] text-[20px] font-normal text-[#FFCE31]"
-									style={{
-										fontFamily: "Outfit, sans-serif",
-										lineHeight: "150%",
-									}}
+								<span
+									className="text-[18px] font-normal text-[#B5B5B5]"
+									style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
 								>
-									<span>★</span>
-									<span>4.7</span>
-								</div>
+									às 08h08
+								</span>
 							</div>
 						</div>
 
@@ -589,23 +502,26 @@ export default function Anovaalianca() {
 
 							<h2
 								className="mt-[14px] text-[24px] font-semibold text-white"
-								style={{
-									fontFamily: "Outfit, sans-serif",
-									lineHeight: "135%",
-								}}
+								style={{ fontFamily: "Outfit, sans-serif", lineHeight: "135%" }}
 							>
 								Disponível em breve – 10.08
 							</h2>
 
-							<p
-								className="mt-[8px] text-[18px] font-normal text-[#B5B5B5]"
-								style={{
-									fontFamily: "Outfit, sans-serif",
-									lineHeight: "150%",
-								}}
-							>
-								Episódio 2
-							</p>
+							<div className="mt-[8px] flex items-center justify-between">
+								<span
+									className="text-[18px] font-normal text-[#B5B5B5]"
+									style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
+								>
+									Episódio 2
+								</span>
+
+								<span
+									className="text-[18px] font-normal text-[#B5B5B5]"
+									style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
+								>
+									às 08h08
+								</span>
+							</div>
 						</div>
 
 						<div className="absolute left-[1105px] top-0 w-[429.904px]">
@@ -621,30 +537,30 @@ export default function Anovaalianca() {
 
 							<h2
 								className="mt-[14px] text-[24px] font-semibold text-white"
-								style={{
-									fontFamily: "Outfit, sans-serif",
-									lineHeight: "135%",
-								}}
+								style={{ fontFamily: "Outfit, sans-serif", lineHeight: "135%" }}
 							>
 								Disponível em breve – 12.08
 							</h2>
 
-							<p
-								className="mt-[8px] text-[18px] font-normal text-[#B5B5B5]"
-								style={{
-									fontFamily: "Outfit, sans-serif",
-									lineHeight: "150%",
-								}}
-							>
-								Episódio 3
-							</p>
+							<div className="mt-[8px] flex items-center justify-between">
+								<span
+									className="text-[18px] font-normal text-[#B5B5B5]"
+									style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
+								>
+									Episódio 3
+								</span>
+
+								<span
+									className="text-[18px] font-normal text-[#B5B5B5]"
+									style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
+								>
+									às 08h08
+								</span>
+							</div>
 						</div>
 					</div>
 
-					<footer
-						className="absolute inset-x-0 flex flex-col items-center md:hidden"
-						style={{ bottom: "40px" }}
-					>
+					<footer className="absolute inset-x-0 flex flex-col items-center md:hidden" style={{ bottom: "40px" }}>
 						<Image
 							src="/images/novaalianca/v1/logo.svg"
 							alt="Aliança Divergente"
@@ -655,36 +571,22 @@ export default function Anovaalianca() {
 
 						<div
 							className="mt-5 flex items-center justify-center gap-3 text-white/70"
-							style={{
-								fontFamily: "Mulish, sans-serif",
-								fontSize: "14px",
-								lineHeight: "145%",
-							}}
+							style={{ fontFamily: "Mulish, sans-serif", fontSize: "14px", lineHeight: "145%" }}
 						>
-							<Link
-								href="/termos-de-uso"
-								className="underline underline-offset-2"
-							>
+							<Link href="/termos-de-uso" className="underline underline-offset-2">
 								Termos de Uso
 							</Link>
 
 							<span>|</span>
 
-							<Link
-								href="/politicas-de-privacidade"
-								className="underline underline-offset-2"
-							>
+							<Link href="/politicas-de-privacidade" className="underline underline-offset-2">
 								Politicas de Privacidade
 							</Link>
 						</div>
 
 						<p
 							className="mt-5 flex flex-col items-center text-center text-white/80"
-							style={{
-								fontFamily: "Mulish, sans-serif",
-								fontSize: "14px",
-								lineHeight: "145%",
-							}}
+							style={{ fontFamily: "Mulish, sans-serif", fontSize: "14px", lineHeight: "145%" }}
 						>
 							<span>Copyright © A Nova Aliança Divergente.</span>
 							<span>Todos os direitos reservados.</span>
@@ -697,11 +599,7 @@ export default function Anovaalianca() {
 					>
 						<p
 							className="flex w-[260px] flex-col text-white/80"
-							style={{
-								fontFamily: "Mulish, sans-serif",
-								fontSize: "14px",
-								lineHeight: "145%",
-							}}
+							style={{ fontFamily: "Mulish, sans-serif", fontSize: "14px", lineHeight: "145%" }}
 						>
 							<span>Copyright © A Nova Aliança Divergente.</span>
 							<span>Todos os direitos reservados.</span>
@@ -717,25 +615,15 @@ export default function Anovaalianca() {
 
 						<div
 							className="flex items-center justify-end gap-3 text-white/70"
-							style={{
-								fontFamily: "Mulish, sans-serif",
-								fontSize: "14px",
-								lineHeight: "145%",
-							}}
+							style={{ fontFamily: "Mulish, sans-serif", fontSize: "14px", lineHeight: "145%" }}
 						>
-							<Link
-								href="/termos-de-uso"
-								className="underline underline-offset-2"
-							>
+							<Link href="/termos-de-uso" className="underline underline-offset-2">
 								Termos de Uso
 							</Link>
 
 							<span>|</span>
 
-							<Link
-								href="/politicas-de-privacidade"
-								className="underline underline-offset-2"
-							>
+							<Link href="/politicas-de-privacidade" className="underline underline-offset-2">
 								Politicas de Privacidade
 							</Link>
 						</div>

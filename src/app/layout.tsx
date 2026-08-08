@@ -82,7 +82,7 @@ const spectral = Spectral({
 });
 
 export const metadata: Metadata = {
-  title: "Como Romper Padrões Emocionais e Transformar Sua Vida | Aliança Divergente",
+  title: "A Revelação da Nova Aliança",
   description: "Descubra métodos práticos para superar a dependência emocional, romper padrões que travam sua vida e evoluir com apoio real. Faça parte da Aliança Divergente.",
   alternates: {
     canonical:

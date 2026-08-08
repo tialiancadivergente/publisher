@@ -1,19 +1,60 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useRef, useState } from "react";
 
 function PlayIcon({ size }: { size: number }) {
 	return (
-		<svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true">
-			<circle cx="12" cy="12" r="12" fill="#FFFFFF" />
-			<path d="M9.6 7.8 16 12l-6.4 4.2V7.8Z" fill="#C0964B" />
+		<svg
+			width={size}
+			height={size}
+			viewBox="0 0 24 24"
+			fill="none"
+			aria-hidden="true"
+		>
+			<circle cx="12" cy="12" r="11" fill="white" />
+			<path d="M10 8.5L16 12L10 15.5V8.5Z" fill="#C0964B" />
+		</svg>
+	);
+}
+
+function HeartIcon({ active }: { active: boolean }) {
+	return (
+		<svg
+			viewBox="0 0 24 22"
+			fill={active ? "#C0964B" : "none"}
+			stroke={active ? "#C0964B" : "#FFFFFF"}
+			strokeWidth="2"
+			strokeLinecap="round"
+			strokeLinejoin="round"
+			className="h-full w-full"
+			aria-hidden="true"
+		>
+			<path d="M20.84 3.61a5.5 5.5 0 0 0-7.78 0L12 4.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 20.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78Z" />
 		</svg>
 	);
 }
 
 export default function Anovaalianca() {
+	const [isPlaying, setIsPlaying] = useState(false);
+	const [liked, setLiked] = useState(false);
+	const episodeRef = useRef<HTMLDivElement>(null);
+
+	const handleWatchNow = () => {
+		setIsPlaying(true);
+
+		requestAnimationFrame(() => {
+			episodeRef.current?.scrollIntoView({
+				behavior: "smooth",
+				block: "center",
+			});
+		});
+	};
+
 	return (
-		<main className="min-h-[1352px] w-full bg-[#000C14]">
-			<section className="relative h-[1352px] w-full overflow-hidden bg-[#000C14]">
+		<main className="w-full overflow-hidden bg-[#111111] md:bg-[#061D1F]">
+			<section className="relative h-[1780px] w-full overflow-hidden bg-[#111111] md:h-[1350px] md:bg-[#061D1F]">
 				<div
 					aria-hidden="true"
 					className="absolute inset-0 md:hidden"
@@ -59,32 +100,41 @@ export default function Anovaalianca() {
 
 					<div
 						className="absolute md:hidden"
-						style={{ top: "118px", left: "64px", width: "351px" }}
+						style={{ top: "104px", left: "64px", width: "351px" }}
 					>
 						<p
 							className="text-sm font-normal text-white/60"
-							style={{ fontFamily: "Mulish, sans-serif", lineHeight: "150%" }}
+							style={{
+								fontFamily: "Mulish, sans-serif",
+								lineHeight: "150%",
+							}}
 						>
-							Duração XXhXXm
+							Duração 1h30
 						</p>
 
-						<div className="mt-2.5 flex h-[29px] items-center">
+						<div className="mt-[6px] flex h-[29px] items-center">
 							<span className="flex h-[18px] w-[19px] shrink-0 items-center justify-center text-xl leading-none text-[#FFCE31]">
 								★
 							</span>
 
 							<span
 								className="ml-[5px] text-xl font-medium text-white"
-								style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
+								style={{
+									fontFamily: "Outfit, sans-serif",
+									lineHeight: "150%",
+								}}
 							>
 								10
 							</span>
 
 							<span
 								className="ml-2 whitespace-nowrap text-base font-normal text-white/60"
-								style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
+								style={{
+									fontFamily: "Outfit, sans-serif",
+									lineHeight: "150%",
+								}}
 							>
-								XXXX | XXXX | XXXX
+								EPISÓDIO 1 | 08.08 às 08h08
 							</span>
 						</div>
 					</div>
@@ -95,9 +145,12 @@ export default function Anovaalianca() {
 					>
 						<p
 							className="text-sm font-normal text-white/60"
-							style={{ fontFamily: "Mulish, sans-serif", lineHeight: "150%" }}
+							style={{
+								fontFamily: "Mulish, sans-serif",
+								lineHeight: "150%",
+							}}
 						>
-							Duração XXhXXm
+							Duração 1h30
 						</p>
 
 						<div className="mt-3.5 flex h-[29px] items-center">
@@ -107,16 +160,22 @@ export default function Anovaalianca() {
 
 							<span
 								className="ml-[5px] text-xl font-medium text-white"
-								style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
+								style={{
+									fontFamily: "Outfit, sans-serif",
+									lineHeight: "150%",
+								}}
 							>
 								10
 							</span>
 
 							<span
 								className="ml-2 whitespace-nowrap text-base font-normal text-white/60"
-								style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
+								style={{
+									fontFamily: "Outfit, sans-serif",
+									lineHeight: "150%",
+								}}
 							>
-								XXXX | XXXX | XXXX
+								EPISÓDIO 1 | 08.08 às 08h08
 							</span>
 						</div>
 					</div>
@@ -124,7 +183,7 @@ export default function Anovaalianca() {
 					<h1
 						className="absolute font-medium text-white md:hidden"
 						style={{
-							top: "205px",
+							top: "172px",
 							left: "64px",
 							width: "351px",
 							fontFamily: "Teramo, serif",
@@ -156,43 +215,74 @@ export default function Anovaalianca() {
 					</h1>
 
 					<p
-						className="absolute text-xs font-medium text-white md:hidden"
+						className="absolute font-bold text-white md:hidden"
 						style={{
-							top: "320px",
+							top: "274px",
 							left: "64px",
 							width: "351px",
 							fontFamily: "Mulish, sans-serif",
-							lineHeight: "190%",
+							fontSize: "20px",
+							lineHeight: "140%",
 						}}
 					>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						A travessia
+					</p>
+
+					<p
+						className="absolute text-xs font-medium text-white md:hidden"
+						style={{
+							top: "307px",
+							left: "64px",
+							width: "351px",
+							fontFamily: "Mulish, sans-serif",
+							lineHeight: "180%",
+						}}
+					>
+						Toda vez que alguém acessou algo e conseguiu
 						<br />
-						Nam nunc leo, sollicitudin ut convallis at, iaculis id eros.
+						traduzir para o mundo, a humanidade deu um salto.
 						<br />
-						Quisque gravida, risus sed viverra maximus, ipsum justo
+						Nesse episódio, você vai iniciar a travessia para
 						<br />
-						auctor massa, in elementum nisl dolor nec nisi.
+						um mundo novo.
+					</p>
+
+					<p
+						className="absolute hidden font-bold text-white md:block"
+						style={{
+							top: "458px",
+							left: "188px",
+							width: "390px",
+							fontFamily: "Mulish, sans-serif",
+							fontSize: "22px",
+							lineHeight: "140%",
+						}}
+					>
+						A travessia
 					</p>
 
 					<p
 						className="absolute hidden text-xs font-medium text-white md:block"
 						style={{
-							top: "461px",
+							top: "495px",
 							left: "188px",
-							width: "331px",
+							width: "390px",
 							fontFamily: "Mulish, sans-serif",
-							lineHeight: "190%",
+							lineHeight: "180%",
 						}}
 					>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nunc leo, sollicitudin ut convallis at, iaculis id eros. Quisque gravida, risus sed viverra maximus, ipsum justo auctor massa, in elementum nisl dolor nec nisi.
+						Toda vez que alguém acessou algo e conseguiu traduzir para o mundo,
+						a humanidade deu um salto. Nesse episódio, você vai iniciar a travessia
+						para um mundo novo.
 					</p>
 
 					<button
 						type="button"
 						aria-label="Ver Agora"
+						onClick={handleWatchNow}
 						className="absolute flex items-center justify-center text-white md:hidden"
 						style={{
-							top: "422px",
+							top: "406px",
 							left: "64px",
 							width: "212px",
 							height: "50.066px",
@@ -220,6 +310,7 @@ export default function Anovaalianca() {
 					<button
 						type="button"
 						aria-label="Ver Agora"
+						onClick={handleWatchNow}
 						className="absolute hidden items-center justify-center text-white md:flex"
 						style={{
 							top: "572px",
@@ -247,6 +338,309 @@ export default function Anovaalianca() {
 						</span>
 					</button>
 
+					<div className="absolute left-1/2 top-[650px] flex w-[317.531px] -translate-x-1/2 flex-col gap-[40px] md:hidden">
+						<div ref={episodeRef} className="w-full">
+							<div className="relative h-[178.466px] w-[317.531px] overflow-hidden rounded-[9.56px]">
+								{isPlaying ? (
+									<iframe
+										src="https://www.youtube.com/embed/kUyQ53g17Mg?autoplay=1&playsinline=1&rel=0"
+										title="A travessia – A História por trás da Maior Mudança da Aliança"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+										allowFullScreen
+										referrerPolicy="strict-origin-when-cross-origin"
+										className="absolute inset-0 h-full w-full border-0"
+									/>
+								) : (
+									<button
+										type="button"
+										onClick={() => setIsPlaying(true)}
+										aria-label="Assistir ao Episódio 1"
+										className="relative block h-full w-full overflow-hidden rounded-[9.56px]"
+									>
+										<Image
+											src="/images/novaalianca/v1/capa_episodio_1.png"
+											alt="A travessia – A História por trás da Maior Mudança da Aliança"
+											fill
+											sizes="318px"
+											className="object-cover"
+										/>
+									</button>
+								)}
+							</div>
+
+							<h2
+								className="mt-[10px] text-[18px] font-semibold text-white"
+								style={{
+									fontFamily: "Outfit, sans-serif",
+									lineHeight: "135%",
+								}}
+							>
+								A travessia – A História por trás da Maior Mudança da Aliança.
+							</h2>
+
+							<div className="mt-[7px] flex items-center justify-between">
+								<div className="flex items-center gap-[12px]">
+									<span
+										className="text-[14px] font-normal text-[#B5B5B5]"
+										style={{
+											fontFamily: "Outfit, sans-serif",
+											lineHeight: "150%",
+										}}
+									>
+										Episódio 1
+									</span>
+
+									<button
+										type="button"
+										aria-label={
+											liked
+												? "Remover episódio dos favoritos"
+												: "Marcar episódio como favorito"
+										}
+										aria-pressed={liked}
+										onClick={() => setLiked((value) => !value)}
+										className="flex h-[13.921px] w-[15.559px] items-center justify-center"
+										style={{
+											filter: liked
+												? "drop-shadow(0px 3.27px 16px #FFCE77)"
+												: "none",
+										}}
+									>
+										<HeartIcon active={liked} />
+									</button>
+								</div>
+
+								<div
+									className="flex items-center gap-[5px] text-[16px] font-normal text-[#FFCE31]"
+									style={{
+										fontFamily: "Outfit, sans-serif",
+										lineHeight: "150%",
+									}}
+								>
+									<span>★</span>
+									<span>4.7</span>
+								</div>
+							</div>
+						</div>
+
+						<div className="w-full">
+							<div className="relative h-[178.466px] w-[317.531px] overflow-hidden rounded-[9.56px]">
+								<Image
+									src="/images/novaalianca/v1/capa_episodio_2.png"
+									alt="Disponível em breve – 10.08"
+									fill
+									sizes="318px"
+									className="object-cover"
+								/>
+							</div>
+
+							<h2
+								className="mt-[10px] text-[18px] font-semibold text-white"
+								style={{
+									fontFamily: "Outfit, sans-serif",
+									lineHeight: "135%",
+								}}
+							>
+								Disponível em breve – 10.08
+							</h2>
+
+							<p
+								className="mt-[7px] text-[14px] font-normal text-[#B5B5B5]"
+								style={{
+									fontFamily: "Outfit, sans-serif",
+									lineHeight: "150%",
+								}}
+							>
+								Episódio 2
+							</p>
+						</div>
+
+						<div className="w-full">
+							<div className="relative h-[178.466px] w-[317.531px] overflow-hidden rounded-[9.56px]">
+								<Image
+									src="/images/novaalianca/v1/capa_episodio_3.png"
+									alt="Disponível em breve – 12.08"
+									fill
+									sizes="318px"
+									className="object-cover"
+								/>
+							</div>
+
+							<h2
+								className="mt-[10px] text-[18px] font-semibold text-white"
+								style={{
+									fontFamily: "Outfit, sans-serif",
+									lineHeight: "135%",
+								}}
+							>
+								Disponível em breve – 12.08
+							</h2>
+
+							<p
+								className="mt-[7px] text-[14px] font-normal text-[#B5B5B5]"
+								style={{
+									fontFamily: "Outfit, sans-serif",
+									lineHeight: "150%",
+								}}
+							>
+								Episódio 3
+							</p>
+						</div>
+					</div>
+
+					<div className="absolute left-1/2 top-[677px] hidden h-[550px] w-[1440px] -translate-x-1/2 md:block">
+						<div
+							ref={episodeRef}
+							className="absolute left-[134.05px] top-0 w-[429.904px]"
+						>
+							<div className="relative h-[241.625px] w-[429.904px] overflow-hidden rounded-[12.94px]">
+								{isPlaying ? (
+									<iframe
+										src="https://www.youtube.com/embed/kUyQ53g17Mg?autoplay=1&playsinline=1&rel=0"
+										title="A travessia – A História por trás da Maior Mudança da Aliança"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+										allowFullScreen
+										referrerPolicy="strict-origin-when-cross-origin"
+										className="absolute inset-0 h-full w-full border-0"
+									/>
+								) : (
+									<button
+										type="button"
+										onClick={() => setIsPlaying(true)}
+										aria-label="Assistir ao Episódio 1"
+										className="relative block h-full w-full overflow-hidden rounded-[12.94px]"
+									>
+										<Image
+											src="/images/novaalianca/v1/capa_episodio_1.png"
+											alt="A travessia – A História por trás da Maior Mudança da Aliança"
+											fill
+											sizes="430px"
+											className="object-cover"
+										/>
+									</button>
+								)}
+							</div>
+
+							<h2
+								className="mt-[14px] text-[24px] font-semibold text-white"
+								style={{
+									fontFamily: "Outfit, sans-serif",
+									lineHeight: "135%",
+								}}
+							>
+								A travessia – A História por trás da Maior Mudança da Aliança.
+							</h2>
+
+							<div className="mt-[8px] flex items-center justify-between">
+								<div className="flex items-center gap-[16px]">
+									<span
+										className="text-[18px] font-normal text-[#B5B5B5]"
+										style={{
+											fontFamily: "Outfit, sans-serif",
+											lineHeight: "150%",
+										}}
+									>
+										Episódio 1
+									</span>
+
+									<button
+										type="button"
+										aria-label={
+											liked
+												? "Remover episódio dos favoritos"
+												: "Marcar episódio como favorito"
+										}
+										aria-pressed={liked}
+										onClick={() => setLiked((value) => !value)}
+										className="flex h-[18.848px] w-[21.065px] items-center justify-center"
+										style={{
+											filter: liked
+												? "drop-shadow(0px 3.27px 16px #FFCE77)"
+												: "none",
+										}}
+									>
+										<HeartIcon active={liked} />
+									</button>
+								</div>
+
+								<div
+									className="flex items-center gap-[7px] text-[20px] font-normal text-[#FFCE31]"
+									style={{
+										fontFamily: "Outfit, sans-serif",
+										lineHeight: "150%",
+									}}
+								>
+									<span>★</span>
+									<span>4.7</span>
+								</div>
+							</div>
+						</div>
+
+						<div className="absolute left-[620px] top-0 w-[429.904px]">
+							<div className="relative h-[241.625px] w-[429.904px] overflow-hidden rounded-[12.94px]">
+								<Image
+									src="/images/novaalianca/v1/capa_episodio_2.png"
+									alt="Disponível em breve – 10.08"
+									fill
+									sizes="430px"
+									className="object-cover"
+								/>
+							</div>
+
+							<h2
+								className="mt-[14px] text-[24px] font-semibold text-white"
+								style={{
+									fontFamily: "Outfit, sans-serif",
+									lineHeight: "135%",
+								}}
+							>
+								Disponível em breve – 10.08
+							</h2>
+
+							<p
+								className="mt-[8px] text-[18px] font-normal text-[#B5B5B5]"
+								style={{
+									fontFamily: "Outfit, sans-serif",
+									lineHeight: "150%",
+								}}
+							>
+								Episódio 2
+							</p>
+						</div>
+
+						<div className="absolute left-[1105px] top-0 w-[429.904px]">
+							<div className="relative h-[241.625px] w-[429.904px] overflow-hidden rounded-[12.94px]">
+								<Image
+									src="/images/novaalianca/v1/capa_episodio_3.png"
+									alt="Disponível em breve – 12.08"
+									fill
+									sizes="430px"
+									className="object-cover"
+								/>
+							</div>
+
+							<h2
+								className="mt-[14px] text-[24px] font-semibold text-white"
+								style={{
+									fontFamily: "Outfit, sans-serif",
+									lineHeight: "135%",
+								}}
+							>
+								Disponível em breve – 12.08
+							</h2>
+
+							<p
+								className="mt-[8px] text-[18px] font-normal text-[#B5B5B5]"
+								style={{
+									fontFamily: "Outfit, sans-serif",
+									lineHeight: "150%",
+								}}
+							>
+								Episódio 3
+							</p>
+						</div>
+					</div>
+
 					<footer
 						className="absolute inset-x-0 flex flex-col items-center md:hidden"
 						style={{ bottom: "40px" }}
@@ -267,19 +661,21 @@ export default function Anovaalianca() {
 								lineHeight: "145%",
 							}}
 						>
-              <Link href="/termos-de-uso" className="underline underline-offset-2">
-                Termos de Uso
-              </Link>
-
+							<Link
+								href="/termos-de-uso"
+								className="underline underline-offset-2"
+							>
+								Termos de Uso
+							</Link>
 
 							<span>|</span>
 
-              <Link
-                href="/politicas-de-privacidade"
-                className="underline underline-offset-2"
-              >
-                Politicas de Privacidade
-              </Link>
+							<Link
+								href="/politicas-de-privacidade"
+								className="underline underline-offset-2"
+							>
+								Politicas de Privacidade
+							</Link>
 						</div>
 
 						<p
@@ -327,18 +723,21 @@ export default function Anovaalianca() {
 								lineHeight: "145%",
 							}}
 						>
-              <Link href="/termos-de-uso" className="underline underline-offset-2">
-                Termos de Uso
-              </Link>
+							<Link
+								href="/termos-de-uso"
+								className="underline underline-offset-2"
+							>
+								Termos de Uso
+							</Link>
 
 							<span>|</span>
 
-              <Link
-                href="/politicas-de-privacidade"
-                className="underline underline-offset-2"
-              >
-                Politicas de Privacidade
-              </Link>
+							<Link
+								href="/politicas-de-privacidade"
+								className="underline underline-offset-2"
+							>
+								Politicas de Privacidade
+							</Link>
 						</div>
 					</footer>
 				</div>

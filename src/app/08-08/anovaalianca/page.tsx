@@ -32,7 +32,7 @@ export default function Anovaalianca() {
 					aria-hidden="true"
 					className="absolute inset-0 md:hidden"
 					style={{
-						backgroundImage: "url('/images/novaalianca/v1/bg_mobile.png')",
+						backgroundImage: "url('/images/novaalianca/v1/bg_mobile_v2.png')",
 						backgroundPosition: "top center",
 						backgroundRepeat: "no-repeat",
 						backgroundSize: "100% auto",
@@ -43,7 +43,7 @@ export default function Anovaalianca() {
 					aria-hidden="true"
 					className="absolute inset-0 hidden md:block"
 					style={{
-						backgroundImage: "url('/images/novaalianca/v1/bg_desktop.png')",
+						backgroundImage: "url('/images/novaalianca/v1/bg_desktop_v2.png')",
 						backgroundPosition: "top center",
 						backgroundRepeat: "no-repeat",
 						backgroundSize: "100% auto",

@@ -101,7 +101,7 @@ export default function Anovaalianca() {
 								className="text-xl font-medium text-white"
 								style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
 							>
-								10
+								
 							</span>
 
 							<span
@@ -126,7 +126,7 @@ export default function Anovaalianca() {
 								className="text-xl font-medium text-white"
 								style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
 							>
-								10
+								
 							</span>
 
 							<span

@@ -2,16 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useRef, useState } from "react";
-
-function PlayIcon({ size }: { size: number }) {
-	return (
-		<svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true">
-			<circle cx="12" cy="12" r="11" fill="white" />
-			<path d="M10 8.5L16 12L10 15.5V8.5Z" fill="#C0964B" />
-		</svg>
-	);
-}
+import { useState } from "react";
 
 function HeartIcon({ active }: { active: boolean }) {
 	return (
@@ -33,14 +24,6 @@ function HeartIcon({ active }: { active: boolean }) {
 export default function Anovaalianca() {
 	const [isPlaying, setIsPlaying] = useState(true);
 	const [liked, setLiked] = useState(false);
-	const episodeRef = useRef<HTMLDivElement>(null);
-
-	const handleWatchNow = () => {
-		setIsPlaying(true);
-		requestAnimationFrame(() => {
-			episodeRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
-		});
-	};
 
 	return (
 		<main className="w-full overflow-hidden bg-[#111111] md:bg-[#061D1F]">
@@ -232,60 +215,10 @@ export default function Anovaalianca() {
 						Toda vez que alguém acessou algo e conseguiu traduzir para o mundo, a humanidade deu um salto. Nesse episódio, você vai iniciar a travessia para um mundo novo.
 					</p>
 
-					<button
-						type="button"
-						aria-label="Ver Agora"
-						onClick={handleWatchNow}
-						className="absolute flex items-center justify-center text-white md:hidden"
-						style={{
-							top: "406px",
-							left: "64px",
-							width: "212px",
-							height: "50.066px",
-							gap: "7.82px",
-							padding: "14.08px 25.03px",
-							borderRadius: "31.29px",
-							backgroundColor: "#C0964B",
-							boxShadow: "3.13px 3.13px 19.56px 0 #C0964B",
-						}}
-					>
-						<PlayIcon size={20.861} />
-						<span
-							className="font-medium"
-							style={{ fontFamily: "Outfit, sans-serif", fontSize: "14.08px", lineHeight: "150%" }}
-						>
-							Ver Agora
-						</span>
-					</button>
 
-					<button
-						type="button"
-						aria-label="Ver Agora"
-						onClick={handleWatchNow}
-						className="absolute hidden items-center justify-center text-white md:flex"
-						style={{
-							top: "572px",
-							left: "185px",
-							width: "212px",
-							height: "50.066px",
-							gap: "7.82px",
-							padding: "14.08px 25.03px",
-							borderRadius: "31.29px",
-							backgroundColor: "#C0964B",
-							boxShadow: "3.13px 3.13px 19.56px 0 #C0964B",
-						}}
-					>
-						<PlayIcon size={25.033} />
-						<span
-							className="font-medium"
-							style={{ fontFamily: "Outfit, sans-serif", fontSize: "14.08px", lineHeight: "150%" }}
-						>
-							Ver Agora
-						</span>
-					</button>
 
-					<div className="absolute left-1/2 top-[650px] flex w-[317.531px] -translate-x-1/2 flex-col gap-[40px] md:hidden">
-						<div ref={episodeRef} className="w-full">
+					<div className="absolute left-1/2 top-[720px] flex w-[317.531px] -translate-x-1/2 flex-col gap-[40px] md:hidden">
+						<div className="w-full">
 							<div className="relative h-[178.466px] w-[317.531px] overflow-hidden rounded-[9.56px]">
 								{isPlaying ? (
 									<iframe
@@ -423,7 +356,7 @@ export default function Anovaalianca() {
 					</div>
 
 					<div className="absolute left-1/2 top-[677px] hidden h-[550px] w-[1440px] -translate-x-1/2 md:block">
-						<div ref={episodeRef} className="absolute left-[134.05px] top-0 w-[429.904px]">
+						<div className="absolute left-[134.05px] top-0 w-[429.904px]">
 							<div className="relative h-[241.625px] w-[429.904px] overflow-hidden rounded-[12.94px]">
 								{isPlaying ? (
 									<iframe

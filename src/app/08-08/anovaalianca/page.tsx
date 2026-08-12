@@ -23,17 +23,20 @@ function HeartIcon({ active }: { active: boolean }) {
 
 export default function Anovaalianca() {
 	const [isEpisode1Playing, setIsEpisode1Playing] = useState(false);
+	const [isEpisode2Playing, setIsEpisode2Playing] = useState(false);
 	const [likedEpisode1, setLikedEpisode1] = useState(false);
 	const [likedEpisode2, setLikedEpisode2] = useState(false);
+	const [likedEpisode3, setLikedEpisode3] = useState(false);
+	const [isDesktopCarouselShifted, setIsDesktopCarouselShifted] = useState(false);
 
 	return (
 		<main className="w-full overflow-hidden bg-[#111111] md:bg-[#061D1F]">
-			<section className="relative h-[1780px] w-full overflow-hidden bg-[#111111] md:h-[1350px] md:bg-[#061D1F]">
+			<section className="relative h-[1900px] w-full overflow-hidden bg-[#111111] md:h-[1350px] md:bg-[#061D1F]">
 				<div
 					aria-hidden="true"
 					className="absolute inset-0 md:hidden"
 					style={{
-						backgroundImage: "url('/images/novaalianca/v1/bg_mobile.png')",
+						backgroundImage: "url('/images/novaalianca/v1/bg_mobile_v2.png')",
 						backgroundPosition: "top center",
 						backgroundRepeat: "no-repeat",
 						backgroundSize: "100% auto",
@@ -287,21 +290,31 @@ export default function Anovaalianca() {
 
 						<div className="w-full">
 							<div className="relative h-[178.466px] w-[317.531px] overflow-hidden rounded-[9.56px]">
-								<Image
-									src="/images/novaalianca/v1/capa_episodio_2_novo.png"
-									alt="A Caverna | Acessando a Verdade do que Vai Acontecer"
-									fill
-									sizes="318px"
-									className="object-cover"
-								/>
-								<iframe
-									src="https://www.youtube.com/embed/FsKMUs61Dtg?autoplay=1&mute=1&playsinline=1&rel=0"
-									title="A Caverna | Acessando a Verdade do que Vai Acontecer"
-									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-									allowFullScreen
-									referrerPolicy="strict-origin-when-cross-origin"
-									className="absolute inset-0 h-full w-full border-0"
-								/>
+								{isEpisode2Playing ? (
+									<iframe
+										src="https://www.youtube.com/embed/FsKMUs61Dtg?autoplay=1&playsinline=1&rel=0"
+										title="A Caverna | Acessando a Verdade do que Vai Acontecer"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+										allowFullScreen
+										referrerPolicy="strict-origin-when-cross-origin"
+										className="absolute inset-0 h-full w-full border-0"
+									/>
+								) : (
+									<button
+										type="button"
+										onClick={() => setIsEpisode2Playing(true)}
+										aria-label="Assistir ao Episódio 2"
+										className="relative block h-full w-full overflow-hidden rounded-[9.56px]"
+									>
+										<Image
+											src="/images/novaalianca/v1/capa_episodio_2_novo.png"
+											alt="A Caverna | Acessando a Verdade do que Vai Acontecer"
+											fill
+											sizes="318px"
+											className="object-cover"
+										/>
+									</button>
+								)}
 							</div>
 
 							<h2
@@ -343,12 +356,13 @@ export default function Anovaalianca() {
 
 						<div className="w-full">
 							<div className="relative h-[178.466px] w-[317.531px] overflow-hidden rounded-[9.56px]">
-								<Image
-									src="/images/novaalianca/v1/capa_episodio_3.png"
-									alt="Disponível em breve – 12.08"
-									fill
-									sizes="318px"
-									className="object-cover"
+								<iframe
+									src="https://www.youtube.com/embed/rIyY2yc3vVw?autoplay=1&mute=1&start=300&playsinline=1&rel=0"
+									title="O INEVITÁVEL | Um retrato do futuro dos divergentes e da humanidade."
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+									allowFullScreen
+									referrerPolicy="strict-origin-when-cross-origin"
+									className="absolute inset-0 h-full w-full border-0"
 								/>
 							</div>
 
@@ -356,16 +370,29 @@ export default function Anovaalianca() {
 								className="mt-[10px] text-[18px] font-semibold text-white"
 								style={{ fontFamily: "Outfit, sans-serif", lineHeight: "135%" }}
 							>
-								Disponível em breve – 12.08
+								O INEVITÁVEL | Um retrato do futuro dos divergentes e da humanidade.
 							</h2>
 
 							<div className="mt-[7px] flex items-center justify-between">
-								<span
-									className="text-[14px] font-normal text-[#B5B5B5]"
-									style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
-								>
-									Episódio 3
-								</span>
+								<div className="flex items-center gap-[12px]">
+									<span
+										className="text-[14px] font-normal text-[#B5B5B5]"
+										style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
+									>
+										Episódio 3
+									</span>
+
+									<button
+										type="button"
+										aria-label={likedEpisode3 ? "Remover episódio dos favoritos" : "Marcar episódio como favorito"}
+										aria-pressed={likedEpisode3}
+										onClick={() => setLikedEpisode3((value) => !value)}
+										className="flex h-[13.921px] w-[15.559px] items-center justify-center"
+										style={{ filter: likedEpisode3 ? "drop-shadow(0px 3.27px 16px #FFCE77)" : "none" }}
+									>
+										<HeartIcon active={likedEpisode3} />
+									</button>
+								</div>
 
 								<span
 									className="text-[14px] font-normal text-[#B5B5B5]"
@@ -377,161 +404,196 @@ export default function Anovaalianca() {
 						</div>
 					</div>
 
-					<div className="absolute left-1/2 top-[677px] hidden h-[550px] w-[1440px] -translate-x-1/2 md:block">
-						<div className="absolute left-[134.05px] top-0 w-[429.904px]">
-							<div className="relative h-[241.625px] w-[429.904px] overflow-hidden rounded-[12.94px]">
-								{isEpisode1Playing ? (
+					<div
+						className="absolute left-1/2 top-[677px] hidden h-[550px] w-[1440px] -translate-x-1/2 overflow-hidden md:block"
+						onMouseLeave={() => setIsDesktopCarouselShifted(false)}
+					>
+						<div
+							className="absolute inset-0 transition-transform duration-500 ease-out"
+							style={{ transform: isDesktopCarouselShifted ? "translateX(-350px)" : "translateX(0)" }}
+						>
+							<div className="absolute left-[134.05px] top-0 w-[429.904px]">
+								<div className="relative h-[241.625px] w-[429.904px] overflow-hidden rounded-[12.94px]">
+									{isEpisode1Playing ? (
+										<iframe
+											src="https://www.youtube.com/embed/kUyQ53g17Mg?autoplay=1&mute=1&start=359&playsinline=1&rel=0"
+											title="A travessia – A História por trás da Maior Mudança da Aliança"
+											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+											allowFullScreen
+											referrerPolicy="strict-origin-when-cross-origin"
+											className="absolute inset-0 h-full w-full border-0"
+										/>
+									) : (
+										<button
+											type="button"
+											onClick={() => setIsEpisode1Playing(true)}
+											aria-label="Assistir ao Episódio 1"
+											className="relative block h-full w-full overflow-hidden rounded-[12.94px]"
+										>
+											<Image
+												src="/images/novaalianca/v1/capa_episodio_1.png"
+												alt="A travessia – A História por trás da Maior Mudança da Aliança"
+												fill
+												sizes="430px"
+												className="object-cover"
+											/>
+										</button>
+									)}
+								</div>
+
+								<h2
+									className="mt-[14px] text-[24px] font-semibold text-white"
+									style={{ fontFamily: "Outfit, sans-serif", lineHeight: "135%" }}
+								>
+									A travessia – A História por trás da Maior Mudança da Aliança.
+								</h2>
+
+								<div className="mt-[8px] flex items-center justify-between">
+									<div className="flex items-center gap-[16px]">
+										<span
+											className="text-[18px] font-normal text-[#B5B5B5]"
+											style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
+										>
+											Episódio 1
+										</span>
+
+										<button
+											type="button"
+											aria-label={likedEpisode1 ? "Remover episódio dos favoritos" : "Marcar episódio como favorito"}
+											aria-pressed={likedEpisode1}
+											onClick={() => setLikedEpisode1((value) => !value)}
+											className="flex h-[18.848px] w-[21.065px] items-center justify-center"
+											style={{ filter: likedEpisode1 ? "drop-shadow(0px 3.27px 16px #FFCE77)" : "none" }}
+										>
+											<HeartIcon active={likedEpisode1} />
+										</button>
+									</div>
+
+									<span
+										className="text-[18px] font-normal text-[#B5B5B5]"
+										style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
+									>
+										às 08h08
+									</span>
+								</div>
+							</div>
+
+							<div className="absolute left-[620px] top-0 w-[429.904px]">
+								<div className="relative h-[241.625px] w-[429.904px] overflow-hidden rounded-[12.94px]">
+									{isEpisode2Playing ? (
+										<iframe
+											src="https://www.youtube.com/embed/FsKMUs61Dtg?autoplay=1&playsinline=1&rel=0"
+											title="A Caverna | Acessando a Verdade do que Vai Acontecer"
+											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+											allowFullScreen
+											referrerPolicy="strict-origin-when-cross-origin"
+											className="absolute inset-0 h-full w-full border-0"
+										/>
+									) : (
+										<button
+											type="button"
+											onClick={() => setIsEpisode2Playing(true)}
+											aria-label="Assistir ao Episódio 2"
+											className="relative block h-full w-full overflow-hidden rounded-[12.94px]"
+										>
+											<Image
+												src="/images/novaalianca/v1/capa_episodio_2_novo.png"
+												alt="A Caverna | Acessando a Verdade do que Vai Acontecer"
+												fill
+												sizes="430px"
+												className="object-cover"
+											/>
+										</button>
+									)}
+								</div>
+
+								<h2
+									className="mt-[14px] text-[24px] font-semibold text-white"
+									style={{ fontFamily: "Outfit, sans-serif", lineHeight: "135%" }}
+								>
+									A Caverna | Acessando a Verdade do que Vai Acontecer
+								</h2>
+
+								<div className="mt-[8px] flex items-center justify-between">
+									<div className="flex items-center gap-[16px]">
+										<span
+											className="text-[18px] font-normal text-[#B5B5B5]"
+											style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
+										>
+											Episódio 2
+										</span>
+
+										<button
+											type="button"
+											aria-label={likedEpisode2 ? "Remover episódio dos favoritos" : "Marcar episódio como favorito"}
+											aria-pressed={likedEpisode2}
+											onClick={() => setLikedEpisode2((value) => !value)}
+											className="flex h-[18.848px] w-[21.065px] items-center justify-center"
+											style={{ filter: likedEpisode2 ? "drop-shadow(0px 3.27px 16px #FFCE77)" : "none" }}
+										>
+											<HeartIcon active={likedEpisode2} />
+										</button>
+									</div>
+
+									<span
+										className="text-[18px] font-normal text-[#B5B5B5]"
+										style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
+									>
+										às 08h08
+									</span>
+								</div>
+							</div>
+
+							<div
+								className="absolute left-[1105px] top-0 w-[429.904px]"
+								onMouseEnter={() => setIsDesktopCarouselShifted(true)}
+							>
+								<div className="relative h-[241.625px] w-[429.904px] overflow-hidden rounded-[12.94px]">
 									<iframe
-										src="https://www.youtube.com/embed/kUyQ53g17Mg?autoplay=1&mute=1&start=359&playsinline=1&rel=0"
-										title="A travessia – A História por trás da Maior Mudança da Aliança"
+										src="https://www.youtube.com/embed/rIyY2yc3vVw?autoplay=1&mute=1&start=300&playsinline=1&rel=0"
+										title="O INEVITÁVEL | Um retrato do futuro dos divergentes e da humanidade."
 										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 										allowFullScreen
 										referrerPolicy="strict-origin-when-cross-origin"
 										className="absolute inset-0 h-full w-full border-0"
 									/>
-								) : (
-									<button
-										type="button"
-										onClick={() => setIsEpisode1Playing(true)}
-										aria-label="Assistir ao Episódio 1"
-										className="relative block h-full w-full overflow-hidden rounded-[12.94px]"
-									>
-										<Image
-											src="/images/novaalianca/v1/capa_episodio_1.png"
-											alt="A travessia – A História por trás da Maior Mudança da Aliança"
-											fill
-											sizes="430px"
-											className="object-cover"
-										/>
-									</button>
-								)}
-							</div>
+								</div>
 
-							<h2
-								className="mt-[14px] text-[24px] font-semibold text-white"
-								style={{ fontFamily: "Outfit, sans-serif", lineHeight: "135%" }}
-							>
-								A travessia – A História por trás da Maior Mudança da Aliança.
-							</h2>
+								<h2
+									className="mt-[14px] text-[24px] font-semibold text-white"
+									style={{ fontFamily: "Outfit, sans-serif", lineHeight: "135%" }}
+								>
+									O INEVITÁVEL | Um retrato do futuro dos divergentes e da humanidade.
+								</h2>
 
-							<div className="mt-[8px] flex items-center justify-between">
-								<div className="flex items-center gap-[16px]">
+								<div className="mt-[8px] flex items-center justify-between">
+									<div className="flex items-center gap-[16px]">
+										<span
+											className="text-[18px] font-normal text-[#B5B5B5]"
+											style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
+										>
+											Episódio 3
+										</span>
+
+										<button
+											type="button"
+											aria-label={likedEpisode3 ? "Remover episódio dos favoritos" : "Marcar episódio como favorito"}
+											aria-pressed={likedEpisode3}
+											onClick={() => setLikedEpisode3((value) => !value)}
+											className="flex h-[18.848px] w-[21.065px] items-center justify-center"
+											style={{ filter: likedEpisode3 ? "drop-shadow(0px 3.27px 16px #FFCE77)" : "none" }}
+										>
+											<HeartIcon active={likedEpisode3} />
+											</button>
+										</div>
+
 									<span
 										className="text-[18px] font-normal text-[#B5B5B5]"
 										style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
 									>
-										Episódio 1
+										às 08h08
 									</span>
-
-									<button
-										type="button"
-										aria-label={likedEpisode1 ? "Remover episódio dos favoritos" : "Marcar episódio como favorito"}
-										aria-pressed={likedEpisode1}
-										onClick={() => setLikedEpisode1((value) => !value)}
-										className="flex h-[18.848px] w-[21.065px] items-center justify-center"
-										style={{ filter: likedEpisode1 ? "drop-shadow(0px 3.27px 16px #FFCE77)" : "none" }}
-									>
-										<HeartIcon active={likedEpisode1} />
-									</button>
 								</div>
-
-								<span
-									className="text-[18px] font-normal text-[#B5B5B5]"
-									style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
-								>
-									às 08h08
-								</span>
-							</div>
-						</div>
-
-						<div className="absolute left-[620px] top-0 w-[429.904px]">
-							<div className="relative h-[241.625px] w-[429.904px] overflow-hidden rounded-[12.94px]">
-								<Image
-									src="/images/novaalianca/v1/capa_episodio_2_novo.png"
-									alt="A Caverna | Acessando a Verdade do que Vai Acontecer"
-									fill
-									sizes="430px"
-									className="object-cover"
-								/>
-								<iframe
-									src="https://www.youtube.com/embed/FsKMUs61Dtg?autoplay=1&mute=1&playsinline=1&rel=0"
-									title="A Caverna | Acessando a Verdade do que Vai Acontecer"
-									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-									allowFullScreen
-									referrerPolicy="strict-origin-when-cross-origin"
-									className="absolute inset-0 h-full w-full border-0"
-								/>
-							</div>
-
-							<h2
-								className="mt-[14px] text-[24px] font-semibold text-white"
-								style={{ fontFamily: "Outfit, sans-serif", lineHeight: "135%" }}
-							>
-								A Caverna | Acessando a Verdade do que Vai Acontecer
-							</h2>
-
-							<div className="mt-[8px] flex items-center justify-between">
-								<div className="flex items-center gap-[16px]">
-									<span
-										className="text-[18px] font-normal text-[#B5B5B5]"
-										style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
-									>
-										Episódio 2
-									</span>
-
-									<button
-										type="button"
-										aria-label={likedEpisode2 ? "Remover episódio dos favoritos" : "Marcar episódio como favorito"}
-										aria-pressed={likedEpisode2}
-										onClick={() => setLikedEpisode2((value) => !value)}
-										className="flex h-[18.848px] w-[21.065px] items-center justify-center"
-										style={{ filter: likedEpisode2 ? "drop-shadow(0px 3.27px 16px #FFCE77)" : "none" }}
-									>
-										<HeartIcon active={likedEpisode2} />
-									</button>
-								</div>
-
-								<span
-									className="text-[18px] font-normal text-[#B5B5B5]"
-									style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
-								>
-									às 08h08
-								</span>
-							</div>
-						</div>
-
-						<div className="absolute left-[1105px] top-0 w-[429.904px]">
-							<div className="relative h-[241.625px] w-[429.904px] overflow-hidden rounded-[12.94px]">
-								<Image
-									src="/images/novaalianca/v1/capa_episodio_3.png"
-									alt="Disponível em breve – 12.08"
-									fill
-									sizes="430px"
-									className="object-cover"
-								/>
-							</div>
-
-							<h2
-								className="mt-[14px] text-[24px] font-semibold text-white"
-								style={{ fontFamily: "Outfit, sans-serif", lineHeight: "135%" }}
-							>
-								Disponível em breve – 12.08
-							</h2>
-
-							<div className="mt-[8px] flex items-center justify-between">
-								<span
-									className="text-[18px] font-normal text-[#B5B5B5]"
-									style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
-								>
-									Episódio 3
-								</span>
-
-								<span
-									className="text-[18px] font-normal text-[#B5B5B5]"
-									style={{ fontFamily: "Outfit, sans-serif", lineHeight: "150%" }}
-								>
-									às 08h08
-								</span>
 							</div>
 						</div>
 					</div>
